@@ -4,7 +4,8 @@ import App from './App.vue'
 import fanui from '../src/UI'
 //引入路由
 import router from './router'
-
+//引入字体图标
+import './assets/iconfont/font.css'
 Vue.use(fanui)
 
 Vue.config.productionTip = false

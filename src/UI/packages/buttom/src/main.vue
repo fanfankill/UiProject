@@ -1,15 +1,13 @@
 <template>
   <div>
-    <ct-button></ct-button>
-     <head></head>
-     <main></main>
-     <footer></footer>
+      bottom组件
+      <i class="iconfont icon-bofang"></i>
   </div>
 </template>
 
 <script>
 export default {
-
+    name:'CtButton'
 }
 </script>
 

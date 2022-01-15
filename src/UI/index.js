@@ -1,9 +1,9 @@
 //引入组件
-
+import Buttom from "./packages/buttom/index.js";
 
 // 组件列表
 const allcomponents=[
-  
+    Buttom
 ]
 
 
