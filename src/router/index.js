@@ -8,6 +8,11 @@ const mainview =()=> import ('../view/main.vue')
 
 
 const routes=[
+    { 
+        path: '*',
+        redirect: '/MainUi' 
+     },
+     
     {
         path:'/MainUi',
         component:mainview,

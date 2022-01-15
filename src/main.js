@@ -6,6 +6,8 @@ import fanui from '../src/UI'
 import router from './router'
 //引入字体图标
 import './assets/iconfont/font.css'
+//引入全局样式
+import './assets/basecss/base.css'
 Vue.use(fanui)
 
 Vue.config.productionTip = false

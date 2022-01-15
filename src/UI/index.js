@@ -1,7 +1,6 @@
 //引入组件
 <<<<<<< HEAD
 import Buttom from "./packages/buttom/index.js";
-
 // 组件列表
 const allcomponents=[
     Buttom

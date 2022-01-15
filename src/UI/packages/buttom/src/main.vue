@@ -6,6 +6,7 @@
 </template>
 
 <script>
+import '../../../theme/button.css'
 export default {
     name:'CtButton'
 }
