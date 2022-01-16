@@ -10,7 +10,10 @@
               <aside-ul></aside-ul>
             </div>
         <div class="main">
-          
+          <ct-container></ct-container>
+          <ct-footer></ct-footer>
+          <ct-main></ct-main>
+          <ct-aside></ct-aside>
         </div>
          </div>
       

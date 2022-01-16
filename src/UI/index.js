@@ -1,16 +1,22 @@
 //引入组件
-<<<<<<< HEAD
+
 import Buttom from "./packages/buttom/index.js";
+import Aside from "./packages/aside/index.js";
+import Container from "./packages/container/index.js";
+import Footer from "./packages/footer/index.js";
+import Header from "./packages/header/index.js";
+import Main from "./packages/main/index.js";
 // 组件列表
 const allcomponents=[
-    Buttom
+    Buttom,
+    Aside,
+    Container,
+    Footer,
+    Header,
+    Main
 ]
 
-=======
 
-// 组件列表
-const allcomponents = [];
->>>>>>> gyp
 
 //组件注册
 const install = function (Vue) {
