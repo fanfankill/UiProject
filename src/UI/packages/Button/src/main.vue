@@ -1,11 +1,12 @@
 <template>
   <div>
-    button组件
+    botton组件
     <i class="iconfont icon-bofang"></i>
   </div>
 </template>
 
 <script>
+import "../../../theme/button.css";
 export default {
   name: "CtButton",
 };
