@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <header class="ct-header">
       header
-  </div>
+  </header>
 </template>
 
 <script>
@@ -11,5 +11,8 @@ export default {
 </script>
 
 <style>
-
+.ct-header{
+  background-color: rgb(187, 49, 49);
+  height: 60px;
+}
 </style>

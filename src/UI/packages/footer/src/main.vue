@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <footer class="ct-footer">
     footer
-  </div>
+  </footer>
 </template>
 
 <script>
@@ -11,5 +11,8 @@ export default {
 </script>
 
 <style>
-
+.ct-footer{
+  background-color: grey;
+  height: 60px;
+}
 </style>
