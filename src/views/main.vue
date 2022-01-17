@@ -14,7 +14,7 @@
       </ct-container>
     </showdiv> -->
 
-      
+      1
 
   </div>
 </template>
@@ -23,6 +23,9 @@
 // import showdiv from '../components/showcompont'
 export default {
     name:'showcompont',
+      mounted(){
+       
+      },
     components:{
       // showdiv
     }
@@ -32,9 +35,10 @@ export default {
 </script>
 
 <style scoped lang="less">
-.container {
+.mycontainer {
   // border: 2px solid @vice-color1;
   // background-color: @blue-bg-color1;
+  height: 3000px;
 }
 
 .showdiv{

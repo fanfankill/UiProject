@@ -1,7 +1,7 @@
 <template>
   <ul class="headul">
     <li><router-link to="/style">指南</router-link></li>
-    <li><router-link to="/">组件</router-link></li>
+    <li><router-link to="/components">组件</router-link></li>
     <li><router-link to="/">资源</router-link></li>
     <li class="iconfont icon-lights"></li>
     <li class="iconfont icon-zhongwen"><a></a></li>
