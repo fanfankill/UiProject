@@ -13,9 +13,7 @@
       </ct-container>
       </ct-container>
     </showdiv> -->
-
-      
-
+    <ct-radio>单选</ct-radio>
   </div>
 </template>
 
