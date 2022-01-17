@@ -33,6 +33,7 @@ export default {};
   position: relative;
 }
 .headul a {
+  text-align: center;
   display: block;
   text-decoration: none;
   color: #a8ddfa;

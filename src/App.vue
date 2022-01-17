@@ -18,6 +18,7 @@
 </template>
 
 <script>
+
 import top from "./components/top";
 import logo from "./components/logo";
 import asider from "./components/asider";
@@ -30,6 +31,7 @@ export default {
     asider,
   },
 };
+
 </script>
 
 <style scoped lang="less">
@@ -60,7 +62,7 @@ export default {
 }
 .main {
   margin-top: 80px;
-  padding: 20px;
+  padding: 20px 0 0 40px;
   flex: 1;
   background-color: white;
   overflow: auto;
