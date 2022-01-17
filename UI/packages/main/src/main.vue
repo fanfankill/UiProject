@@ -7,6 +7,7 @@
 </template>
 
 <script>
+import "../../../theme/main.less";
 export default {
     name:'CtMain',
     props:{
@@ -15,9 +16,3 @@ export default {
 }
 </script>
 
-<style>
-.ct-main{
-  background-color: gold;
-  flex: 1;
-}
-</style>

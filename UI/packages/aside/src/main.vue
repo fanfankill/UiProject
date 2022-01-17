@@ -5,7 +5,7 @@
 </template>
 
 <script>
-
+import '../../../theme/aside.less'
 export default {
     name:'CtAside',
     props:{
@@ -14,10 +14,3 @@ export default {
 }
 </script>
 
-<style>
-.ct-aside{
-  background-color: #21A8F3;
-  display: block;
-  width: 200px;
-}
-</style>
