@@ -31,7 +31,7 @@ table {
   border-collapse: collapse;
   margin: 50px 0 0 50px;
   table-layout: fixed;
-  width: 100%;
+  width: 90%;
 }
 
 thead td {
