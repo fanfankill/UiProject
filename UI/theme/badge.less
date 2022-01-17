@@ -1,0 +1,51 @@
+@import url(./common/global.less);
+.ct-badge {
+    position: relative;
+    vertical-align: middle;
+    display: inline-block;
+    .ct-badge__content {
+        background-color:@error-color;
+        border-radius: 10px;
+        color: #FFF;
+        display: inline-block;
+        font-size: 12px;
+        height: 18px;
+        line-height: 18px;
+        padding: 0 6px;
+        text-align: center;
+        white-space: nowrap;
+        border: 1px solid #FFF
+    }
+    .ct-badge__content.is-fixed {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        -webkit-transform: translateY(-50%) translateX(100%);
+        transform: translateY(-50%) translateX(100%)
+    }
+    .ct-badge__content.is-fixed.is-dot {
+        right: 5px
+    }
+    .ct-badge__content.is-dot {
+        height: 8px;
+        width: 8px;
+        padding: 0;
+        right: 0;
+        border-radius: 50%
+    }
+    .ct-badge__content--primary {
+        background-color: @main-color
+    }
+    .ct-badge__content--success {
+        background-color: @success-color
+    }
+    .ct-badge__content--warning {
+        background-color: @warning-color
+    }
+    .ct-badge__content--info {
+        background-color: @info-color
+    }
+    .ct-badge__content--danger {
+        background-color: @error-font-color
+    }
+}

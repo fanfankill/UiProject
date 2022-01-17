@@ -1,6 +1,6 @@
 <template>
   <div class="mycontainer">
-    <!-- <showdiv
+    <showdiv
     title="容器"
     derection="小容器组件"
     detailcode="<code><h3>hh</h3></code>">
@@ -12,22 +12,20 @@
         <ct-footer></ct-footer>
       </ct-container>
       </ct-container>
-    </showdiv> -->
-
-      1
+  </showdiv>
 
   </div>
 </template>
 
 <script>
-// import showdiv from '../components/showcompont'
+import showdiv from '../components/showcompont'
 export default {
     name:'showcompont',
       mounted(){
        
       },
     components:{
-      // showdiv
+      showdiv
     }
   
 }
@@ -45,4 +43,5 @@ export default {
   height: 400px;
   width: 80%;
 }
+
 </style>
