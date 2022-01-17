@@ -1,16 +1,8 @@
 //引入组件
-<<<<<<< HEAD
-import Buttom from "./packages/buttom/index.js";
-// 组件列表
-const allcomponents=[
-    Buttom
-]
-
-=======
 
 // 组件列表
 const allcomponents = [];
->>>>>>> gyp
+
 
 //组件注册
 const install = function (Vue) {
