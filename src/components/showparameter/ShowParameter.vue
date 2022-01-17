@@ -54,7 +54,4 @@ td {
   padding-right: 100px;
   word-break: break-all;
 }
-td:empty {
-  content: 'aaaa';
-}
 </style>
