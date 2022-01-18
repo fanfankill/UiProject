@@ -10,6 +10,11 @@ import "./assets/iconfont/font.css";
 //引入全局样式
 import "./assets/basecss/base.css";
 
+// 引入highlight插件
+import Highlight from './hljsplugin/highlight'; // 这里是你项目highlight.js所在路径
+Vue.use(Highlight);
+
+
 Vue.use(fanui);
 
 Vue.config.productionTip = false;

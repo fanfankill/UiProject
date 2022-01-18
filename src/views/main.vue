@@ -15,22 +15,25 @@
       </ct-container>
       </ct-container>
     </showdiv> -->
-    <showdiv title="基础用法" subtitle="基础的按钮用法" ctname="Button" :attributes="attr"></showdiv>
+    <show-component title="基础用法" subtitle="按钮的基础用法" :attributes="['type, size']" ctname="Button"></show-component>
+    <ct-avatar size="mini" shape="square"></ct-avatar>
   </div>
 </template>
 
 <script>
-import showdiv from '../components/showcompont'
+import ShowComponent from '../components/showcomponent'
+import CtAvatar from '../../UI/packages/avatar'
 export default {
-  data() {
-    return {
-      attr: ["type", "plain", "round", "circle"]
-    }
-  },
-    name:'showcompont',
-    components:{
-      showdiv,
-    }
+  // data() {
+  //   return {
+  //     attr: ["type", "plain", "round", "circle"],
+  //     codes: ``
+  //   }
+  // },
+  components:{
+    CtAvatar,
+    ShowComponent
+  }
 }
 </script>
 

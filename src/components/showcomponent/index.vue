@@ -21,8 +21,8 @@
         </div>
         <div class="highlight">
           <div class="codearea">
-            codeareas
-            <slot name="showarea"></slot>
+            <!-- codeareas -->
+            <pre v-highlight="codes"><code></code></pre>
           </div>
         </div>
       </div>
@@ -36,6 +36,8 @@
 </template>
 
 <script>
+import "highlight.js/lib/common";
+import "../../assets/basecss/global.less"
 export default {
   data() {
     return {
@@ -125,42 +127,27 @@ export default {
       type: Array,
       required: true,
     },
+    //需要展示的代码，建议用模板字符串
+    codes: {
+      type: String
+    }
   },
 };
 </script>
 
-<style>
-/* .v-enter-active,
-.v-leave-active {
-  transition: all 2s linear;
+<style lang="less">
+.hljs {
+  font-family: Menlo, Monaco, Consolas, Courier, monospace;
 }
-.v-enter,
-.v-leave-to {
-  height: 0;
+.hljs-tag, .hljs-name, .hljs-attr {
+  color: @info-font-color;
 }
-
-.v-leave, .v-enter-to {
-    height: 0;
-} */
-/* .v-enter-active {
-  animation: up 2s;
+.hljs-string {
+  color: @error-font-color;
 }
-.v-leave-active {
-  animation: down 2s;
-} */
-/* .v-enter, .v-leave-to {
-  height: auto;
-} */
-/* @keyframes up {
-  from {height: auto;}
-  to {height: 0px;}
-  
+.panel {
+  width: 65%;
 }
-@keyframes down {
-  from {height: 0;}
-  to {height: auto;}
-} */
-
 .panel h3 {
   margin: 55px 0 20px;
   font-size: 22px;
@@ -174,7 +161,7 @@ export default {
   margin: 14px 0;
 }
 .panel .demoblock {
-  width: 870px;
+  width: 100%;
   margin-bottom: 24px;
   border: 1px solid #ebebeb;
   border-radius: 3px;
@@ -233,7 +220,6 @@ export default {
 .panel .demoblock .meta .highlight .codearea {
   width: 100%;
   line-height: 1.8;
-  font-family: Menlo, Monaco, Consolas, Courier, monospace;
   font-size: 12px;
   margin: 0;
   border: none;
