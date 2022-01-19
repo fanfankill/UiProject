@@ -44,6 +44,7 @@
 </template>
 
 <script>
+import "../../assets/basecss/global.less";
 export default {
   data() {
     return {
@@ -100,15 +101,39 @@ export default {
 #codeblock {
   transition: all 0.3s;
 }
-
 .hljs {
+  line-height: 1.8;
   font-family: Menlo, Monaco, Consolas, Courier, monospace;
+  font-size: 12px;
+  padding: 18px 24px;
+  background-color: #fafafa;
+  border: 1px solid #eaeefb;
+  margin-bottom: 25px;
+  border-radius: 4px;
+  -webkit-font-smoothing: auto;
 }
-.hljs-built_in, .hljs-keyword, .hljs-name, .hljs-selector-tag, .hljs-tag {
+.hljs-built_in,
+.hljs-keyword,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-tag {
   color: @info-font-color!important;
 }
-.hljs-string {
-  color: @error-font-color!important;
+.hljs-string,
+.hljs-meta,
+.hljs-symbol,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-addition {
+  color: @code-string-color!important;
+}
+.hljs,
+.hljs-subst,
+.hljs-attr {
+  color: #000 !important;
+}
+.hljs-tag .hljs-attr {
+  color: @info-font-color!important;
 }
 .panel {
   width: 65%;
