@@ -9,8 +9,14 @@ import router from "./router";
 import "./assets/iconfont/font.css";
 //引入全局样式
 import "./assets/basecss/base.css";
+import './assets/basecss/global.css';
+
+//滚动条插件
+import vuescroll from 'vuescroll';
+import 'vuescroll/dist/vuescroll.css';
 
 Vue.use(fanui);
+Vue.use(vuescroll);
 
 Vue.config.productionTip = false;
 

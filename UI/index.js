@@ -5,15 +5,13 @@ import Container from "./packages/container/index.js";
 import Footer from "./packages/footer/index.js";
 import Header from "./packages/header/index.js";
 import Main from "./packages/main/index.js";
-import Button from "./packages/button/index.js"
 // 组件列表
 const allcomponents=[
     Aside,
     Container,
     Footer,
     Header,
-    Main,
-    Button,
+    Main
 ]
 
 
