@@ -4,11 +4,15 @@
     <p>{{ this.subtitle }}</p>
     <div class="demoblock">
       <div class="source">
-        组件展示区域
         <slot name="showarea"></slot>
       </div>
       <!-- <transition> -->
-      <div class="meta" id="codeblock">
+      <div
+        class="meta"
+        id="codeblock"
+        ref="ayheight"
+        :style="{ height: ToBlockCodeheight + 'px' }"
+      >
         <div class="description">
           <div>
             <p>
@@ -27,82 +31,25 @@
         </div>
       </div>
       <!-- </transition> -->
-      <div class="demo-block-control" @click="blockControl($event)">
-        <i class="iconfont icon-downarrow" @click="iblockControl($event)"></i>
-        <span @click="spanblockControl($event)">显示代码</span>
+      <div class="demo-block-control" @click="blockControl">
+        <i
+          class="iconfont"
+          :class="[isClose ? 'icon-downarrow' : 'icon-uparrow']"
+        ></i>
+        <span v-if="isClose">显示代码</span>
+        <span v-else>隐藏代码</span>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import "highlight.js/lib/common";
-import "../../assets/basecss/global.less"
 export default {
   data() {
     return {
-      isClose: true,
+      isClose: false,
+      BlockCodeheight: "",
     };
-  },
-  methods: {
-    blockControl(e) {
-      let event1 = e.currentTarget;
-      let event2 = e.target;
-      let codeBlock = document.getElementById("codeblock");
-      if (event1 === event2) {
-        if (this.isClose) {
-          codeBlock.style.height = "auto";
-          e.target.children[0].classList.remove("icon-downarrow");
-          e.target.children[0].classList.add("icon-uparrow");
-          e.target.children[1].innerText = "隐藏代码";
-          this.isClose = !this.isClose;
-        } else {
-          e.target.children[0].classList.add("icon-downarrow");
-          e.target.children[0].classList.remove("icon-uparrow");
-          e.target.children[1].innerText = "显示代码";
-          codeBlock.style.height = "0";
-          this.isClose = !this.isClose;
-        }
-      }
-    },
-    iblockControl(e) {
-      let codeBlock = document.getElementById("codeblock");
-      if (this.isClose) {
-        codeBlock.style.height = "auto";
-        e.target.classList.remove("icon-downarrow");
-        e.target.classList.add("icon-uparrow");
-        e.currentTarget.parentElement.children[1].innerText = "隐藏代码";
-        this.isClose = !this.isClose;
-      } else {
-        codeBlock.style.height = "0";
-        e.target.classList.add("icon-downarrow");
-        e.target.classList.remove("icon-uparrow");
-        e.currentTarget.parentElement.children[1].innerText = "显示代码";
-        this.isClose = !this.isClose;
-      }
-    },
-    spanblockControl(e) {
-      let codeBlock = document.getElementById("codeblock");
-      if (this.isClose) {
-        codeBlock.style.height = "auto";
-        e.currentTarget.parentElement.children[0].classList.remove(
-          "icon-downarrow"
-        );
-        e.currentTarget.parentElement.children[0].classList.add("icon-uparrow");
-        e.target.innerText = "隐藏代码";
-        this.isClose = !this.isClose;
-      } else {
-        e.currentTarget.parentElement.children[0].classList.add(
-          "icon-downarrow"
-        );
-        e.currentTarget.parentElement.children[0].classList.remove(
-          "icon-uparrow"
-        );
-        e.target.innerText = "显示代码";
-        codeBlock.style.height = "0";
-        this.isClose = !this.isClose;
-      }
-    },
   },
   props: {
     // 标题
@@ -129,21 +76,39 @@ export default {
     },
     //需要展示的代码，建议用模板字符串
     codes: {
-      type: String
-    }
+      type: String,
+    },
+  },
+  computed: {
+    ToBlockCodeheight: function () {
+      return this.isClose ? "0" : this.BlockCodeheight;
+    },
+  },
+  methods: {
+    blockControl() {
+      this.isClose = !this.isClose;
+    },
+  },
+  mounted() {
+    //先展开状态获取高度 再关闭
+    this.BlockCodeheight = this.$refs.ayheight.offsetHeight;
+    this.isClose = true;
   },
 };
 </script>
-
 <style lang="less">
+#codeblock {
+  transition: all 0.3s;
+}
+
 .hljs {
   font-family: Menlo, Monaco, Consolas, Courier, monospace;
 }
-.hljs-tag, .hljs-name, .hljs-attr {
-  color: @info-font-color;
+.hljs-built_in, .hljs-keyword, .hljs-name, .hljs-selector-tag, .hljs-tag {
+  color: @info-font-color!important;
 }
 .hljs-string {
-  color: @error-font-color;
+  color: @error-font-color!important;
 }
 .panel {
   width: 65%;
@@ -181,7 +146,6 @@ export default {
 
 .panel .demoblock .meta {
   width: 100%;
-  height: 0;
   background-color: #fafafa;
   border-top: 1px solid #eaeefb;
   overflow: hidden;
@@ -243,24 +207,29 @@ export default {
   position: relative;
   color: #d3dce6;
 }
+.demo-block-control {
+  transition: all 0.3s;
+  overflow: hidden;
+}
 .panel .demoblock .demo-block-control:hover {
   color: #21a8f3;
   background-color: #f9fafc;
 }
 .panel .demoblock .demo-block-control:hover > span {
-  display: inline-block;
-  color: #21a8f3;
+  opacity: 1;
+  top: 0px;
 }
 .panel .demoblock .demo-block-control i {
   font-size: 16px;
   line-height: 44px;
 }
 .panel .demoblock .demo-block-control span {
+  transition: all 0.3s;
   position: absolute;
+  top: -20px;
   font-size: 14px;
   line-height: 44px;
-  transition: 0.3s;
-  display: none;
+  opacity: 0;
   padding-left: 8px;
 }
 </style>
