@@ -41,7 +41,7 @@ import "../../assets/basecss/global.less"
 export default {
   data() {
     return {
-      isClose: false,
+      isClose: true,
     };
   },
   methods: {

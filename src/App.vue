@@ -10,6 +10,7 @@
           <asider></asider>
         </div>
         <div class="main">
+          <show-component :codes="codes" :attributes="['type', 'size']" ctname="Button"></show-component>
           <router-view></router-view>
         </div>
       </div>
@@ -23,13 +24,24 @@ import top from "./components/top";
 import logo from "./components/logo";
 import asider from "./components/asider";
 
+import ShowComponent from "./components/showcomponent"
 
 export default {
+  data() {
+    return {
+      codes: `
+      <template>
+        <ct-button>按钮</ct-button>
+      </template>
+      `
+    }
+  },
   name: "App",
   components: {
     top,
     logo,
     asider,
+    ShowComponent,
   },
 };
 
