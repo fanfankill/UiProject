@@ -1,8 +1,13 @@
 //引入组件
-import Button from "./packages/Button";
+import Aside from "./packages/aside/index.js";
+import Container from "./packages/container/index.js";
+import Footer from "./packages/footer/index.js";
+import Header from "./packages/header/index.js";
+import Main from "./packages/main/index.js";
+import Button from "./packages/button/index.js";
 
 // 组件列表
-const allcomponents = [Button];
+const allcomponents = [Aside, Container, Footer, Header, Main, Button];
 
 //组件注册
 const install = function (Vue) {
