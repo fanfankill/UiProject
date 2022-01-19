@@ -47,13 +47,11 @@ export default {
   height: 80px;
   position: fixed;
   top: 0;
-  background-color: white;
   border-bottom: solid 1px gainsboro;
 }
 .aside {
   overflow: auto;
   width: 240px;
-  background-color: white;
   overflow: auto;
   margin-top: 80px;
   border-right: solid 1px gainsboro;
@@ -62,7 +60,6 @@ export default {
   margin-top: 80px;
   padding: 20px;
   flex: 1;
-  background-color: white;
   overflow: auto;
 }
 .main::-webkit-scrollbar {

@@ -3,13 +3,32 @@
     <li><router-link to="/style">指南</router-link></li>
     <li><router-link to="/">组件</router-link></li>
     <li><router-link to="/">资源</router-link></li>
-    <li class="iconfont icon-lights"></li>
+    <li class="iconfont icon-lights" @click="toggleMode"></li>
     <li class="iconfont icon-zhongwen"><a></a></li>
   </ul>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      mode: "light",
+    };
+  },
+  methods: {
+    toggleMode() {
+      if (this.mode === "light") {
+        document.body.style.backgroundColor = "#272727";
+        document.body.style.color = "white";
+        this.mode = "dark";
+      } else {
+        document.body.style.backgroundColor = "white";
+        document.body.style.color = "black";
+        this.mode = "light";
+      }
+    },
+  },
+};
 </script>
 
 <style scoped>
