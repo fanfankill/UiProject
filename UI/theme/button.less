@@ -38,8 +38,8 @@
   border-color:  @info-color;
   &:hover,
   &:focus{
-    background: #a6a9ad;
-    border-color: #a6a9ad;
+    background: #66b1ff;
+    background-color: #66b1ff;
     color: #fff;
   }
 }
@@ -145,10 +145,10 @@
 //!important使属性值的优先级最高
 //@font-face用于设置自定义字体
 @font-face {
-  font-family: "iconfont"; /* Project id 3143270 */
-  src: url('//at.alicdn.com/t/font_3143270_ff5ubtk79l9.woff2?t=1642242349810') format('woff2'),
-  url('//at.alicdn.com/t/font_3143270_ff5ubtk79l9.woff?t=1642242349810') format('woff'),
-  url('//at.alicdn.com/t/font_3143270_ff5ubtk79l9.ttf?t=1642242349810') format('truetype');
+  font-family: 'iconfont';  /* Project id 3143270 */
+  src: url('//at.alicdn.com/t/font_3143270_du1j2jlg1f8.woff2?t=1642580218135') format('woff2'),
+  url('//at.alicdn.com/t/font_3143270_du1j2jlg1f8.woff?t=1642580218135') format('woff'),
+  url('//at.alicdn.com/t/font_3143270_du1j2jlg1f8.ttf?t=1642580218135') format('truetype');
 }
 
 [class*='ct-icon']{
@@ -159,14 +159,22 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.ct-icon-bluetoothoff:before{
-  content:"\e697";
-}
-
 .ct-button [class*='ct-icon']+span{
   margin-left: 5px;
 }
 
 .ct-button.is-disabled{
   cursor: no-drop;
+}
+
+.ct-icon-loading {
+  animation: rotating 2s linear infinite;
+}
+
+.ct-icon-loading:before{
+  content: "\e61e";
+}
+
+.ct-icon-delete:before {
+ content: "\e62b;";
 }

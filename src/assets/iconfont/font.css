@@ -32,3 +32,11 @@
 .icon-heianmoshi:before {
   content: "\e7cb";
 }
+
+.icon-delete:before{
+  content: "\e67e";
+}
+
+.icon-loading:before{
+  content: "\e62b";
+}
