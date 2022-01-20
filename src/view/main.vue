@@ -10,7 +10,6 @@
           <aside-ul></aside-ul>
         </div>
         <div class="main">
-          <ct-panel title="基础用法" subtitle="基础的按钮用法"></ct-panel>
         </div>
       </div>
     </div>
@@ -22,13 +21,11 @@ import "../assets/basecss/layout.css";
 import headul from "./page/top";
 import HeadTitle from "./page/HeadTitle";
 import AsideUl from "./aside/AsideUl";
-import CtPanel from "./page/CtPanel.vue";
 export default {
   components: {
     headul,
     HeadTitle,
-    AsideUl,
-    CtPanel
+    AsideUl
   }
 };
 </script>

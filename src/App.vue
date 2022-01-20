@@ -10,26 +10,6 @@
           <asider></asider>
         </div>
         <div class="main">
-          <show-component
-            title="基础用法"
-            subtitle="按钮的基础用法"
-            :attributes="['type', 'size']"
-            ctname="Button"
-            :codes="codes"
-          >
-            <template v-slot:showarea>
-              <ct-container>
-                <ct-aside></ct-aside>
-                <ct-container>
-                  <ct-header></ct-header>
-                  <ct-main>
-                    <ct-panel></ct-panel>
-                  </ct-main>
-                  <ct-footer></ct-footer>
-                </ct-container>
-              </ct-container>
-            </template>
-          </show-component>
           <router-view></router-view>
         </div>
       </div>
@@ -42,16 +22,10 @@ import top from "./components/top";
 import logo from "./components/logo";
 import asider from "./components/asider";
 
-import ShowComponent from "./components/showcomponent";
-
 export default {
   data() {
     return {
-      codes: `
-<template>
-  <ct-button>按钮</ct-button>
-</template>
-      `,
+      
     };
   },
   name: "App",
@@ -59,7 +33,6 @@ export default {
     top,
     logo,
     asider,
-    ShowComponent,
   },
 };
 </script>
