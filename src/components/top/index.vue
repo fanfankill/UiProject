@@ -1,12 +1,17 @@
 <template>
   <ul class="headul">
     <li
-    v-for="(item,index) in mylist" 
-    :key="index"
-    @click="handleclick(index)">
-    <router-link :to="item.to" :class="['base_link',{'is-active':current==index}] ">{{item.name}}</router-link>
+      v-for="(item, index) in mylist"
+      :key="index"
+      @click="handleclick(index)"
+    >
+      <router-link
+        :to="item.to"
+        :class="['base_link', { 'is-active': current == index }]"
+        >{{ item.name }}</router-link
+      >
     </li>
-    
+
     <li class="iconfont icon-lights"></li>
     <li class="iconfont icon-zhongwen"><a></a></li>
   </ul>
@@ -16,26 +21,39 @@
 export default {
   data() {
     return {
-      current:0,
-      mylist:[
-      {
-        to:'/style',
-        name:'指南'
-        },{
-          to:'/components',
-          name:'组件'
-        },{
-          to:'/',
-          name:'资源'
-        }
-      ]
-    }
+      current: 0,
+      mylist: [
+        {
+          to: "/style",
+          name: "指南",
+        },
+        {
+          to: "/components",
+          name: "组件",
+        },
+        {
+          to: "/",
+          name: "资源",
+        },
+      ],
+    };
   },
-  methods:{
-    handleclick(index){
-      this.current=index
-    }
-  }
+  methods: {
+    handleclick(index) {
+      this.current = index;
+    },
+    toggleMode() {
+      if (this.mode === "light") {
+        document.body.style.backgroundColor = "#272727";
+        document.body.style.color = "white";
+        this.mode = "dark";
+      } else {
+        document.body.style.backgroundColor = "white";
+        document.body.style.color = "black";
+        this.mode = "light";
+      }
+    },
+  },
 };
 </script>
 
@@ -79,10 +97,10 @@ export default {
   height: 1px;
   background: @info-font-color;
 }
-.is-active{
+.is-active {
   color: @info-font-color;
 }
-.is-active::after{
+.is-active::after {
   content: "";
   display: inline-block;
   position: absolute;
@@ -90,6 +108,6 @@ export default {
   left: calc(50% - 24px);
   width: 50px;
   height: 1px;
-  background:@info-font-color;
+  background: @info-font-color;
 }
 </style>

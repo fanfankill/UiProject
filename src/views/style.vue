@@ -2,11 +2,12 @@
   <div>
     <h1 class="title">色彩</h1>
     <br />
-    <ul>
+    <ul class="intro">
       <li>1. 主色系为蓝色。</li>
       <li>2. 点缀色为黄色及绿色，请勿大面积使用点缀色。</li>
       <li>3. 状态色包括四种：错误，警告，成功，信息。</li>
       <li>4. 背景色包括浅灰色系，浅蓝色系，和浅状态色系。</li>
+      <li>5. 主色和状态色的hover色偏浅，active色偏黑。</li>
     </ul>
     <br />
 
@@ -71,10 +72,11 @@
     </div>
 
     <div style="display: flex">
-      <button style="background-color: #21a8f3">主色</button>
-      <button style="background-color: #f06897">危险</button>
-      <button style="background-color: #00ce3f">安全</button>
-      <button style="background-color: #a8ddfa">信息</button>
+      <button class="main">主色</button>
+      <button class="error">错误</button>
+      <button class="danger">警告</button>
+      <button class="success">成功</button>
+      <button class="info">信息</button>
     </div>
 
     <div>
@@ -115,15 +117,17 @@
   </div>
 </template>
 
-<style scoped>
-ul,
-li {
-  list-style: none;
-  padding: 0;
-}
+<style scoped lang="less">
 li {
   margin-left: 10px;
   margin-bottom: 10px;
+}
+.intro {
+  background-color: #cfecfc;
+  padding: 10px;
+  margin: 10px;
+  width: 50vw;
+  border-radius: 5px;
 }
 .title {
   font-weight: 400;
@@ -156,5 +160,50 @@ button {
   padding: 8px 15px;
   border-radius: 5px;
   margin: 10px;
+}
+.main {
+  background-color: #21a8f3;
+  &:hover {
+    background-color: #5fbcee;
+  }
+  &:active {
+    background-color: #1b9adf;
+  }
+}
+.error {
+  background-color: #f06897;
+  &:hover {
+    background-color: #ec8eaf;
+  }
+  &:active {
+    background-color: #d67b9b;
+  }
+}
+.danger {
+  background-color: #e79f18;
+  &:hover {
+    background-color: #ecb959;
+  }
+  &:active {
+    background-color: #d18f16;
+  }
+}
+.success {
+  background-color: #00ce3f;
+  &:hover {
+    background-color: #3bdf6c;
+  }
+  &:active {
+    background-color: #03b639;
+  }
+}
+.info {
+  background-color: #a8ddfa;
+  &:hover {
+    background-color: #a1d1eb;
+  }
+  &:active {
+    background-color: #79bce0;
+  }
 }
 </style>

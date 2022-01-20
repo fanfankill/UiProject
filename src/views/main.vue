@@ -38,25 +38,14 @@
     <router-view>
 
     </router-view>
-
   </div>
 </template>
 
 <script>
-
-// import ShowComponent from '../components/showcomponent'
-
 export default {
-
-  components:{
-   
-    // ShowComponent
-  }
+  
 }
-
-
 </script>
-
 <style scoped lang="less">
 
 .container {
@@ -70,8 +59,10 @@ export default {
   padding-bottom: 80px;
 }
 
-.showdiv{
+.showdiv {
   height: 400px;
   width: 80%;
 }
+
 </style>
+

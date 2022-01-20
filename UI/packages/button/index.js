@@ -6,3 +6,4 @@ Button.install = function(Vue) {
 };
 
 export default Button;
+

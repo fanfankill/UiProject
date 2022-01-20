@@ -33,6 +33,7 @@
   content: "\e7cb";
 }
 
+
 .icon-downarrow:before {
   content: "\e642";
 }
@@ -41,4 +42,11 @@
 }
 .icon-avatar:before {
   content: "\e676";
+}
+.icon-delete:before{
+  content: "\e67e";
+}
+
+.icon-loading:before{
+  content: "\e62b";
 }
