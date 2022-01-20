@@ -20,6 +20,7 @@ import Highlight from './hljsplugin/highlight'; // 这里是你项目highlight.j
 Vue.use(Highlight);
 
 
+
 Vue.use(fanui);
 Vue.use(vuescroll);
 

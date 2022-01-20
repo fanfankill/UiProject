@@ -24,6 +24,10 @@ export default {
           name: "标记",
           eName: 'badge',
           href: "#",
+        },  {
+          name: "下拉",
+          eName: 'dropdown',
+          href: "#",
         },
       ],
     };

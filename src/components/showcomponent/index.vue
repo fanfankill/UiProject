@@ -64,12 +64,10 @@ export default {
     // 组件名称
     ctname: {
       type: String,
-      required: true,
     },
     // 属性列表，字符串数组
     attributes: {
       type: Array,
-      required: true,
     },
     //需要展示的代码，建议用模板字符串
     codes: {

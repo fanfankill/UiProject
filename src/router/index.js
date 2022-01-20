@@ -7,6 +7,8 @@ const mainView = () => import("../views/main.vue");
 const styleView = () => import("../views/style.vue");
 const Button = () => import("../components/button/index")
 const Link = () => import("../components/link/index")
+//从example引入展示页面
+const dropdown = () => import("../example/dropdown_example/main.vue")
 
 const routes = [
   {
@@ -20,6 +22,9 @@ const routes = [
       {
         path: "badge",
         component: Link
+      },{
+        path:'dropdown',
+        component:dropdown
       }
     ]
   },
