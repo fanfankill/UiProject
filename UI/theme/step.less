@@ -1,0 +1,35 @@
+@import url(./common/global.less);
+
+.ct-step {
+  .ct-step__head {
+    overflow: hidden;
+    height: 26px;
+
+    .ct-step__img {
+      position: absolute;
+      z-index: 99;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: white;
+      border: 2px solid @grey-bg-color1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: @grey-bg-color1;
+    }
+
+    .ct-step__line {
+      margin-top: 12px;
+      transform: translateY(-50%);
+      width: auto;
+      height: 1px;
+      border: 1px solid @grey-bg-color1;
+    }
+  }
+
+  .ct-step__main {
+    font-size: 16px;
+    color: @grey-bg-color1;
+  }
+}
