@@ -1,21 +1,28 @@
 <template>
   <div class="mycontainer">
- 
-
+    <ct-rate
+        :num=num
+        :size=size
+        @getStarNum=getStarNum>
+    </ct-rate>
   </div>
 </template>
 
 <script>
 
 export default {
-    name:'showcompont',
-      mounted(){
-       
-      },
-    components:{
-    
+  name: 'showcompont',
+  data() {
+    return {
+      num: 3,
+      size: 16
     }
-  
+  },
+  methods:{
+    getStarNum(number){
+      console.log(number)
+    },
+  }
 }
 
 </script>
@@ -27,7 +34,7 @@ export default {
   height: 3000px;
 }
 
-.showdiv{
+.showdiv {
   height: 400px;
   width: 80%;
 }

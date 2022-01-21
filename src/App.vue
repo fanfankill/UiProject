@@ -10,7 +10,8 @@
           <asider></asider>
         </div>
         <div class="main">
-          <router-view></router-view>
+          <router-view>
+          </router-view>
         </div>
       </div>
     </div>
@@ -23,12 +24,13 @@ import top from "./components/top";
 import logo from "./components/logo";
 import asider from "./components/asider";
 
+
 export default {
   name: "App",
   components: {
     top,
     logo,
-    asider,
+    asider
   },
 };
 
@@ -41,9 +43,11 @@ export default {
   flex: 1;
   height: 100vh;
 }
+
 .is-vertal {
   flex-direction: column;
 }
+
 .head {
   width: 100%;
   height: 80px;
@@ -52,6 +56,7 @@ export default {
   background-color: white;
   border-bottom: solid 1px gainsboro;
 }
+
 .aside {
   overflow: auto;
   width: 240px;
@@ -60,6 +65,7 @@ export default {
   margin-top: 80px;
   border-right: solid 1px gainsboro;
 }
+
 .main {
   margin-top: 80px;
   padding: 20px 0 0 40px;
@@ -67,6 +73,7 @@ export default {
   background-color: white;
   overflow: auto;
 }
+
 .main::-webkit-scrollbar {
   width: 0;
 }

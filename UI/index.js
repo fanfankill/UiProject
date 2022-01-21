@@ -5,6 +5,7 @@ import Container from "./packages/container/index.js";
 import Footer from "./packages/footer/index.js";
 import Header from "./packages/header/index.js";
 import Main from "./packages/main/index.js";
+import Rate from "./packages/rate/index.js"
 // 组件列表
 
 const allcomponents = [
@@ -14,6 +15,7 @@ const allcomponents = [
     Header,
     Main,
     Badge,
+    Rate
 ]
 
 //组件注册
