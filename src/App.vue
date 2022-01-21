@@ -10,7 +10,6 @@
           <asider></asider>
         </div>
         <div class="main">
-            <show-parameter :title="title" :contents="contents"></show-parameter>
           <router-view>
           </router-view>
         </div>
@@ -24,28 +23,14 @@
 import top from "./components/top";
 import logo from "./components/logo";
 import asider from "./components/asider";
-import ShowParameter from "./components/showparameter/ShowParameter";
+
 
 export default {
   name: "App",
   components: {
     top,
     logo,
-    asider,
-    ShowParameter
-  }, data() {
-    return {
-      title: ['参数', '说明', '类型', '可选值', '默认值'],
-      contents: [
-        ['title', '标题', 'String', '—', '—'],
-        ['confirm-button-text', '确认按钮的文字', 'String', '—', '—'],
-        ['cancel-button-text', '取消按钮的文字', 'String', '—', '—'],
-        ['title', '标题', 'String', '—', '—'],
-        ['title', '标题', 'String', '—', '—'],
-        ['title', '标题', 'String', '—', '—'],
-        ['title', '标题', 'String', '—', '—']
-      ]
-    }
+    asider
   },
 };
 
