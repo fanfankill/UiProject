@@ -19,13 +19,17 @@
 </template>
 
 <script>
-
 import top from "./components/top";
 import logo from "./components/logo";
 import asider from "./components/asider";
 
 
 export default {
+  data() {
+    return {
+      
+    };
+  },
   name: "App",
   components: {
     top,
@@ -33,7 +37,6 @@ export default {
     asider
   },
 };
-
 </script>
 
 <style scoped lang="less">
@@ -53,7 +56,6 @@ export default {
   height: 80px;
   position: fixed;
   top: 0;
-  background-color: white;
   border-bottom: solid 1px gainsboro;
 }
 
@@ -61,7 +63,6 @@ export default {
   overflow: auto;
   width: 240px;
   background-color: white;
-  overflow: auto;
   margin-top: 80px;
   border-right: solid 1px gainsboro;
 }
@@ -70,7 +71,6 @@ export default {
   margin-top: 80px;
   padding: 20px 0 0 40px;
   flex: 1;
-  background-color: white;
   overflow: auto;
 }
 
