@@ -23,6 +23,11 @@ import logo from "./components/logo";
 import asider from "./components/asider";
 
 export default {
+  data() {
+    return {
+      
+    };
+  },
   name: "App",
   components: {
     top,
