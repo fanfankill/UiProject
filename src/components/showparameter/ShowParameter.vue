@@ -3,12 +3,12 @@
     <table>
       <thead>
       <tr>
-        <td v-for="(item,index) in title" v-bind:key="index">{{ item }}</td>
+        <td v-for="(item,index) in parameter.title" v-bind:key="index">{{ item }}</td>
       </tr>
       </thead>
 
       <tbody>
-      <tr v-for="(content,index) in contents" :key="index">
+      <tr v-for="(content,index) in parameter.contents" :key="index">
         <td v-for="(item,index) in content" :key="index">{{ item }}</td>
       </tr>
       </tbody>
@@ -20,8 +20,7 @@
 export default {
   name: "ShowParameter",
   props: {
-    title: Array,
-    contents: Array
+    parameter: Object,
   }
 }
 </script>
