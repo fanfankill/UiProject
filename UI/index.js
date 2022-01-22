@@ -4,15 +4,13 @@ import Container from "./packages/container/index.js";
 import Footer from "./packages/footer/index.js";
 import Header from "./packages/header/index.js";
 import Main from "./packages/main/index.js";
-<<<<<<< HEAD
 import DropDown from './packages/dropdown/index.js'
 import DropDownItem from './packages/dropdown-item/index.js'
 import DropDownMenu from './packages/dropdown-menu/index.js'
 import Button from "./packages/button/index.js"
 import Badge from "./packages/badge/index.js"
-=======
 import CtAvatar from "./packages/avatar/index";
->>>>>>> wq
+
 // 组件列表
 
 const allcomponents = [
@@ -23,13 +21,11 @@ const allcomponents = [
     Header,
     Main,
     Badge,
-<<<<<<< HEAD
     DropDown,
     DropDownItem,
-    DropDownMenu
-=======
+    DropDownMenu,
     CtAvatar
->>>>>>> wq
+
 ]
 
 

@@ -6,7 +6,7 @@
         <headul></headul>
       </div>
       <div class="container">
-        <div class="aside">
+        <div>
           <aside-ul></aside-ul>
         </div>
         <div class="main">
@@ -17,7 +17,6 @@
 </template>
 
 <script>
-import "../assets/basecss/layout.css";
 import headul from "./page/top";
 import HeadTitle from "./page/HeadTitle";
 import AsideUl from "./aside/AsideUl";
@@ -31,14 +30,15 @@ export default {
 </script>
 
 <style>
-.mainrightshowdiv {
-  height: 1000px;
-  width: 100%;
-  background-color: white;
+.head{
+  position: relative;
 }
 .center {
   width: 700px;
   height: 500px;
   background-color: red;
+}
+.icon-youceanniushouqi{
+  transform: rotate(180deg);
 }
 </style>
