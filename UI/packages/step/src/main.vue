@@ -1,18 +1,20 @@
 <template>
   <div
     class="ct-step"
+    :class="'ct-step__' + $parent.direction"
     :style="{
       flexBasis: $parent.space === 'auto' ? '50%' : $parent.space + 'px',
-      flexDirection: $parent.direction,
     }"
   >
     <div class="ct-step__head">
       <!-- <slot></slot> -->
-      <div class="ct-step__img" :class="'ct-step__' + status">
-        <div v-if="icon" :class="icon"></div>
-        <div v-else>
-          {{ index + 1 }}
-        </div>
+      <div
+        v-if="icon"
+        class="iconfont ct-step__iconfont"
+        :class="[icon, 'ct-step__' + status]"
+      ></div>
+      <div v-else class="ct-step__img" :class="'ct-step__' + status">
+        {{ index + 1 }}
       </div>
       <div class="ct-step__line" :class="'ct-step__' + lineStatus"></div>
     </div>
