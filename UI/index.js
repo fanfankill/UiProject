@@ -1,24 +1,11 @@
-//引入组件
-import Aside from "./packages/aside/index.js";
-import Container from "./packages/container/index.js";
-import Footer from "./packages/footer/index.js";
-import Header from "./packages/header/index.js";
-import Main from "./packages/main/index.js";
-import Button from "./packages/button/index.js";
-import Steps from "./packages/steps";
-import Step from "./packages/step";
-
 // 组件列表
-const allcomponents = [
-  Aside,
-  Container,
-  Footer,
-  Header,
-  Main,
-  Button,
-  Steps,
-  Step,
-];
+const allcomponents = [];
+
+const requireComponents = require.context("./packages", true, /index\.js$/);
+
+requireComponents.keys().forEach((key) => {
+  allcomponents.push(requireComponents(key).default);
+});
 
 //组件注册
 const install = function (Vue) {

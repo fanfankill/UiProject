@@ -23,17 +23,17 @@ export default {
         {
           name: "按钮",
           eName: "button",
-          href: "/button",
+          href: "button",
         },
         {
           name: "标记",
           eName: "badge",
-          href: "/badge",
+          href: "#",
         },
         {
-          name: "步骤",
-          eName: "steps",
-          href: "/steps",
+          name: "下拉",
+          eName: "dropdown",
+          href: "#",
         },
       ],
     };

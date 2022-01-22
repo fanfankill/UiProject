@@ -25,3 +25,15 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #cdcdcd;
 }
+
+.block_show_div{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+.flex_col{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}

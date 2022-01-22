@@ -1,3 +1,4 @@
+
 <template>
   <!--
   封装一个element-ui风格的按钮
@@ -78,7 +79,6 @@ export default {
   created() {
     console.log(this.type);
   },
-
   computed:{
     _ctFormItemSize(){
       return (this.ctFormItem||{}).ctFornItemSize;

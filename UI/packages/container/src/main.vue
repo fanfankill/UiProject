@@ -12,8 +12,8 @@ export default {
     },
 
     mounted(){
-      console.log(this.$slots);
-      console.log(this.isvertical);
+      // console.log(this.$slots);
+      // console.log(this.isvertical);
     },
 
     computed:{
@@ -23,7 +23,7 @@ export default {
           }else if(this.direction=='horizontal'){
               return false
           }
-          console.log(this.$slots.default);
+          // console.log(this.$slots.default);
           return this.$slots&&this.$slots.default?this.$slots.default.some(vnode=>{
             const tag=vnode.componentOptions&&vnode.componentOptions.tag
               return  tag=='ct-header'||tag=='ct-footer'

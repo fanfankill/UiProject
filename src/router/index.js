@@ -1,13 +1,18 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
+import examples from "../examples";
+
 Vue.use(VueRouter);
 
 //路由引入
 const mainView = () => import("../views/main.vue");
 const styleView = () => import("../views/style.vue");
+
 const Button = () => import("../components/button/index");
 const Link = () => import("../components/link/index");
-const Steps = () => import("../components/steps/index");
+
+//从example引入展示页面
+const dropdown = () => import("../examples/dropdown");
 
 const routes = [
   {
@@ -27,10 +32,20 @@ const routes = [
         component: Link,
       },
       {
-        path: "steps",
-        component: Steps,
+        path: "dropdown",
+        component: dropdown,
       },
     ],
+  },
+  {
+    path: "/examples",
+    component: mainView,
+    children: examples.map((example) => {
+      return {
+        path: example.name,
+        component: example,
+      };
+    }),
   },
   {
     path: "/style",

@@ -58,6 +58,8 @@
 
 <script>
 export default {
+  name: "steps",
+  chName: "步骤条",
   data() {
     return {
       activeIndex: 0,
