@@ -1,18 +1,7 @@
 <template>
   <div class="mycontainer">
-    <!-- <showdiv
-    title="容器"
-    derection="小容器组件"
-    detailcode="<code><h3>hh</h3></code>">
-          <ct-container>
-        <ct-aside></ct-aside>
-      <ct-container>
-          <ct-header></ct-header>
-        <ct-main></ct-main>
-        <ct-footer></ct-footer>
-      </ct-container>
-      </ct-container>
-    </showdiv> -->
+
+    <router-view></router-view>
   </div>
 </template>
 
@@ -23,15 +12,15 @@ export default {
     // components:{
     //   showdiv
     // }
-  
+}
+</script>
+<style scoped lang="less">
+
+.mycontainer {
+  border: 2px solid @vice-color1;
+  background-color: @blue-bg-color1;
+  padding-bottom: 80px;
 }
 
-</script>
-
-<style scoped lang="less">
-// .container {
-//   // border: 2px solid @vice-color1;
-//   // background-color: @blue-bg-color1;
-// }
-
 </style>
+
