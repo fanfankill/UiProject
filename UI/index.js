@@ -1,10 +1,11 @@
 //引入组件
-import Badge from "./packages/badge";
 import Aside from "./packages/aside/index.js";
 import Container from "./packages/container/index.js";
 import Footer from "./packages/footer/index.js";
 import Header from "./packages/header/index.js";
 import Main from "./packages/main/index.js";
+import Badge from "./packages/badge";
+import Skeleton from "./packages/skeleton";
 // 组件列表
 
 const allcomponents = [
@@ -14,6 +15,7 @@ const allcomponents = [
     Header,
     Main,
     Badge,
+    Skeleton,
 ]
 
 //组件注册
