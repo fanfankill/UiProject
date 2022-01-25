@@ -40,7 +40,7 @@
 </template>
 
 <script>
-import "../../assets/showcomponentcss/index.less";
+import "../../assets/showcomponent/index.less";
 export default {
   data() {
     return {
@@ -72,7 +72,7 @@ export default {
     //需要展示的代码，建议用模板字符串
     codes: {
       type: String,
-    }
+    },
   },
   computed: {
     ToBlockCodeheight: function () {
@@ -91,5 +91,4 @@ export default {
   },
 };
 </script>
-<style lang="less">
-</style>
+<style lang="less"></style>

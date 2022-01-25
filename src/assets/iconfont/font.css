@@ -1,10 +1,10 @@
 @font-face {
   font-family: "iconfont"; /* Project id 3143270 */
-  src: url("//at.alicdn.com/t/font_3143270_ws56re2sqo8.woff2?t=1642830675647")
+  src: url("//at.alicdn.com/t/font_3143270_xtxdenqir7b.woff2?t=1643111911496")
       format("woff2"),
-    url("//at.alicdn.com/t/font_3143270_ws56re2sqo8.woff?t=1642830675647")
+    url("//at.alicdn.com/t/font_3143270_xtxdenqir7b.woff?t=1643111911496")
       format("woff"),
-    url("//at.alicdn.com/t/font_3143270_ws56re2sqo8.ttf?t=1642830675647")
+    url("//at.alicdn.com/t/font_3143270_xtxdenqir7b.ttf?t=1643111911496")
       format("truetype");
 }
 
@@ -14,6 +14,38 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-jiazai:before {
+  content: "\e699";
+}
+
+.icon-check-line:before {
+  content: "\e64c";
+}
+
+.icon-bianji1:before {
+  content: "\e625";
+}
+
+.icon-iconfontapple:before {
+  content: "\e634";
+}
+
+.icon-linux:before {
+  content: "\e6c1";
+}
+
+.icon-windows-fill:before {
+  content: "\e882";
+}
+
+.icon-youceanniushouqi:before {
+  content: "\e607";
+}
+
+.icon-hanbaoanniu:before {
+  content: "\e61a";
 }
 
 .icon-yunshangchuan:before {

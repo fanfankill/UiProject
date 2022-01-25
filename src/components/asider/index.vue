@@ -4,7 +4,7 @@
       <ul>
         <li v-for="(item, index) in sideNav" :key="index">
           <router-link
-            :to="'/components/' + item.eName"
+            :to="'/examples/' + item.eName"
             tag="li"
             active-class="ct-aside-active"
             >{{ `${item.name} ${item.eName}` }}</router-link
@@ -16,26 +16,17 @@
 </template>
 
 <script>
+import examples from "../../examples";
+
 export default {
   data() {
     return {
-      sideNav: [
-        {
-          name: "按钮",
-          eName: "button",
-          href: "button",
-        },
-        {
-          name: "标记",
-          eName: "badge",
-          href: "#",
-        },
-        {
-          name: "下拉",
-          eName: "dropdown",
-          href: "#",
-        },
-      ],
+      sideNav: examples.map((example) => {
+        return {
+          name: example.chName,
+          eName: example.name,
+        };
+      }),
     };
   },
 };
