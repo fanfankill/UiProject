@@ -9,6 +9,8 @@ const Button = () => import("../components/button/index")
 const Link = () => import("../components/link/index")
 //从example引入展示页面
 const dropdown = () => import("../example/dropdown_example/main.vue")
+const avatar = () => import("../example/Avatar_example/main.vue")
+const dialog = () => import("../example/dialog_example/main.vue")
 
 const routes = [
   {
@@ -25,6 +27,12 @@ const routes = [
       },{
         path:'dropdown',
         component:dropdown
+      },{
+        path: 'avatar',
+        component: avatar
+      },{
+        path: 'dialog',
+        component: dialog
       }
     ]
   },

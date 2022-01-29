@@ -29,6 +29,16 @@ export default {
           eName: 'dropdown',
           href: "#",
         },
+        {
+          name: "头像",
+          eName: 'avatar',
+          href: "#"
+        },
+        {
+          name: "对话框",
+          eName: 'dialog',
+          href: "#"
+        }
       ],
     };
   },
