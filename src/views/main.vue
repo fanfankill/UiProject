@@ -21,24 +21,29 @@
    <span>12</span>">
        <template v-slot:showarea>
        <ct-container>
-        <ct-aside></ct-aside>
-      <ct-container>
-          <ct-header></ct-header>
-        <ct-main>
-          <ct-panel></ct-panel>
-        </ct-main>
-        <ct-footer></ct-footer>
-      </ct-container>
-      </ct-container>
        </template>
     </show-component> -->
+<<<<<<< HEAD
 
     <router-view> </router-view>
+=======
+    <router-view></router-view>
+>>>>>>> ffc908d72a99b0c9140b88181a0b317809f2cdc2
   </div>
 </template>
 
 <script>
+<<<<<<< HEAD
 export default {};
+=======
+// import showdiv from '../components/showcompont'
+export default {
+    name:'showcompont',
+    // components:{
+    //   showdiv
+    // }
+}
+>>>>>>> ffc908d72a99b0c9140b88181a0b317809f2cdc2
 </script>
 <style scoped lang="less">
 .container {
@@ -51,9 +56,12 @@ export default {};
   // background-color: @blue-bg-color1;
   padding-bottom: 80px;
 }
+<<<<<<< HEAD
 
 .showdiv {
   height: 400px;
   width: 80%;
 }
+=======
+>>>>>>> ffc908d72a99b0c9140b88181a0b317809f2cdc2
 </style>

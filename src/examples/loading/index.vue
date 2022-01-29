@@ -25,7 +25,6 @@ export default {
       loading3: true,
       options3: {
         text: "自定义加载文字",
-        icon: "图案",
         animeStyle: "moon",
       },
     };
