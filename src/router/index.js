@@ -9,6 +9,7 @@ const Button = () => import("../components/button/index")
 const Link = () => import("../components/link/index")
 //从example引入展示页面
 const dropdown = () => import("../example/dropdown_example/main.vue")
+const drawer = () => import("../example/drawer_example/main.vue")
 
 const routes = [
   {
@@ -25,6 +26,9 @@ const routes = [
       },{
         path:'dropdown',
         component:dropdown
+      },{
+        path:'drawer',
+        component:drawer
       }
     ]
   },

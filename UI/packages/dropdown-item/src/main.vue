@@ -25,6 +25,7 @@ export default {
             console.log('?');
             this.dropdown.isshowlist=false
           }if(this.dropdown.HideNoShow){
+               this.dropdown.isshowlist=false
             e.stopPropagation();
             
           }

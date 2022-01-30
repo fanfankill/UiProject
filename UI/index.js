@@ -10,6 +10,8 @@ import DropDownMenu from './packages/dropdown-menu/index.js'
 import Button from "./packages/button/index.js"
 import Badge from "./packages/badge/index.js"
 import CtAvatar from "./packages/avatar/index";
+import Skeleton from "./packages/skeleton";
+import Drawer from "./packages/drawer";
 
 // 组件列表
 
@@ -24,7 +26,9 @@ const allcomponents = [
     DropDown,
     DropDownItem,
     DropDownMenu,
-    CtAvatar
+    CtAvatar,
+    Skeleton,
+    Drawer
 
 ]
 
@@ -33,14 +37,14 @@ const allcomponents = [
 
 
 //组件注册
-const install = function (Vue) {
-  // 遍历并注册所有组件
-  allcomponents.map((component) => {
-    Vue.component(component.name, component);
-  });
+const install = function(Vue) {
+    // 遍历并注册所有组件
+    allcomponents.map((component) => {
+        Vue.component(component.name, component);
+    });
 };
 
 //导出全局install
 export default {
-  install,
+    install,
 };

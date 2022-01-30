@@ -28,6 +28,10 @@ export default {
           name: "下拉",
           eName: 'dropdown',
           href: "#",
+        }, {
+          name: "抽屉",
+          eName: 'drawer',
+          href: "#",
         },
       ],
     };

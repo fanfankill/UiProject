@@ -1,0 +1,52 @@
+@import url(./common/global.less);
+
+.ct-drawer{
+    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2002;
+
+}
+.ct-drawer--content{
+    position: absolute;
+    background-color: white;
+    z-index: 2002;
+}
+
+.ct-direction-left{
+    width: 30%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.ct-direction-right{
+    width: 30%;
+   right: 0;
+    top: 0;
+    bottom: 0;
+}
+.ct-direction-top{
+    right: 0;
+    left: 0;
+    top: 0;
+      width: 100%;
+
+}
+.ct-direction-bottom{
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/**动画效果*/
+.fade-enter-active, .fade-leave-active {
+    transition: all .5s;
+  }
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+}
