@@ -9,7 +9,8 @@ import DropDownItem from './packages/dropdown-item/index.js'
 import DropDownMenu from './packages/dropdown-menu/index.js'
 import Button from "./packages/button/index.js"
 import Badge from "./packages/badge/index.js"
-import Skeleton from "./packages/skeleton";
+import Skeleton from "./packages/skeleton/index.js";
+import Notification from "./packages/notification/index.js";
 
 // 组件列表
 
@@ -37,9 +38,11 @@ const install = function(Vue) {
     allcomponents.map((component) => {
         Vue.component(component.name, component);
     });
+    Vue.prototype.$notify = Notification;
 };
 
 //导出全局install
 export default {
     install,
+    Notification,
 };
