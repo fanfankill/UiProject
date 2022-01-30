@@ -8,34 +8,10 @@ Vue.use(VueRouter);
 const mainView = () => import("../views/main.vue");
 const styleView = () => import("../views/style.vue");
 
-const Button = () => import("../components/button/index");
-const Link = () => import("../components/link/index");
-
-//从example引入展示页面
-const dropdown = () => import("../examples/dropdown");
-
 const routes = [
   {
     path: "/",
     component: mainView,
-  },
-  {
-    path: "/components",
-    component: mainView,
-    children: [
-      {
-        path: "button",
-        component: Button,
-      },
-      {
-        path: "badge",
-        component: Link,
-      },
-      {
-        path: "dropdown",
-        component: dropdown,
-      },
-    ],
   },
   {
     path: "/examples",
@@ -52,8 +28,6 @@ const routes = [
     component: styleView,
   },
 ];
-
-//默认hash
 
 const router = new VueRouter({
   routes,
