@@ -43,15 +43,6 @@ export default {
           mask:[]
       }
   },
-  watch: {
-    visible() {
-      if (this.visible) {
-        this.insert();
-      } else {
-        this.remove();
-      }
-    },
-  },
   mounted() {},
   beforeDestroy() {
     console.log(this);
@@ -60,6 +51,16 @@ export default {
   computed: {
     isHorizontal() {
       return this.direction == "left" || this.direction == "right";
+    },
+  },
+
+    watch: {
+    visible() {
+      if (this.visible) {
+        this.insert();
+      } else {
+        this.remove();
+      }
     },
   },
 
@@ -80,9 +81,6 @@ export default {
       document.body.appendChild(dom);
     },
     remove(){
-      console.log('remove');
-      console.log(this.mask);
-      console.log();
         document.body.removeChild(this.mask.shift())
     }
   },

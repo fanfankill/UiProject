@@ -12,6 +12,8 @@
 
 <script>
 export default {
+     name: "drawer",
+  chName: "侧边",
     data() {
         return {
             opendraw:false
