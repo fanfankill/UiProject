@@ -27,6 +27,8 @@
 </template>
 <script>
 export default {
+  name: "dialog",
+  chName: "对话框",
     data() {
         return {
             dialogVisible: false,

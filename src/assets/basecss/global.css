@@ -10,7 +10,6 @@
   /*border: 10px solid transparent;*/
 }
 
-
 ::-webkit-scrollbar-thumb {
   min-height: 20px;
   background-clip: content-box;
@@ -26,12 +25,12 @@
   background: #cdcdcd;
 }
 
-.block_show_div{
+.block_show_div {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
 }
-.flex_col{
+.flex_col {
   display: flex;
   justify-content: space-between;
   align-items: center;

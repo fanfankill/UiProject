@@ -1,0 +1,23 @@
+// transition: ct-scaleFade
+.ct-scaleFade-enter-active,
+.ct-scaleFade-leave-active {
+  transition: all 0.3s ease;
+}
+
+.ct-scaleFade-enter,
+.ct-scaleFade-leave-to {
+  opacity: 0;
+  transform: scale(0);
+}
+
+// transition: ct-slideFade
+.ct-slideFade-enter-active,
+.ct-slideFade-leave-active {
+  transition: all 0.3s ease;
+}
+
+.ct-slideFade-enter,
+.ct-slideFade-leave-to {
+  opacity: 0;
+  transform: translateX(100%);
+}

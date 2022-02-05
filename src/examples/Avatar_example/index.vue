@@ -110,6 +110,8 @@
 <script>
 import showcomponent from "../../components/showcomponent";
 export default {
+  name: "avatar",
+  chName: "头像",
   components: {
     showcomponent,
   },

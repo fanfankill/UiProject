@@ -1,0 +1,57 @@
+@import url(./common/global.less);
+
+.ct-steps {
+  display: flex;
+  height: 100%;
+
+  /deep/ .ct-step {
+    position: relative;
+    flex-shrink: 1;
+    flex-basis: 50%;
+
+    .ct-step__line,
+    .ct-step__main {
+      transition: all 0.5s ease-in-out;
+    }
+
+    &:last-child.ct-step__row {
+      .ct-step__line {
+        display: none;
+        flex-basis: auto !important;
+        flex-shrink: 0;
+        flex-grow: 0;
+      }
+    }
+
+    &:last-child.ct-step__column {
+      flex-basis: auto !important;
+      .ct-step__head {
+        flex-shrink: 0;
+        flex-grow: 0;
+        .ct-step__line {
+          display: none;
+        }
+      }
+    }
+
+    .ct-step__success {
+      border-color: @success-hover-color !important;
+      color: @success-hover-color !important;
+    }
+
+    .ct-step__process {
+      border-color: @main-color !important;
+      color: @main-color !important;
+    }
+
+    .ct-step__error {
+      border-color: @error-color !important;
+      color: @error-color !important;
+    }
+
+    .ct-step__warning {
+      border-color: @warning-color !important;
+      color: @warning-color !important;
+    }
+  }
+}
