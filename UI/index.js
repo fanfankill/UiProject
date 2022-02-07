@@ -1,5 +1,7 @@
 
+
 import Loading from "./packages/loading";
+
 
 
 
@@ -25,9 +27,9 @@ const install = function (Vue) {
   Vue.use(Loading.directive);
   Vue.prototype.$loading = Loading.service;
 
-}
+};
 
 //导出全局install
 export default {
-    install,
+  install,
 };
