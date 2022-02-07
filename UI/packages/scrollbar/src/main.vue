@@ -4,8 +4,11 @@
     class="ct-scrollbar"
     :style="[{ height: height + 'px' }, { width: width + 'px' }]"
   >
-    <div ref="scrollblock" class="ct-srcollbar-block">
-      <div ref="scrollcontain" class="ct-srcollbar-contain">
+    <div ref="scrollblock" class="ct-srcollbar-block"
+    :style="{backgroundColor:backcolor}">
+      <div ref="scrollcontain" 
+      :style="{color:fontcolor}"
+      class="ct-srcollbar-contain">
         <slot></slot>
       </div>
     </div>
@@ -18,7 +21,7 @@
     barstyle?barstyle:{
        width: '10px',
     },
-     isenter
+   isenter
           ? ''
           : {
               opacity: '0',
@@ -26,7 +29,7 @@
     ]"></div>
 
     <div
-      class="ct-scrollbar-thumb ct-scrollbar-togeter"
+      :class="['ct-scrollbar-thumb ct-scrollbar-togeter',{'ct-scrollbar-thumb-dark':dark}]"
       ref="thumb"
       :style="[
         /**控制自定义样式 */
@@ -63,7 +66,10 @@ export default {
       type: Number,
       default: 400,
     },
-
+    dark:{
+      type:Boolean,
+      default:false
+    },   
     thumbstlye:{
       type:Object,
     },
@@ -71,35 +77,64 @@ export default {
      barstyle:{
       type:Object,
     },
+    delay:{
+      type:Number,
+      default:0
+    },
+    visible:{
+      type:Boolean,
+      default:false
+    }
   },
 
   data() {
     return {
-      isenter: false,
+      myenter: false,
       thumbtop: 0,
+      timer:'',
+      clearemitter:true
     };
   },
   watch: {
-    isenter() {
-      console.log("change");
+  
+  },
+  computed:{
+    backcolor(){
+      return this.dark?'#000':'#fff'
     },
+    fontcolor(){
+       return !this.dark?'#000':'#fff'
+    },
+
+    isenter(){
+      return this.myenter||this.visible
+    }
   },
 
   mounted() {
     this.handleenter();
     this.handlebar();
     this.thumbdraw();
+    console.log(this.$refs.scrollcontain.scrollTop=200);
   },
 
   methods: {
     handleenter() {
       this.$refs.ctscrollbar.addEventListener("mouseenter", () => {
-        this.isenter = true;
-   
+        clearTimeout(this.timer)
+          this.myenter=true
       });
 
       this.$refs.ctscrollbar.addEventListener("mouseleave", () => {
-        this.isenter = false;
+     
+          if(this.timer){ 
+            clearTimeout(this.timer)
+          }
+          this.timer=setTimeout(()=>{
+         
+          this.myenter = false;
+          clearTimeout(this.timer)
+        },this.delay)
      
       });
       //滚动区域的监听
@@ -116,19 +151,22 @@ export default {
     /**拖拽 */
     thumbdraw() {
       this.$refs.bar.addEventListener("mousedown", () => {
-        console.log(1);
+        this.clearemitter=false
         this.$refs.bar.addEventListener("mousemove", this.handledraw);
       });
 
       document.body.addEventListener("mouseup", () => {
-           console.log(1);
-        this.$refs.bar.removeEventListener("mousemove", this.handledraw);
+         if(!this.clearemitter)
+        {
+          this.$refs.bar.removeEventListener("mousemove", this.handledraw);
+          this.clearemitter=true
+        }
       });
     
     },
     /**拖拽方法 */
     handledraw(e){
-      console.log(e);
+
       this.computeddrawheight(e.offsetY)
     },
     /**拖拽高度计算 */
@@ -155,6 +193,7 @@ export default {
       /**对应内容滚动top也应该改变  也会触发scroll事件*/
       this.$refs.scrollblock.scrollTop =(offsety / this.$refs.bar.offsetHeight)*(this.$refs.scrollcontain.offsetHeight-this.$refs.scrollblock.offsetHeight);
     },
+    
   },
 };
 </script>
@@ -162,6 +201,7 @@ export default {
 <style>
 .ct-scrollbar {
   position: relative;
+  transition: all .3s;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -179,6 +219,7 @@ export default {
 
 .ct-srcollbar-contain {
   position: relative;
+  transition: all .5s;
 }
 
 .ct-scrollbar-bar {
@@ -205,6 +246,9 @@ export default {
   cursor: pointer;
   transition: all 0.1s;
   transition: opacity 0.3s;
+}
+.ct-scrollbar-thumb-dark{
+  background: #fff;
 }
 .ct-scrollbar-thumb:active {
   background: #000;

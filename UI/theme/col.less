@@ -1,0 +1,37 @@
+.loop(@i) when (@i <=24){
+  .ct-col-@{i} {
+    width: ((1 / 24) * @i * 100) * 1%;
+  }
+
+  .ct-col-offset-@{i} {
+    margin-left: ((1 / 24) * @i * 100) * 1%;
+  }
+
+  .ct-col-pull-@{i} {
+    position: relative;
+    right: ((1 / 24) * @i * 100) * 1%;
+  }
+
+  .ct-col-push-@{i} {
+    position: relative;
+    left: ((1 / 24) * @i * 100) * 1%;
+  }
+  .loop((@i + 1))
+}
+
+[class*="ct-col-"] {
+  float: left;
+  box-sizing: border-box;
+  width: 100%;
+
+}
+
+.ct-col-0 {
+  display: none;
+}
+
+.loop(0);
+
+
+
+			

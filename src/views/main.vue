@@ -1,4 +1,5 @@
 <template>
+
   <div class="mycontainer">
 
     <router-view> </router-view>
@@ -13,6 +14,8 @@ export default {
     name:'showcompont',
 }
 </script>
+
+
 
 <style scoped lang="less">
 .container {
@@ -31,3 +34,4 @@ export default {
 }
 
 </style>
+

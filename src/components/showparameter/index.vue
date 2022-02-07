@@ -28,7 +28,7 @@ export default {
 <style scoped>
 table {
   border-collapse: collapse;
-  margin: 50px 0 0 50px;
+  margin: 50px 0 0 0px;
   table-layout: fixed;
   width: 90%;
 }
