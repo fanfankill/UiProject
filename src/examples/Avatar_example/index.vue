@@ -1,5 +1,7 @@
 <template>
   <div>
+    <h2>Avatar 头像</h2>
+    <p>用图标、图片或者字符的形式展示用户或事物信息。</p>
     <showcomponent
       title="基础用法"
       subtitle="头像的基础用法"

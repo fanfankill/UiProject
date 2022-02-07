@@ -1,11 +1,8 @@
 @font-face {
-  font-family: "iconfont"; /* Project id 3143270 */
-  src: url("//at.alicdn.com/t/font_3143270_xtxdenqir7b.woff2?t=1643111911496")
-      format("woff2"),
-    url("//at.alicdn.com/t/font_3143270_xtxdenqir7b.woff?t=1643111911496")
-      format("woff"),
-    url("//at.alicdn.com/t/font_3143270_xtxdenqir7b.ttf?t=1643111911496")
-      format("truetype");
+  font-family: 'iconfont';  /* Project id 3143270 */
+  src: url('//at.alicdn.com/t/font_3143270_76hs7kofhun.woff2?t=1643340525426') format('woff2'),
+       url('//at.alicdn.com/t/font_3143270_76hs7kofhun.woff?t=1643340525426') format('woff'),
+       url('//at.alicdn.com/t/font_3143270_76hs7kofhun.ttf?t=1643340525426') format('truetype');
 }
 
 .iconfont {
@@ -127,9 +124,18 @@
 .icon-heianmoshi:before {
   content: "\e7cb";
 }
-.icon-avatartest::before {
+.icon-avatartest:before {
   content: "\e602";
 }
-.icon-closedialog::before {
+.icon-closedialog:before {
+  content: "\e6e9";
+}
+.icon-downarrow:before {
+  content: "\e642";
+}
+.icon-uparrow:before {
+  content: "\e643";
+}
+.icon-closedialog:before {
   content: "\e6e9";
 }
