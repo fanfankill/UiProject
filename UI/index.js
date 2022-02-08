@@ -1,4 +1,9 @@
+
+
 import Loading from "./packages/loading";
+
+
+
 
 // 组件列表
 const components = [];
@@ -21,6 +26,7 @@ const install = function (Vue) {
 
   Vue.use(Loading.directive);
   Vue.prototype.$loading = Loading.service;
+
 };
 
 //导出全局install

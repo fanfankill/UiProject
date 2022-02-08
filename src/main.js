@@ -19,6 +19,7 @@ import "vuescroll/dist/vuescroll.css";
 import Highlight from "./plugins/highlight"; // 这里是你项目highlight.js所在路径
 Vue.use(Highlight);
 
+
 Vue.use(fanui);
 Vue.use(vuescroll);
 

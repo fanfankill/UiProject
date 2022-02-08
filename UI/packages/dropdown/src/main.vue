@@ -4,7 +4,9 @@
     <div class="ct_dropdown" ref="triggerElm">
       <slot></slot>
        <!-- 隐藏菜单部分 -->
-      <slot name="dropdown"></slot>
+      <div class="ct_dromdown_position">
+        <slot name="dropdown"></slot>
+      </div>
   
     </div>
 
@@ -72,8 +74,10 @@ export default {
 
 <style lang='less'>
 .ct_dropdown{
-  position: relative;
   display: inline-block;
+}
+.ct_dromdown_position{
+  position: relative;
 }
 .ct_dropdown_block{
   background-color:white;

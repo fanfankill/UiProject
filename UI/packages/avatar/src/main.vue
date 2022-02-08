@@ -60,29 +60,33 @@ export default {
     },
     renderAvatar() {
       const { icon, src, alt, isImageExist, srcSet, fit, size } = this;
-
+      console.log(fit);
       if (isImageExist && src) {
-        let imgSize = null;
-        if(typeof size === "number") {
-          imgSize = {
-              width: `${size}px`,
-              height: `${size}px`
-            }
-        } else if(size === "medium") {
-          imgSize = {
-            width : "30px",
-            height: "30px"
-          }
-        } else if(size === "mini") {
-          imgSize = {
-            width : "20px",
-            height: "20px"
-          }
+        let imgStyle = null;
+        if (typeof size === "number") {
+          imgStyle = {
+            width: `${size}px`,
+            height: `${size}px`,
+            "object-fit": `${fit}`,
+          };
+        } else if (size === "medium") {
+          imgStyle = {
+            width: "30px",
+            height: "30px",
+            "object-fit": `${fit}`,
+          };
+        } else if (size === "mini") {
+          imgStyle = {
+            width: "20px",
+            height: "20px",
+            "object-fit": `${fit}`,
+          };
         } else {
-          imgSize = {
+          imgStyle = {
             width: "40px",
-            height: "40px"
-          }
+            height: "40px",
+            "object-fit": `${fit}`,
+          };
         }
         return (
           <img
@@ -90,12 +94,12 @@ export default {
             onError={this.handleError}
             alt={alt}
             srcSet={srcSet}
-            style={{"object-fit": fit}}
-            style={imgSize}
+            style={imgStyle}
           />
         );
       }
-      const iconSize = typeof size === "number"
+      const iconSize =
+        typeof size === "number"
           ? {
               fontSize: `${size / 2}px`,
             }
@@ -108,11 +112,12 @@ export default {
   },
   render() {
     const { avatarClass, size } = this;
-    const sizeStyle = typeof size === "number"
+    const sizeStyle =
+      typeof size === "number"
         ? {
             height: `${size}px`,
             width: `${size}px`,
-            lineHeight: `${size}px`
+            lineHeight: `${size}px`,
           }
         : {};
     return (

@@ -8,8 +8,8 @@
       <router-link
         :to="item.to"
         :class="['base_link', { 'is-active': current == index }]"
-        >{{ item.name }}</router-link
-      >
+        >{{ item.name }}
+      </router-link>
     </li>
 
     <li class="iconfont icon-lights"></li>
@@ -109,5 +109,10 @@ export default {
   width: 50px;
   height: 1px;
   background: @info-font-color;
+}
+@media screen and (max-width:900px) {
+    .headul{
+      display: none;
+    }
 }
 </style>

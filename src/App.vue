@@ -1,5 +1,8 @@
 <template>
   <div id="app">
+   <div class="showsmlicon">
+       <span class="iconfont icon-youceanniushouqi"></span>
+   </div>
     <div class="container is-vertal">
       <div class="head">
         <logo></logo>
@@ -76,5 +79,28 @@ export default {
 
 .main::-webkit-scrollbar {
   width: 0;
+}
+
+.showsmlicon{
+  display: none;
+}
+
+@media screen and(max-width:900px) {
+  .aside{
+    display: none;
+  }
+  .showsmlicon{
+  display: block;
+  position: fixed;
+  top: 90px;
+  font-weight: 800;
+  font-size: 2rem;
+  text-align: center;
+  width: 4rem;
+  transform: rotate(180deg);
+  background-color: white;
+  box-shadow: 2px 0 8px #00000026;
+
+}
 }
 </style>

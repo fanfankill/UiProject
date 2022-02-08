@@ -10,3 +10,13 @@ li {
   list-style: none;
   padding: 0;
 }
+
+html{
+  font-size: 14px;
+}
+
+@media screen and (max-width:900px) {
+  html{
+    font-size: 12px;
+  }
+}

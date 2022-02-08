@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="LeftBlock">
     <vue-scroll>
       <ul>
         <li v-for="(item, index) in sideNav" :key="index">
@@ -21,12 +21,14 @@ import examples from "../../examples";
 export default {
   data() {
     return {
+
       sideNav: examples.map((example) => {
         return {
           name: example.chName,
           eName: example.name,
         };
       }),
+
     };
   },
 };
@@ -45,7 +47,6 @@ ul {
 ul li {
   height: 40px;
   line-height: 40px;
-  text-align: center;
 }
 ul li + li {
   margin-top: 4px;
@@ -53,4 +54,14 @@ ul li + li {
 ul li:hover {
   background-color: #f4f7f8;
 }
+ul li>li{
+
+  padding-left:50px;
+}
+
+
+@media screen and (max-width: 900px) {
+
+}
+
 </style>
