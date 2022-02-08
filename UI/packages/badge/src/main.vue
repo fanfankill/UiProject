@@ -1,7 +1,7 @@
 <template>
   <div class="ct-badge">
       <slot></slot>
-    <transition name="el-badge">
+    <transition name="ct-badge">
       <sup
         v-show="!hidden && (content || content === 0 || isDot)"
         v-text="content"
@@ -19,7 +19,6 @@
 </template>
 
 <script>
-import "../../../theme/badge.less";
 export default {
     name:'CtBadge',
     props: {
@@ -50,11 +49,12 @@ export default {
 }
 </script>
 
-<style scoped>
-.el-badge-enter-active{
+<style lang="less" scoped>
+@import "./UI/theme/badge.less";
+.ct-badge-enter-active{
   transition: .4s;
 }
-.el-badge-leave-active{
+.ct-badge-leave-active{
   transition: .4s;
 }
 </style>

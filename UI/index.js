@@ -12,6 +12,7 @@ import Badge from "./packages/badge/index.js"
 import Skeleton from "./packages/skeleton/index.js";
 import Notification from "./packages/notification/index.js";
 
+
 // 组件列表
 
 const allcomponents = [
