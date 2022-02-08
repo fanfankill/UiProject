@@ -1,9 +1,14 @@
 <template>
-  <div>
+  <div class="LeftBlock">
     <vue-scroll>
       <ul>
         <li v-for="(item, index) in sideNav" :key="index">
-          <router-link :to="'/components/'+item.eName" tag="li" active-class="ct-aside-active">{{`${item.name} ${item.eName}`}}</router-link>
+          <router-link
+            :to="'/examples/' + item.eName"
+            tag="li"
+            active-class="ct-aside-active"
+            >{{ `${item.name} ${item.eName}` }}</router-link
+          >
         </li>
       </ul>
     </vue-scroll>
@@ -11,25 +16,17 @@
 </template>
 
 <script>
+import examples from "../../examples";
+
 export default {
   data() {
     return {
-      sideNav: [
-        {
-          name: "容器",
-          eName: 'container',
-          href: "#",
-        },
-        {
-          name: "标记",
-          eName: 'badge',
-          href: "#",
-        },  {
-          name: "下拉",
-          eName: 'dropdown',
-          href: "#",
-        },
-      ],
+      sideNav: examples.map((example) => {
+        return {
+          name: example.chName,
+          eName: example.name,
+        };
+      }),
     };
   },
 };
@@ -38,7 +35,6 @@ export default {
 <style scoped lang="less">
 .ct-aside-active {
   color: @main-color;
-  background-color: #f4f8fa;
 }
 ul {
   width: 100%;
@@ -48,13 +44,17 @@ ul {
 ul li {
   height: 40px;
   line-height: 40px;
-  text-align: center;
 }
-ul li+li {
+ul li + li {
   margin-top: 4px;
 }
 ul li:hover {
   background-color: #f4f7f8;
 }
+ul li > li {
+  padding-left: 50px;
+}
 
+@media screen and (max-width: 900px) {
+}
 </style>

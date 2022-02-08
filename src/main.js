@@ -9,16 +9,15 @@ import router from "./router";
 import "./assets/iconfont/font.css";
 //引入全局样式
 import "./assets/basecss/base.css";
-import './assets/basecss/global.css';
+import "./assets/basecss/global.css";
 
 //滚动条插件
-import vuescroll from 'vuescroll';
-import 'vuescroll/dist/vuescroll.css';
+import vuescroll from "vuescroll";
+import "vuescroll/dist/vuescroll.css";
 
 // 引入highlight插件
-import Highlight from './hljsplugin/highlight'; // 这里是你项目highlight.js所在路径
+import Highlight from "./plugins/highlight"; // 这里是你项目highlight.js所在路径
 Vue.use(Highlight);
-
 
 
 Vue.use(fanui);
