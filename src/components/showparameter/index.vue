@@ -37,7 +37,7 @@ thead td {
 }
 tr {
   height: 50px;
-  line-height: 50px;
+  line-height: 20px;
   border-bottom: 1px solid #dcdfe6;
   /*white-space: nowrap;*/
 }

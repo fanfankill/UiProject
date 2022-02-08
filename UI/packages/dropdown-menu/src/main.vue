@@ -14,7 +14,7 @@ export default {
 
     computed:{
       showprop:function(){
-        console.log(this.dropdown.isshowlist);
+
         return this.dropdown.isshowlist
       }
     },

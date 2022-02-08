@@ -48,7 +48,12 @@ export default {
              if(this.trigger=='click'){
 
                target.addEventListener('click',(e)=>{
-                 this.isshowlist=!this.isshowlist
+                 if(this.HideNoShow){
+                    this.isshowlist=true
+                 }
+                 else{
+                   this.isshowlist=!this.isshowlist
+                 }
                  e.stopPropagation()
                })
                //全局监听
