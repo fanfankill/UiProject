@@ -12,7 +12,7 @@
       </router-link>
     </li>
 
-    <li class="iconfont icon-lights"></li>
+    <li class="iconfont icon-lights" @click="toggleMode"></li>
     <li class="iconfont icon-zhongwen"><a></a></li>
   </ul>
 </template>
@@ -110,9 +110,9 @@ export default {
   height: 1px;
   background: @info-font-color;
 }
-@media screen and (max-width:900px) {
-    .headul{
-      display: none;
-    }
+@media screen and (max-width: 900px) {
+  .headul {
+    display: none;
+  }
 }
 </style>

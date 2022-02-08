@@ -2,7 +2,7 @@
   <div
     class="ct-chatbox"
     :class="sent ? 'ct-chatbox__left' : 'ct-chatbox__right'"
-    :style="{ '--bg-color': bgColor }"
+    :style="{ '--bg-color': bgColorCopy }"
   >
     <div class="ct-chatbox__outer">
       <div class="ct-chatbox__avatar" v-if="avatar">
@@ -34,8 +34,7 @@ export default {
   name: "CtChatbox",
   props: {
     text: {
-      type: String,
-      default: "",
+      type: Array,
     },
     sent: {
       type: Boolean,
@@ -59,11 +58,14 @@ export default {
     },
   },
   data() {
-    return {};
+    return {
+      bgColorCopy: "",
+    };
   },
   mounted() {
-    if (!this.bgColor) {
-      this.bgColor = this.sent ? "#a8ddfa" : "#dde3e7";
+    this.bgColorCopy = this.bgColor;
+    if (!this.bgColorCopy) {
+      this.bgColorCopy = this.sent ? "#a8ddfa" : "#dde3e7";
     }
   },
 };

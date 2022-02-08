@@ -5,6 +5,7 @@ import examples from "../examples";
 Vue.use(VueRouter);
 
 //路由引入
+const blankView = () => import("../views/blank.vue");
 const mainView = () => import("../views/main.vue");
 const styleView = () => import("../views/style.vue");
 
@@ -15,7 +16,7 @@ const routes = [
   },
   {
     path: "/examples",
-    component: mainView,
+    component: blankView,
     children: examples.map((example) => {
       return {
         path: example.name,

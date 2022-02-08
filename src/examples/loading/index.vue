@@ -1,7 +1,6 @@
 <template>
   <div>
-    <h1>指令用法</h1>
-    <Showcomponent :title="基础用法" :codes="code1">
+    <Showcomponent title="指令用法" :codes="code1">
       <template v-slot:desc>
         <div>
           通过<code>v-loading</code>的指令方式来控制加载动画，默认为父元素加载
@@ -15,7 +14,7 @@
       </template>
     </Showcomponent>
 
-    <Showcomponent :title="全屏用法" :codes="code2">
+    <Showcomponent title="全屏用法" :codes="code2">
       <template v-slot:desc>
         <div>通过增加修饰符<code>fullscreen</code>来全屏加载</div>
       </template>
@@ -27,7 +26,7 @@
       </template>
     </Showcomponent>
 
-    <Showcomponent :title="Options用法" :codes="code3">
+    <Showcomponent title="Options用法" :codes="code3">
       <template v-slot:desc>
         <div>通过<code>options</code>传参一个配置对象</div>
       </template>
@@ -39,8 +38,7 @@
       </template>
     </Showcomponent>
 
-    <h1>服务用法</h1>
-    <Showcomponent title="主要用法" :codes="code4">
+    <Showcomponent title="服务用法" :codes="code4">
       <template v-slot:desc>
         <div>通过全局<code>this.$loading()</code>来创建加载实例。</div>
         <div>
@@ -59,7 +57,7 @@
       </template>
     </Showcomponent>
 
-    <h1>Options参数</h1>
+    <h2>Options参数</h2>
     <Showparameter :parameter="params"></Showparameter>
   </div>
 </template>

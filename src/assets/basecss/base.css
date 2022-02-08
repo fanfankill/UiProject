@@ -2,7 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, SimSun, sans-serif;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB,
+    Microsoft YaHei, SimSun, sans-serif;
   font-weight: 300;
 }
 ul,
@@ -11,12 +12,13 @@ li {
   padding: 0;
 }
 
-html{
+html {
   font-size: 14px;
+  transition: color 300ms, background-color 300ms;
 }
 
-@media screen and (max-width:900px) {
-  html{
+@media screen and (max-width: 900px) {
+  html {
     font-size: 12px;
   }
 }

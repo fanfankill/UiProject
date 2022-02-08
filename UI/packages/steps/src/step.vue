@@ -20,7 +20,7 @@
     </div>
     <div class="ct-step__main" :class="'ct-step__' + status">
       <div>
-        {{ title }}
+        {{ titleCopy }}
       </div>
       <div>{{ description }}</div>
     </div>
@@ -47,6 +47,7 @@ export default {
 
   data() {
     return {
+      titleCopy: "",
       index: -1,
       status: "",
       lineStatus: "",
@@ -57,7 +58,9 @@ export default {
     this.$parent.steps.push(this);
   },
 
-  mounted() {},
+  mounted() {
+    this.titleCopy = this.title;
+  },
 
   watch: {
     "$parent.active": {
@@ -74,16 +77,16 @@ export default {
     setStatus(val) {
       if (this.index < val - 1) {
         this.lineStatus = this.$parent.finishStatus;
-        this.title = "已完成";
+        this.titleCopy = "已完成";
       } else {
         this.lineStatus = "";
       }
       if (this.index < val) {
         this.status = this.$parent.finishStatus;
-        this.title = "已完成";
+        this.titleCopy = "已完成";
       } else if (this.index === val) {
         this.status = this.$parent.processStatus;
-        this.title = "进行中";
+        this.titleCopy = "进行中";
       } else {
         this.status = "";
       }
