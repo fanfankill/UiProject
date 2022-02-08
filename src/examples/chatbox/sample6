@@ -1,0 +1,28 @@
+<div>
+  <ct-chatbox
+    :text="['Hello, John']"
+    name="Jim"
+    stamp="3 minutes ago"
+    avatar="https://tse2-mm.cn.bing.net/th/id/OIP-C.bzgSr4mZFexX7i59eid9cgAAAA?w=194&h=194&c=7&r=0&o=5&dpr=1.25&pid=1.7"
+  ></ct-chatbox>
+  <ct-chatbox
+    sent
+    :text="['Hi, Jim', 'How are you?']"
+    name="John"
+    stamp="4 minutes ago"
+    avatar="https://tse2-mm.cn.bing.net/th/id/OIP-C.bzgSr4mZFexX7i59eid9cgAAAA?w=194&h=194&c=7&r=0&o=5&dpr=1.25&pid=1.7"
+  ></ct-chatbox>
+  <ct-chatbox
+    :text="['I am fine.', 'What about you?']"
+    name="Jim"
+    stamp="4 minutes ago"
+    avatar="https://tse2-mm.cn.bing.net/th/id/OIP-C.bzgSr4mZFexX7i59eid9cgAAAA?w=194&h=194&c=7&r=0&o=5&dpr=1.25&pid=1.7"
+  ></ct-chatbox>
+  <ct-chatbox
+    sent
+    :text="['I am OK, too.', 'Thanks!']"
+    name="John"
+    stamp="4 minutes ago"
+    avatar="https://tse2-mm.cn.bing.net/th/id/OIP-C.bzgSr4mZFexX7i59eid9cgAAAA?w=194&h=194&c=7&r=0&o=5&dpr=1.25&pid=1.7"
+  ></ct-chatbox>
+</div>
