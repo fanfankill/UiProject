@@ -28,10 +28,6 @@ export default {
       default: "success",
       type: String,
     },
-    alignCenter: {
-      default: false,
-      type: Boolean,
-    },
   },
   data() {
     return {
