@@ -21,14 +21,12 @@ import examples from "../../examples";
 export default {
   data() {
     return {
-
       sideNav: examples.map((example) => {
         return {
           name: example.chName,
           eName: example.name,
         };
       }),
-
     };
   },
 };
@@ -37,7 +35,6 @@ export default {
 <style scoped lang="less">
 .ct-aside-active {
   color: @main-color;
-  background-color: #f4f8fa;
 }
 ul {
   width: 100%;
@@ -54,14 +51,10 @@ ul li + li {
 ul li:hover {
   background-color: #f4f7f8;
 }
-ul li>li{
-
-  padding-left:50px;
+ul li > li {
+  padding-left: 50px;
 }
-
 
 @media screen and (max-width: 900px) {
-
 }
-
 </style>

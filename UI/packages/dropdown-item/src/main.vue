@@ -19,13 +19,9 @@ export default {
     inject:['dropdown'],
     methods:{
       handleclick(e){
-          console.log(e);
-          console.log(this.dropdown);
           if(this.dropdown.trigger=='hover'&&!this.dropdown.HideNoShow){
-            console.log('?');
             this.dropdown.isshowlist=false
           }if(this.dropdown.HideNoShow){
-               this.dropdown.isshowlist=false
             e.stopPropagation();
             
           }

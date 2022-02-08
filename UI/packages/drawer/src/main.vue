@@ -81,6 +81,7 @@ export default {
       document.body.appendChild(dom);
     },
     remove(){
+        console.log('/');
         document.body.removeChild(this.mask.shift())
     }
   },
