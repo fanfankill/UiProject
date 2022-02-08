@@ -158,7 +158,7 @@
         默认为大型按钮，额外的尺寸：<code>medium</code>、<code>small</code>、<code>mini</code>，通过设置<code>size</code>属性来配置它们。
       </template>
     </showcomponent>
-    <showpara :parameter="parameter" style="margin-top:150px;"></showpara>
+    <showpara  title="Attribute" :parameter="parameter" style="margin-top:150px;"></showpara>
   </div>
 </template>
 

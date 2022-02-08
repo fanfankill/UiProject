@@ -125,7 +125,7 @@
         使用<code>direction</code>属性来定义 Descriptions 的样式
       </template>
     </showcomponent>
-    <showpara :parameter="parameter" style="margin-top:150px;"></showpara>
+    <showpara title="Attribute" :parameter="parameter" style="margin-top:150px;"></showpara>
 
 
   </div>
