@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1 v-if="title">{{title}}</h1>
     <table>
       <thead>
       <tr>
@@ -21,6 +22,10 @@ export default {
   name: "ShowParameter",
   props: {
     parameter: Object,
+    title: {
+      type:String,
+      default:"",
+    }
   }
 }
 </script>
