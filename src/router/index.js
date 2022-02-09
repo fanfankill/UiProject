@@ -102,32 +102,8 @@ const routes = [
         component: tree,
       },
       {
-        path: "link",
-        component: link,
-      },
-      {
-        path: "tabs",
-        component: tabs,
-      },
-      {
-        path: "tree",
-        component: tree,
-      },
-      {
         path: "switch",
         component: switchCom,
-      },
-      {
-        path: "link",
-        component: link,
-      },
-      {
-        path: "tabs",
-        component: tabs,
-      },
-      {
-        path: "tree",
-        component: tree,
       },
       {
         path: "animate",
