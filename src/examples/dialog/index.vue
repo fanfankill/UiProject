@@ -127,7 +127,8 @@ export default {
         title: ["参数", "说明", "类型", "可选值", "默认值"],
         contents: [["title", "标题，也可通过具名 slot 传入", "string", "", ""],
         ["visible", "是否显示 Dialog，支持 .sync 修饰符", "boolean", "", "false"],
-        ["width", "Dialog 的宽度", "string", "", "50%"]]
+        ["width", "Dialog 的宽度", "string", "", "50%"],
+        ["center", "标题, footer居中", "boolean", "", "false"]]
       },
       Sparameter: {
         title: ["name", "说明"],
