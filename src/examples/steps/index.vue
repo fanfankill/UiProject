@@ -115,12 +115,12 @@
       </template>
     </Showcomponent>
 
-    <h1 style="margin: 50px 0 30px 0">参数列表</h1>
+    <h1 style="margin: 50px 0 30px 0">Attribution</h1>
 
-    <h2>CtSteps参数</h2>
+    <h2>CtSteps</h2>
     <Showparameter :parameter="stepsParams"></Showparameter>
 
-    <h2 style="margin: 50px 0 0 0">CtStep参数</h2>
+    <h2 style="margin: 50px 0 0 0">CtStep</h2>
     <Showparameter :parameter="stepParams"></Showparameter>
   </div>
 </template>

@@ -42,10 +42,8 @@
         </div>
       </template>
       <template v-slot:desc>
-    <div>
-    通过传入<code>hide-no-show</code>属性来修改默认点击消失
-  </div>
- </template>
+        <div>通过传入<code>hide-no-show</code>属性来修改默认点击消失</div>
+      </template>
     </showcomponent>
   </div>
 </template>
@@ -60,29 +58,29 @@ export default {
     return {
       mycode: `
 <div class="block_show_div">
-    <div class="flex_col">
-    <h4>hover效果</h4>
-        <ct-dropdown hide-no-show>
-            <ct-button type="primary">隐藏效果</ct-button>
-            <ct-dropdown-menu slot="dropdown">
-            <ct-dropdown-item icon="icon-chuangzaoli">食物</ct-dropdown-item>
-            <ct-dropdown-item icon="icon-lights" disabled>购物</ct-dropdown-item>
-            <ct-dropdown-item icon="icon-yingwen">生活</ct-dropdown-item>
-            </ct-dropdown-menu>
-        </ct-dropdown>
+  <div class="flex_col">
+  <h4>hover效果</h4>
+  <ct-dropdown hide-no-show>
+    <ct-button type="primary">隐藏效果</ct-button>
+    <ct-dropdown-menu slot="dropdown">
+    <ct-dropdown-item icon="icon-chuangzaoli">食物</ct-dropdown-item>
+    <ct-dropdown-item icon="icon-lights" disabled>购物</ct-dropdown-item>
+    <ct-dropdown-item icon="icon-yingwen">生活</ct-dropdown-item>
+    </ct-dropdown-menu>
+  </ct-dropdown>
 </div>
 
 <div class="flex_col">
-    <h4>click效果</h4>
-    <ct-dropdown hide-no-show trigger="click">
-        <ct-button type="primary">隐藏效果</ct-button>
-            <ct-dropdown-menu slot="dropdown">
-            <ct-dropdown-item icon="icon-chuangzaoli">食物</ct-dropdown-item>
-            <ct-dropdown-item icon="icon-lights" disabled>购物</ct-dropdown-item>
-            <ct-dropdown-item icon="icon-yingwen">生活</ct-dropdown-item>
-            </ct-dropdown-menu>
-        </ct-dropdown>
-    </div>
+  <h4>click效果</h4>
+  <ct-dropdown hide-no-show trigger="click">
+    <ct-button type="primary">隐藏效果</ct-button>
+      <ct-dropdown-menu slot="dropdown">
+      <ct-dropdown-item icon="icon-chuangzaoli">食物</ct-dropdown-item>
+      <ct-dropdown-item icon="icon-lights" disabled>购物</ct-dropdown-item>
+      <ct-dropdown-item icon="icon-yingwen">生活</ct-dropdown-item>
+      </ct-dropdown-menu>
+    </ct-dropdown>
+  </div>
 </div> 
       `,
     };
@@ -90,5 +88,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>

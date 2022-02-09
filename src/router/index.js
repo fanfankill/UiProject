@@ -99,6 +99,22 @@ const routes = [
         path: "switch",
         component: switchCom,
       },
+      {
+        path: "switch",
+        component: Switch,
+      },
+      {
+        path: "link",
+        component: link,
+      },
+      {
+        path: "tabs",
+        component: tabs,
+      },
+      {
+        path: "tree",
+        component: tree,
+      },
     ],
   },
   {

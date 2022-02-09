@@ -57,7 +57,7 @@
       </template>
     </Showcomponent>
 
-    <h2>Options参数</h2>
+    <h2>Options</h2>
     <Showparameter :parameter="params"></Showparameter>
   </div>
 </template>
@@ -101,111 +101,113 @@ export default {
         bgColor: "rgba(100,100,100,0.5)",
         fontColor: "white",
       },
-      code1: `<template>
-  <div>
-    <div v-loading="loading" class="container"></div>
-    <ct-button @click="toggleLoading">开/关</ct-button>
-  </div>
-</template>
+      code1:
+        `  <template>
+    <div>
+      <div v-loading="loading" class="container"></div>
+      <ct-button @click="toggleLoading">开/关</ct-button>
+    </div>
+  </template>
 
-<script>
-export default {
-  data() {
-    return {
-      loading: false,
-    };
-  },
-  methods: {
-    toggleLoading() {
-      this.loading = !this.loading;
-    },
-  },
-};
-<//script>
-`,
-      code2: `<template>
-  <div>
-    <div v-loading.fullscreen="loading2" class="container"></div>
-    <ct-button @click="toggleLoading2">开/关</ct-button>
-  </div>
-</template>
-
-<script>
-export default {
-  data() {
-    return {
-      loading2: false,
-    };
-  },
-  methods: {
-    toggleLoading2() {
-      this.loading2 = true;
-      setTimeout(() => {
-        this.loading2 = false;
-      }, 2000);
-    },
-  },
-};
-<//script>`,
-      code3: `<template>
-  <div>
-    <div v-loading:[options3]="loading3" class="container"></div>
-    <ct-button @click="toggleLoading3">开/关</ct-button>
-  </div>
-</template>
-
-<script>
-export default {
-  data() {
-    return {
-      loading3: false,
-      options3: {
-        text: "自定义加载文字",
-        animeStyle: "moon",
-        bgColor: "rgba(100,100,100,0.5)",
-        fontColor: "white",
+  <script>
+    export default {
+      data() {
+        return {
+          loading: false,
+        };
+      },
+      methods: {
+        toggleLoading() {
+          this.loading = !this.loading;
+        },
       },
     };
-  },
-  methods: {
-    toggleLoading3() {
-      this.loading3 = !this.loading3;
-    },
-  },
-};
-<//script>
-`,
-      code4: `<template>
-  <div>
-    <div ref="loading4" class="container"></div>
-    <ct-button @click="toggleLoading4">开开</ct-button>
-  </div>
-</template>
+    <` + `/script>`,
+      code2:
+        `  <template>
+    <div>
+      <div v-loading.fullscreen="loading2" class="container"></div>
+      <ct-button @click="toggleLoading2">开/关</ct-button>
+    </div>
+  </template>
 
-<script>
-export default {
-  data() {
-    return {};
-  },
-  methods: {
-    toggleLoading4() {
-      let instance = this.$loading({
-        fullscreen: false,
-        target: this.$refs.loading4,
-        data: {
-          text: "自定义文字",
-          spinner: "iconfont icon-jiazai",
-          fontColor: "white",
-          bgColor: "rgba(100,200,100,.4)",
+  <script>
+    export default {
+      data() {
+        return {
+          loading2: false,
+        };
+      },
+      methods: {
+        toggleLoading2() {
+          this.loading2 = true;
+          setTimeout(() => {
+            this.loading2 = false;
+          }, 2000);
         },
-      });
-      setTimeout(() => {
-        instance.close();
-      }, 2000);
-    },
-  },
-};
-<//script>`,
+      },
+    };
+    <` + `/script>`,
+      code3:
+        `  <template>
+    <div>
+      <div v-loading:[options3]="loading3" class="container"></div>
+      <ct-button @click="toggleLoading3">开/关</ct-button>
+    </div>
+  </template>
+
+  <script>
+    export default {
+      data() {
+        return {
+          loading3: false,
+          options3: {
+            text: "自定义加载文字",
+            animeStyle: "moon",
+            bgColor: "rgba(100,100,100,0.5)",
+            fontColor: "white",
+          },
+        };
+      },
+      methods: {
+        toggleLoading3() {
+          this.loading3 = !this.loading3;
+        },
+      },
+    };
+    </` + `/script>`,
+      code4:
+        `  <template>
+    <div>
+      <div ref="loading4" class="container"></div>
+      <ct-button @click="toggleLoading4">开开</ct-button>
+    </div>
+  </template>
+
+  <script>
+    export default {
+      data() {
+        return {};
+      },
+      methods: {
+        toggleLoading4() {
+          let instance = this.$loading({
+            fullscreen: false,
+            target: this.$refs.loading4,
+            data: {
+              text: "自定义文字",
+              spinner: "iconfont icon-jiazai",
+              fontColor: "white",
+              bgColor: "rgba(100,200,100,.4)",
+            },
+          });
+          setTimeout(() => {
+            instance.close();
+          }, 2000);
+        },
+      },
+    };
+    <` + `/script>`,
     };
   },
   methods: {

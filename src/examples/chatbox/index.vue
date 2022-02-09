@@ -165,7 +165,7 @@
       </template>
     </Showcomponent>
 
-    <h1 style="margin-top: 50px">参数列表</h1>
+    <h1 style="margin-top: 50px">Attribution</h1>
     <Showparameter :parameter="params"></Showparameter>
   </div>
 </template>
