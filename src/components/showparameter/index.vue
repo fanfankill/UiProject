@@ -33,7 +33,11 @@ export default {
 <style scoped>
 table {
   border-collapse: collapse;
+<<<<<<< HEAD
+  margin: 50px 0 0 0;
+=======
   margin: 50px 0 0 0px;
+>>>>>>> ffa097eae147969b4ac88dcb463f9a0e54d8eadc
   table-layout: fixed;
   width: 90%;
 }
