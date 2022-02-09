@@ -46,73 +46,85 @@ const routes = [
       {
         path: "avatar",
         component: avatar,
+        meta: {
+          index:0,
+      }
       },
       {
         path: "button",
         component: button,
+        meta: {
+          index:1,
+      }
       },
       {
         path: "chatbox",
         component: chatbox,
+        meta: {
+          index:2,
+      }
       },
       {
         path: "container",
         component: container,
+        meta: {
+          index:3,
+      }
       },
       {
         path: "descriptions",
         component: descriptions,
+        meta: {
+          index:4,
+      }
       },
       {
         path: "dialog",
         component: dialog,
+        index:5,
+      },{
+        path: "link",
+        component: link,
+        index:6,
       },
       {
         path: "loading",
         component: loading,
+        index:7,
       },
       {
         path: "dropdown",
         component: dropdown,
+        index:8,
       },
       {
         path: "radio",
         component: radio,
+        index:9,
       },
       {
         path: "scrollbar",
         component: scrollbar,
+        index:10,
       },
       {
         path: "steps",
         component: steps,
+        index:11,
       },{
-        path: "link",
-        component: link,
-      },
-      {
-        path: "tabs",
-        component: tabs,
-      },
-      {
-        path: "tree",
-        component: tree,
-      },
-      {
         path: "switch",
         component: switchCom,
-      },
-      {
-        path: "link",
-        component: link,
+        index:12,
       },
       {
         path: "tabs",
         component: tabs,
+        index:13,
       },
       {
         path: "tree",
         component: tree,
+        index:14,
       },
     ],
   },

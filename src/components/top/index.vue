@@ -3,7 +3,6 @@
     <li
       v-for="(item, index) in mylist"
       :key="index"
-      @click="handleclick(index)"
     >
       <router-link
         :to="item.to"
@@ -40,9 +39,6 @@ export default {
     };
   },
   methods: {
-    handleclick(index) {
-      this.current = index;
-    },
     toggleMode() {
       if (this.mode === "light") {
         document.body.style.backgroundColor = "#272727";

@@ -23,7 +23,6 @@ export default {
   },
   methods: {
     handleshow() {
-      console.log(1);
     },
     gotoMain() {
       this.$router.push({ path: "/" });

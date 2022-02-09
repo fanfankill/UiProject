@@ -14,7 +14,12 @@
         </div>
 
         <div class="main" ref="main">
-          <keep-alive><router-view> </router-view></keep-alive>
+          <keep-alive>
+            <transition :name="transitionName">
+          <router-view> </router-view>
+          </transition>
+          </keep-alive>
+          
           <back-top parent="main"></back-top>
 
         </div>
@@ -35,7 +40,22 @@ export default {
     logo,
     asider,
     backTop
-   }
+   },
+   data() {
+     return {
+       transitionName:''
+     }
+   },
+  watch:{
+       $route(to,from){
+      if(to.meta.index>from.meta.index){
+        console.log(1);
+        this.transitionName = 'slide-left';
+      }else{
+        this.transitionName = 'slide-right';
+      }
+    }
+  }
 }
 </script>
 
@@ -81,6 +101,29 @@ export default {
 .showsmlicon {
   display: none;
 }
+
+/**动画 */
+.slide-right-enter-active,
+.slide-right-leave-active,
+.slide-left-enter-active,
+.slide-left-leave-active {
+  will-change: transform;
+  transition: all 500ms;
+  
+}
+.slide-right-enter {
+  opacity: 0;
+}
+.slide-right-leave-active {
+  opacity: 0;
+}
+.slide-left-enter {
+  opacity: 0;
+}
+.slide-left-leave-active {
+  opacity: 0;;
+}
+
 
 @media screen and(max-width:900px) {
   .aside {
