@@ -1,5 +1,5 @@
 import Loading from "./packages/loading";
-
+import Notification from './packages/notification/index'
 
 
 
@@ -21,7 +21,6 @@ const install = function(Vue) {
             Vue.component(component.name, component);
         }
     });
-
     Vue.use(Loading.directive);
     Vue.prototype.$loading = Loading.service;
     Vue.prototype.$notify = Notification;
@@ -30,5 +29,4 @@ const install = function(Vue) {
 //导出全局install
 export default {
     install,
-    Notification,
 };
