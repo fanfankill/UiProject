@@ -24,12 +24,12 @@ const link = () => import("../examples/link");
 const tabs = () => import("../examples/tabs");
 const tree = () => import("../examples/tree");
 const switchCom = () => import("../examples/switch");
-
+const message = () => import("../examples/message");
 
 const routes = [
   {
-    path:'/',
-    redirect: '/main'
+    path: "/",
+    redirect: "/main",
   },
   {
     path: "/main",
@@ -38,9 +38,6 @@ const routes = [
   {
     path: "/examples",
     redirect: "/examples/avatar",
-  },
-  {
-    path: "/examples",
     component: blankView,
     children: [
       {
@@ -72,6 +69,10 @@ const routes = [
         component: loading,
       },
       {
+        path: "message",
+        component: message,
+      },
+      {
         path: "dropdown",
         component: dropdown,
       },
@@ -86,7 +87,8 @@ const routes = [
       {
         path: "steps",
         component: steps,
-      },{
+      },
+      {
         path: "link",
         component: link,
       },
@@ -118,7 +120,14 @@ const routes = [
   },
   {
     path: "/style",
-    component: styleView,
+    redirect: "/style/color",
+    component: blankView,
+    children: [
+      {
+        path: "color",
+        component: styleView,
+      },
+    ],
   },
 ];
 

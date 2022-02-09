@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Avatar 头像</h2>
+    <h1>Avatar 头像</h1>
     <p>用图标、图片或者字符的形式展示用户或事物信息。</p>
     <showcomponent
       title="基础用法"
@@ -102,7 +102,8 @@
           </div>
         </template>
         <template v-slot:desc>
-          使用<code>fit</code>属性定义 CtAvatar 如何适应容器，同原生object-fit一样。
+          使用<code>fit</code>属性定义 CtAvatar
+          如何适应容器，同原生object-fit一样。
         </template>
       </showcomponent>
       <h2>Attribute</h2>
@@ -124,10 +125,12 @@ export default {
   data() {
     return {
       sizeList: ["large", "medium", "mini"],
-      imgsrc: "https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png",
+      imgsrc:
+        "https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png",
       fits: ["fill", "contain", "cover", "none", "scale-down"],
       url: "https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg",
-      code1: `<div class="div-block">
+      code1:
+        `<div class="div-block">
   <div class="circle">
     <div class="sub-title">circle</div>
       <div class="demo-basic-circle">
@@ -155,8 +158,11 @@ export default {
       }
     }
   }
-<` + `/` + `script>`,
-      code2: `<div class="div-block">
+<` +
+        `/` +
+        `script>`,
+      code2:
+        `<div class="div-block">
   <div class="circle">
     <div class="sub-title">icon展示</div>
       <div class="demo-basic-circle">
@@ -185,8 +191,11 @@ export default {
       }
     }
   }
-<` + `/` + `script>`,
-      code3: `<template>
+<` +
+        `/` +
+        `script>`,
+      code3:
+        `<template>
   <div class="demo-fit">
     <div class="block" v-for="fit in fits" :key="fit">
         <span class="title">{{ fit }}</span>
@@ -203,14 +212,24 @@ export default {
       }
     }
   }
-<` + `/` + `script>`,
+<` +
+        `/` +
+        `script>`,
       parameter: {
         title: ["参数", "说明", "类型", "可选值", "默认值"],
-        contents: [["icon", "设置头像的图标类型，参考 Icon 组件", "string", "", ""],
-        ["size", "设置头像的大小", "number/string", "number/large/medium/mini", "large"],
-        ["src", "图片头像的资源地址", "string", "", ""],
-        ["shape", "头像的形状", "string", "circle/square", "circle"]]
-      }
+        contents: [
+          ["icon", "设置头像的图标类型，参考 Icon 组件", "string", "", ""],
+          [
+            "size",
+            "设置头像的大小",
+            "number/string",
+            "number/large/medium/mini",
+            "large",
+          ],
+          ["src", "图片头像的资源地址", "string", "", ""],
+          ["shape", "头像的形状", "string", "circle/square", "circle"],
+        ],
+      },
     };
   },
 };

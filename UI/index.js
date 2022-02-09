@@ -1,5 +1,6 @@
 import Loading from "./packages/loading";
-import notification from "./packages/notification";
+import Notify from "./packages/notification";
+import Message from "./packages/message";
 
 // 组件列表
 const components = [];
@@ -25,7 +26,8 @@ const install = function (Vue) {
 
   // 服务注册
   Vue.prototype.$loading = Loading.service;
-  Vue.prototype.$notify = notification;
+  Vue.prototype.$notify = Notify;
+  Vue.prototype.$message = Message;
 };
 
 //导出全局install
