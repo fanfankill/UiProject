@@ -118,14 +118,7 @@ const routes = [
   },
   {
     path: "/style",
-    component: blankView,
-    redirect: "/style/color",
-    children: [
-      {
-        path: "color",
-        component: styleView,
-      },
-    ],
+    component: styleView,
   },
 ];
 
