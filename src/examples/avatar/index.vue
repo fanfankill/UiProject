@@ -1,5 +1,7 @@
 <template>
   <div>
+    <h2>Avatar 头像</h2>
+    <p>用图标、图片或者字符的形式展示用户或事物信息。</p>
     <showcomponent
       title="基础用法"
       subtitle="头像的基础用法"
@@ -103,17 +105,21 @@
           使用<code>fit</code>属性定义 CtAvatar 如何适应容器，同原生object-fit一样。
         </template>
       </showcomponent>
+      <h2>Attribute</h2>
+      <show-parameter :parameter="parameter"></show-parameter>
     </template>
   </div>
 </template>
 
 <script>
 import showcomponent from "../../components/showcomponent";
+import showparameter from "../../components/showparameter";
 export default {
   name: "avatar",
   chName: "头像",
   components: {
     showcomponent,
+    ShowParameter: showparameter,
   },
   data() {
     return {
@@ -198,6 +204,13 @@ export default {
     }
   }
 <` + `/` + `script>`,
+      parameter: {
+        title: ["参数", "说明", "类型", "可选值", "默认值"],
+        contents: [["icon", "设置头像的图标类型，参考 Icon 组件", "string", "", ""],
+        ["size", "设置头像的大小", "number/string", "number/large/medium/mini", "large"],
+        ["src", "图片头像的资源地址", "string", "", ""],
+        ["shape", "头像的形状", "string", "circle/square", "circle"]]
+      }
     };
   },
 };
