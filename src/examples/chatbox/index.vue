@@ -6,7 +6,7 @@
       :codes="code1"
     >
       <template v-slot:showarea>
-        <div style="width: 800px">
+        <div style="width: 100%">
           <ct-chatbox :text="['Hello, John']"></ct-chatbox>
           <ct-chatbox sent :text="['Hello']"></ct-chatbox>
           <ct-chatbox :text="['Hello, How are you?']"></ct-chatbox>
@@ -196,7 +196,7 @@ export default {
           ],
         ],
       },
-      code1: `<div style="width: 800px">
+      code1: `<div style="width: 100%">
   <ct-chatbox :text="['Hello, John']"></ct-chatbox>
   <ct-chatbox sent :text="['Hello']"></ct-chatbox>
   <ct-chatbox :text="['Hello, How are you?']"></ct-chatbox>

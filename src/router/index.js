@@ -2,9 +2,6 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 // import examples from "../examples";
 
-
-
-
 Vue.use(VueRouter);
 
 //路由引入
@@ -25,60 +22,75 @@ const loading = () => import("../examples/loading");
 const scrollbar = () => import("../examples/scrollbar");
 const steps = () => import("../examples/steps");
 
-
-
 const routes = [
   {
     path: "/",
     component: mainView,
   },
   {
-    path:'/examples',
-    redirect: '/examples/avatar'
+    path: "/examples",
+    redirect: "/examples/avatar",
   },
   {
     path: "/examples",
     component: blankView,
-    children:[
+    children: [
       {
         path: "avatar",
         component: avatar,
-      },{
+      },
+      {
         path: "button",
         component: button,
-      },{
+      },
+      {
         path: "chatbox",
         component: chatbox,
-      },{
+      },
+      {
         path: "container",
         component: container,
-      },{
+      },
+      {
         path: "descriptions",
         component: descriptions,
-      },{
+      },
+      {
         path: "dialog",
         component: dialog,
-      },{
+      },
+      {
         path: "loading",
         component: loading,
-      },{
+      },
+      {
         path: "dropdown",
         component: dropdown,
-      },{
+      },
+      {
         path: "radio",
         component: radio,
-      },{
+      },
+      {
         path: "scrollbar",
         component: scrollbar,
-      },{
+      },
+      {
         path: "steps",
         component: steps,
       },
-    ]
+    ],
   },
   {
     path: "/style",
-    component: styleView,
+    component: blankView,
+    redirect: "/style/color",
+    children: [
+      {
+        path: "color",
+        component: styleView,
+      },
+    ],
   },
 ];
 
