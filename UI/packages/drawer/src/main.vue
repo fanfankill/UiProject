@@ -14,9 +14,9 @@
 </template>
 
 <script>
-import Vue from "vue";
-import popup from "../../../../src/utils/popup";
-const Mask = Vue.extend(popup);
+// import Vue from "vue";
+// import popup from "../../../../src/utils/popup";
+// const Mask = Vue.extend(popup);
 
 export default {
   name: "CtDrawer",
@@ -69,21 +69,21 @@ export default {
       this.$emit("update:visible", false);
       this.insert();
     },
-    insert() {
-      //插入遮罩
-      const dom= new Mask({
-        el: document.createElement("div"),
-        data: {
-          visible: this.visible,
-        },
-      }).$el;
-      this.mask.push(dom)
-      document.body.appendChild(dom);
-    },
-    remove(){
-        console.log('/');
-        document.body.removeChild(this.mask.shift())
-    }
+    // insert() {
+    //   //插入遮罩
+    //   const dom= new Mask({
+    //     el: document.createElement("div"),
+    //     data: {
+    //       visible: this.visible,
+    //     },
+    //   }).$el;
+    //   this.mask.push(dom)
+    //   document.body.appendChild(dom);
+    // },
+    // remove(){
+    //     console.log('/');
+    //     document.body.removeChild(this.mask.shift())
+    // }
   },
 };
 </script>
