@@ -12,7 +12,9 @@
         :attributes="['type, size']"
         ctname="Animate"
         :codes="code1"
-     
+
+        v-animate="'queue-top'"
+        class="iscenter"
     >
       <template v-slot:showarea  >
         <div class="block_show_div">
