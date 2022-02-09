@@ -12,8 +12,11 @@
         <div class="aside">
           <asider></asider>
         </div>
-        <div class="main">
+
+        <div class="main" ref="main">
           <keep-alive><router-view> </router-view></keep-alive>
+          <back-top parent="main"></back-top>
+
         </div>
       </div>
     </div>
@@ -24,13 +27,16 @@
 import top from "../components/top";
 import logo from "../components/logo";
 import asider from "../components/asider";
+import backTop from './backTop.vue'
+
 export default {
   components: {
     top,
     logo,
     asider,
-  },
-};
+    backTop
+   }
+}
 </script>
 
 <style scoped>

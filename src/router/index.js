@@ -1,6 +1,5 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-// import examples from "../examples";
 
 Vue.use(VueRouter);
 
@@ -22,13 +21,18 @@ const loading = () => import("../examples/loading");
 const scrollbar = () => import("../examples/scrollbar");
 const steps = () => import("../examples/steps");
 const link = () => import("../examples/link");
-const Switch = () => import("../examples/switch");
 const tabs = () => import("../examples/tabs");
 const tree = () => import("../examples/tree");
+const switchCom = () => import("../examples/switch");
+
 
 const routes = [
   {
-    path: "/",
+    path:'/',
+    redirect: '/main'
+  },
+  {
+    path: "/main",
     component: mainView,
   },
   {
@@ -82,10 +86,21 @@ const routes = [
       {
         path: "steps",
         component: steps,
+      },{
+        path: "link",
+        component: link,
+      },
+      {
+        path: "tabs",
+        component: tabs,
+      },
+      {
+        path: "tree",
+        component: tree,
       },
       {
         path: "switch",
-        component: Switch,
+        component: switchCom,
       },
       {
         path: "link",
@@ -103,14 +118,7 @@ const routes = [
   },
   {
     path: "/style",
-    component: blankView,
-    redirect: "/style/color",
-    children: [
-      {
-        path: "color",
-        component: styleView,
-      },
-    ],
+    component: styleView,
   },
 ];
 
