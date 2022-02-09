@@ -171,6 +171,7 @@ export default {
             "false",
           ],
           ["width", "Dialog 的宽度", "string", "", "50%"],
+          ["center", "标题, footer居中", "boolean", "", "false"],
         ],
       },
       Sparameter: {

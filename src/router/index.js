@@ -25,6 +25,7 @@ const tabs = () => import("../examples/tabs");
 const tree = () => import("../examples/tree");
 const switchCom = () => import("../examples/switch");
 const message = () => import("../examples/message");
+const animate = () => import("../examples/animate");
 
 const routes = [
   {
@@ -101,6 +102,18 @@ const routes = [
         component: tree,
       },
       {
+        path: "link",
+        component: link,
+      },
+      {
+        path: "tabs",
+        component: tabs,
+      },
+      {
+        path: "tree",
+        component: tree,
+      },
+      {
         path: "switch",
         component: switchCom,
       },
@@ -115,6 +128,10 @@ const routes = [
       {
         path: "tree",
         component: tree,
+      },
+      {
+        path: "animate",
+        component: animate,
       },
     ],
   },
