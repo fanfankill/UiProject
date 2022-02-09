@@ -41,11 +41,13 @@ Vue.directive('animate', {
         if (binding.addClass) {
           window.removeEventListener('scroll', binding.addClass)
         }
+
       }
     }
     window.addEventListener('scroll', binding.addClass)
     binding.addClass()
   },
+
   unbind: function (el, binding) {
     if (binding.addClass) {
       window.removeEventListener('scroll', binding.addClass)
