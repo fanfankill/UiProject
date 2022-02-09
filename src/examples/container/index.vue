@@ -31,6 +31,12 @@ export default {
         }
       }
     },
+    beforeDestroy(){
+      console.log(Date.now());
+    },
+    destroyed(){
+      console.log(Date.now());
+    }
 }
 </script>
 

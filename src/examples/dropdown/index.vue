@@ -40,6 +40,9 @@ export default {
         }
       }
     },
+    created(){
+      console.log(Date.now());
+    }
 };
 </script>
 
