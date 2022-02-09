@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="LeftBlock">
     <vue-scroll>
       <ul>
         <li v-for="(item, index) in sideNav" :key="index">
@@ -35,7 +35,6 @@ export default {
 <style scoped lang="less">
 .ct-aside-active {
   color: @main-color;
-  background-color: #f4f8fa;
 }
 ul {
   width: 100%;
@@ -45,12 +44,17 @@ ul {
 ul li {
   height: 40px;
   line-height: 40px;
-  text-align: center;
 }
 ul li + li {
   margin-top: 4px;
 }
 ul li:hover {
   background-color: #f4f7f8;
+}
+ul li > li {
+  padding-left: 50px;
+}
+
+@media screen and (max-width: 900px) {
 }
 </style>

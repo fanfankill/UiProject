@@ -7,12 +7,13 @@
     >
       <router-link
         :to="item.to"
-        :class="['base_link', { 'is-active': current == index }]"
-        >{{ item.name }}</router-link
-      >
+         active-class="is-active"
+        :class="['base_link']"
+        >{{ item.name }}
+      </router-link>
     </li>
 
-    <li class="iconfont icon-lights"></li>
+    <li class="iconfont icon-lights" @click="toggleMode"></li>
     <li class="iconfont icon-zhongwen"><a></a></li>
   </ul>
 </template>
@@ -24,16 +25,16 @@ export default {
       current: 0,
       mylist: [
         {
-          to: "/style",
+          to: "/",
           name: "指南",
         },
         {
-          to: "/components",
+          to: "/examples",
           name: "组件",
         },
         {
-          to: "/",
-          name: "资源",
+          to: "/style",
+          name: "色彩",
         },
       ],
     };
@@ -109,5 +110,10 @@ export default {
   width: 50px;
   height: 1px;
   background: @info-font-color;
+}
+@media screen and (max-width: 900px) {
+  .headul {
+    display: none;
+  }
 }
 </style>

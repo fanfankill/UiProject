@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1 v-if="title">{{title}}</h1>
     <table>
       <thead>
       <tr>
@@ -21,6 +22,10 @@ export default {
   name: "ShowParameter",
   props: {
     parameter: Object,
+    title: {
+      type:String,
+      default:"",
+    }
   }
 }
 </script>
@@ -28,7 +33,11 @@ export default {
 <style scoped>
 table {
   border-collapse: collapse;
+<<<<<<< HEAD
   margin: 50px 0 0 0;
+=======
+  margin: 50px 0 0 0px;
+>>>>>>> ffa097eae147969b4ac88dcb463f9a0e54d8eadc
   table-layout: fixed;
   width: 90%;
 }
@@ -37,7 +46,7 @@ thead td {
 }
 tr {
   height: 50px;
-  line-height: 50px;
+  line-height: 20px;
   border-bottom: 1px solid #dcdfe6;
   /*white-space: nowrap;*/
 }

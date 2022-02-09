@@ -99,5 +99,5 @@ export default {
 </script>
 
 <style lang="less">
-  @import "./UI/theme/button--test.less";
+  @import "./UI/theme/button.less";
 </style>

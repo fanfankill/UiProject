@@ -1,13 +1,18 @@
 <template>
-  <div class="ontainer">
-    <router-view></router-view>
+  <div class="main">
+    <top></top>
+    <h1>What's CreateUI</h1>
   </div>
 </template>
 
-<script></script>
+<script>
+import top from "../components/top";
+export default {
+  name: "main",
+   components:{
+     top,
+   }
+};
+</script>
+<style scoped lang="less"></style>
 
-<style scoped lang="less">
-.container {
-  border: 2px solid @vice-color1;
-}
-</style>
