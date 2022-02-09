@@ -24,12 +24,17 @@ const link = () => import("../examples/link");
 const tabs = () => import("../examples/tabs");
 const tree = () => import("../examples/tree");
 const switchCom = () => import("../examples/switch");
+const message = () => import("../examples/message");
 const animate = () => import("../examples/animate");
+const skeleton = () => import("../examples/skeleton");
+const badge = () => import("../examples/badge");
+const notification = () => import("../examples/notification");
+const rate = () => import("../examples/rate");
 
 const routes = [
   {
-    path:'/',
-    redirect: '/main'
+    path: "/",
+    redirect: "/main",
   },
   {
     path: "/main",
@@ -38,14 +43,15 @@ const routes = [
   {
     path: "/examples",
     redirect: "/examples/avatar",
-  },
-  {
-    path: "/examples",
     component: blankView,
     children: [
       {
         path: "avatar",
         component: avatar,
+      },
+      {
+        path: "badge",
+        component: badge,
       },
       {
         path: "button",
@@ -72,6 +78,14 @@ const routes = [
         component: loading,
       },
       {
+        path: "message",
+        component: message,
+      },
+      {
+        path: "notification",
+        component: notification,
+      },
+      {
         path: "dropdown",
         component: dropdown,
       },
@@ -80,13 +94,22 @@ const routes = [
         component: radio,
       },
       {
+        path: "rate",
+        component: rate,
+      },
+      {
         path: "scrollbar",
         component: scrollbar,
       },
       {
         path: "steps",
         component: steps,
-      },{
+      },
+      {
+        path: "skeleton",
+        component: skeleton,
+      },
+      {
         path: "link",
         component: link,
       },
@@ -103,18 +126,6 @@ const routes = [
         component: switchCom,
       },
       {
-        path: "link",
-        component: link,
-      },
-      {
-        path: "tabs",
-        component: tabs,
-      },
-      {
-        path: "tree",
-        component: tree,
-      },
-      {
         path: "animate",
         component: animate,
       },
@@ -122,7 +133,14 @@ const routes = [
   },
   {
     path: "/style",
-    component: styleView,
+    redirect: "/style/color",
+    component: blankView,
+    children: [
+      {
+        path: "color",
+        component: styleView,
+      },
+    ],
   },
 ];
 

@@ -1,0 +1,86 @@
+[
+  {
+    "name": "视口",
+    "eName": "Animate"
+  },
+  {
+    "name": "头像",
+    "eName": "Avatar"
+  },
+  {
+    "name": "标记",
+    "eName": "Badge"
+  },
+  {
+    "name": "按钮",
+    "eName": "Button"
+  },
+  {
+    "name": "聊天盒子",
+    "eName": "Chatbox"
+  },
+  {
+    "name": "布局容器",
+    "eName": "Container"
+  },
+  {
+    "name": "描述列表",
+    "eName": "Descriptions"
+  },
+  {
+    "name": "对话框",
+    "eName": "Dialog"
+  },
+  {
+    "name": "下拉框",
+    "eName": "Dropdown"
+  },
+  {
+    "name": "链接",
+    "eName": "Link"
+  },
+  {
+    "name": "加载",
+    "eName": "Loading"
+  },
+  {
+    "name": "消息",
+    "eName": "Message"
+  },
+  {
+    "name": "通知",
+    "eName": "Notification"
+  },
+  {
+    "name": "单选框",
+    "eName": "Radio"
+  },
+  {
+    "name": "评分",
+    "eName": "Rate"
+  },
+  {
+    "name": "滚动条",
+    "eName": "Scrollbar"
+  },
+  {
+    "name": "骨架屏",
+    "eName": "Skeleton"
+  },
+  {
+    "name": "步骤条",
+    "eName": "Steps"
+  },
+  {
+    "name": "开关",
+    "eName": "Switch"
+  },
+  {
+    "name": "标签页",
+    "eName": "Tabs"
+  },
+  {
+    "name": "树",
+    "eName": "Tree"
+  }
+]

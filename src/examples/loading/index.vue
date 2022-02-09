@@ -1,5 +1,7 @@
 <template>
   <div>
+    <h1>Loading 加载</h1>
+    <p>通过指令与服务的方式，添加加载动画</p>
     <Showcomponent title="指令用法" :codes="code1">
       <template v-slot:desc>
         <div>
@@ -245,7 +247,7 @@ export default {
 
 <style lang="less" scoped>
 .container {
-  width: 800px;
+  width: 100%;
   height: 200px;
   background-color: @main-color3;
 }

@@ -1,5 +1,7 @@
 <template>
   <div>
+    <h1>Chatbox 聊天盒</h1>
+    <p>展示对话双方的各种聊天信息</p>
     <Showcomponent
       title="基础用法"
       subtitle="简单的聊天盒展示，宽度默认为父元素宽度"

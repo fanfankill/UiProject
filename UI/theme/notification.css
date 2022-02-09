@@ -64,6 +64,7 @@ h2 {
   opacity: 0;
 }
 .notification {
+  z-index: 9999999999;
   background-color: #fff;
   padding: 20px;
   position: fixed;

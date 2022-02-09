@@ -8,7 +8,7 @@
     >
       <template v-slot:showarea>
         <CtScrollbar :height="180" dark>
-          <div v-for="i in 40" :key="i" style="padding: 10px; fontsize: 1rem">
+          <div v-for="i in 40" :key="i" style="padding: 10px; font-size: 1rem">
             对于滚动区域的描述的感觉还是不错的，留给使用者的可改造空间大，使用起来十分的方便
           </div>
         </CtScrollbar>

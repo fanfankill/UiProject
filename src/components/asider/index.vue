@@ -16,17 +16,10 @@
 </template>
 
 <script>
-import examples from "../../examples";
-
 export default {
   data() {
     return {
-      sideNav: examples.map((example) => {
-        return {
-          name: example.chName,
-          eName: example.name,
-        };
-      }),
+      sideNav: require("./list.json"),
     };
   },
 };

@@ -1,5 +1,7 @@
 <template>
   <div>
+    <h1>Link 链接</h1>
+    <p>不同形式的链接</p>
     <showcomponent
       title="基础用法"
       subtitle="基础的文字链接用法。"
