@@ -7,7 +7,7 @@
           @click="setStartNum(number)"
     >
     </span>
-    <span>{{this.levels[this.starNum-1]}}</span>
+    <span v-if="showText">{{ this.levels[this.starNum - 1] }}</span>
   </div>
 </template>
 
@@ -31,20 +31,24 @@ export default {
         return ['极差', '失望', '一般', '满意', '惊喜']
       }
     },
-    readOnly:{
-      type:Boolean,
-      default:false
-    }
+    readOnly: {
+      type: Boolean,
+      default: false
+    },
+    showText: {
+      type: Boolean,
+      default: false
+    },
   },
-  data(){
-    return{
-      starNum:this.num
+  data() {
+    return {
+      starNum: this.num,
     }
   },
   methods: {
-    setStartNum(number){
+    setStartNum(number) {
       this.starNum = number;
-      this.$emit("getStarNum",this.starNum)
+      this.$emit("getStarNum", this.starNum)
     }
   },
 }

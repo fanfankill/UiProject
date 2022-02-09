@@ -26,6 +26,10 @@ const tree = () => import("../examples/tree");
 const switchCom = () => import("../examples/switch");
 const message = () => import("../examples/message");
 const animate = () => import("../examples/animate");
+const skeleton = () => import("../examples/skeleton");
+const badge = () => import("../examples/badge");
+const notification = () => import("../examples/notification");
+const rate = () => import("../examples/rate");
 
 const routes = [
   {
@@ -44,6 +48,10 @@ const routes = [
       {
         path: "avatar",
         component: avatar,
+      },
+      {
+        path: "badge",
+        component: badge,
       },
       {
         path: "button",
@@ -74,6 +82,10 @@ const routes = [
         component: message,
       },
       {
+        path: "notification",
+        component: notification,
+      },
+      {
         path: "dropdown",
         component: dropdown,
       },
@@ -82,12 +94,20 @@ const routes = [
         component: radio,
       },
       {
+        path: "rate",
+        component: rate,
+      },
+      {
         path: "scrollbar",
         component: scrollbar,
       },
       {
         path: "steps",
         component: steps,
+      },
+      {
+        path: "skeleton",
+        component: skeleton,
       },
       {
         path: "link",
