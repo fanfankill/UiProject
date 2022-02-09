@@ -4,11 +4,9 @@
       <span class="iconfont icon-youceanniushouqi"></span>
     </div>
     <div class="container is-vertal">
-      <div class="head-wrapper">
-        <div class="head">
-          <logo></logo>
-          <top></top>
-        </div>
+      <div class="head">
+        <logo></logo>
+        <top></top>
       </div>
       <div class="container">
         <div class="aside">
@@ -30,8 +28,8 @@ import asider from "../components/asider";
 import backTop from './backTop.vue'
 
 export default {
-   components:{
-     top,
+  components: {
+    top,
     logo,
     asider,
     backTop
@@ -39,35 +37,30 @@ export default {
 }
 </script>
 
-
 <style scoped>
 .container {
   display: flex;
   flex-direction: row;
   flex: 1;
-  height: 100vh;
 }
 
 .is-vertal {
   flex-direction: column;
 }
 
-.head-wrapper {
-  margin-top: 80px;
-}
-
 .head {
   width: 100%;
   height: 80px;
-  position: fixed;
+  position: relative;
   z-index: 2001;
-  background-color: #fff;
   top: 0;
+  background-color: #fff;
   border-bottom: solid 1px gainsboro;
 }
 
 .aside {
   overflow: auto;
+  height: calc(100vh - 80px);
   width: 240px;
   border-right: solid 1px gainsboro;
 }
@@ -76,6 +69,7 @@ export default {
   padding: 20px 0 60px 40px;
   flex: 1;
   overflow: auto;
+  height: calc(100vh - 80px);
 }
 
 .main::-webkit-scrollbar {
