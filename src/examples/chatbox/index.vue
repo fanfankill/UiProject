@@ -1,12 +1,14 @@
 <template>
   <div>
+    <h1>Chatbox 聊天盒</h1>
+    <p>展示对话双方的各种聊天信息</p>
     <Showcomponent
       title="基础用法"
       subtitle="简单的聊天盒展示，宽度默认为父元素宽度"
       :codes="code1"
     >
       <template v-slot:showarea>
-        <div style="width: 800px">
+        <div style="width: 100%">
           <ct-chatbox :text="['Hello, John']"></ct-chatbox>
           <ct-chatbox sent :text="['Hello']"></ct-chatbox>
           <ct-chatbox :text="['Hello, How are you?']"></ct-chatbox>
@@ -165,7 +167,7 @@
       </template>
     </Showcomponent>
 
-    <h1 style="margin-top: 50px">参数列表</h1>
+    <h1 style="margin-top: 50px">Attribution</h1>
     <Showparameter :parameter="params"></Showparameter>
   </div>
 </template>
@@ -196,7 +198,7 @@ export default {
           ],
         ],
       },
-      code1: `<div style="width: 800px">
+      code1: `<div style="width: 100%">
   <ct-chatbox :text="['Hello, John']"></ct-chatbox>
   <ct-chatbox sent :text="['Hello']"></ct-chatbox>
   <ct-chatbox :text="['Hello, How are you?']"></ct-chatbox>

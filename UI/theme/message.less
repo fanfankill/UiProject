@@ -1,0 +1,55 @@
+@import url(./common/global.less);
+
+.message-fade-enter-active,
+.message-fade-leave-active {
+  transition: all 0.3s ease;
+}
+.message-fade-enter,
+.message-fade-leave-to {
+  transform: translateY(-20px);
+  opacity: 0;
+}
+.message {
+  position: fixed;
+  z-index: 9999;
+  top: 15px;
+  right: 36%;
+  margin: 0 auto;
+  width: 22%;
+  border-radius: 4px;
+  padding: 13px 18px;
+  color: #616060;
+  font-size: 17px;
+}
+.message-close {
+  position: absolute;
+  top: 25%;
+  right: 10px;
+  color: rgba(153, 152, 152, 0.774);
+  cursor: pointer;
+  font-size: 17px;
+  &:hover {
+    color: #0c0c0c;
+  }
+}
+.message_img {
+  display: inline-block;
+  border-radius: 50%;
+  width: 17px;
+  margin-right: 3px;
+}
+.message-success {
+  background: #dcffefd3;
+  color: @success-color;
+}
+.message-info {
+  background: @main-color;
+}
+.message-warning {
+  color: #ecae51;
+  background: @warning-color;
+}
+.message-error {
+  background: #ffe2e2;
+  color: @error-color;
+}

@@ -1,0 +1,127 @@
+.ct-tabs-nav {
+  position: relative;
+  border-bottom: 1px solid #dcdee2;
+  margin-bottom: 1rem;
+}
+.ct-tab {
+  display: inline-block;
+  margin-right: 1rem;
+  padding: .5rem 1rem;
+  cursor: pointer;
+  position: relative;
+  transition: all .3s ease-in;
+  & span {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    text-align: center;
+    line-height: 1rem;
+    position: absolute;
+    visibility: hidden;
+    border-radius: 50%;
+  }
+}
+.ct-tab:hover {
+  color: @main-color;
+}
+
+
+.ct-inv-bar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: @main-color;
+  height: 2px;
+  border-radius: 1px;
+  transition: transform 300ms ease-in-out;
+}
+.tabdisabled {
+  color: @grey-bg-color2;
+  cursor: default;
+  pointer-events: none;
+}
+.active {
+  color: @main-color;
+}
+
+// 图标位置
+.iconleft.ct-tab::before {
+  padding-right: .5rem;
+}
+.iconright.ct-tab::before {
+  float: right;
+  padding-left: .5rem;
+}
+.icontop.ct-tab::before {
+  position: absolute;
+  margin: -1.2rem 0 0 calc(50% - 1.5rem);
+
+}
+.iconbottom.ct-tab::before {
+  position: absolute;
+  margin: 1.5rem 0 0 calc(50% - 1.5rem);
+}
+.icontop.ct-tab {
+  padding-top: 1.5rem;
+}
+.iconbottom.ct-tab {
+  padding-bottom: 1.5rem;
+}
+
+// 不同类型的样式
+.ct-tab.cardtype {
+  margin-right: 0;
+  padding: .5rem 1.3rem;
+  border: 1px solid @grey-bg-color2;
+  border-bottom: 0;
+  background-color: rgb(243, 243, 243);
+  border-radius: 2px;
+}
+.cardtype + .cardtype {
+  border-left: 0;
+}
+.cardtype.active {
+  border-bottom: 0;
+  background-color: #fff;
+}
+
+// 动态增删标签页样式
+span.closable {
+  position: static;
+  visibility: visible;
+  margin-left: .5rem;
+  transition: all .5s ease-out;
+  &:hover {
+    color: #fff;
+    transition: background-color .5s ease-out;
+    background-color: rgb(155, 155, 155);
+  }
+}
+.ct-tab:hover {
+  & span {
+    position: static;
+    visibility: visible;
+    margin-left: .5rem;
+    transition: all .5s ease-out;
+  }
+  & span:hover {
+    color: #fff;
+    transition: background-color .5s ease-out;
+    background-color: rgb(192, 192, 192);
+  }
+}
+
+.add-tab {
+  position: absolute;
+  right: 1px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #e4e4e4;
+  padding: 0 .25rem;
+  border: 1px solid #e4e4e4;
+  border-radius: 2px;
+  cursor: pointer;
+  &:hover {
+    color: @main-hover-color;
+  }
+}
