@@ -60,15 +60,22 @@
         <ct-button type="primary" @click="centerVisible = false">确定</ct-button>
       </span>
     </ct-dialog>
+
+    <h2>Attribute</h2>
+    <show-parameter :parameter="Aparameter"></show-parameter>
+    <h2>slot</h2>
+    <show-parameter :parameter="Sparameter"></show-parameter>
   </div>
 </template>
 <script>
 import showcomponent from "../../components/showcomponent";
+import showparameter from "../../components/showparameter";
 export default {
   name: "Dialog",
   chName: "对话框",
   components: {
     showcomponent,
+    ShowParameter: showparameter,
   },
   data() {
     return {
@@ -115,7 +122,17 @@ export default {
     <ct-button @click="centerVisible = false">取 消</ct-button>
     <ct-button type="primary" @click="centerVisible = false">确定</ct-button>
   </span>
-</ct-dialog>`
+</ct-dialog>`,
+      Aparameter: {
+        title: ["参数", "说明", "类型", "可选值", "默认值"],
+        contents: [["title", "标题，也可通过具名 slot 传入", "string", "", ""],
+        ["visible", "是否显示 Dialog，支持 .sync 修饰符", "boolean", "", "false"],
+        ["width", "Dialog 的宽度", "string", "", "50%"]]
+      },
+      Sparameter: {
+        title: ["name", "说明"],
+        contents: [["", "Dialog 的内容"], ["title", "Dialog 标题区的内容"], ["footer", "	Dialog 按钮操作区的内容"]]
+      }
     };
   },
 };
