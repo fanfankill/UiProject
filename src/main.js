@@ -26,7 +26,7 @@ Vue.use(vuescroll);
 Vue.config.productionTip = false;
 
 
-Vue.directive('animate', {
+Vue.directive('Animate', {
   // 当绑定元素插入到 DOM 中
   inserted: function (el, binding) {
     // 聚焦元素
@@ -39,17 +39,21 @@ Vue.directive('animate', {
           el.className = binding.value+' '+el.className
         }
         if (binding.addClass) {
+          window.removeEventListener('wheel', binding.addClass)
           window.removeEventListener('scroll', binding.addClass)
         }
 
       }
     }
-    window.addEventListener('scroll', binding.addClass)
+    window.addEventListener('wheel', binding.addClass,true)
+    window.addEventListener('scroll', binding.addClass,true)
     binding.addClass()
-  },
 
+  },
+  //解绑
   unbind: function (el, binding) {
     if (binding.addClass) {
+      window.removeEventListener('wheel', binding.addClass)
       window.removeEventListener('scroll', binding.addClass)
     }
   }

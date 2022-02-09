@@ -8,7 +8,7 @@
         :attributes="['type, size']"
         ctname="Animate"
         :codes="code1"
-        v-animate="'queue-top'"
+        v-Animate="'queue-top'"
         class="iscenter"
     >
       <template v-slot:showarea  >
@@ -22,11 +22,15 @@
         使用<code>v-animate</code>、<code>class</code>属性来定义视口出现的效果，可以自定义视口出现的效果
       </template>
     </showcomponent>
+
     <showpara
         title="Attribute"
         :parameter="parameter"
         style="margin-top: 150px"
+        v-animate="'queue-top'"
+        class="iscenter"
     ></showpara>
+
   </div>
 </template>
 
@@ -49,7 +53,6 @@ export default {
   }
 }
 </style>`,
-      code2:``,
       parameter: {
         title: ["参数", "说明", "类型", "可选值", "默认值"],
         contents: [
