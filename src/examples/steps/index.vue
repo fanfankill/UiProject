@@ -1,5 +1,7 @@
 <template>
   <div>
+    <h1>Steps 步骤条</h1>
+    <p>以不同形式展示步骤的进行</p>
     <Showcomponent title="基础用法" subtitle="简单的步骤条" :codes="code1">
       <template v-slot:desc>
         <div>控制<code>active</code>来切换步骤</div>
@@ -115,12 +117,12 @@
       </template>
     </Showcomponent>
 
-    <h1 style="margin: 50px 0 30px 0">参数列表</h1>
+    <h1 style="margin: 50px 0 30px 0">Attribution</h1>
 
-    <h2>CtSteps参数</h2>
+    <h2>CtSteps</h2>
     <Showparameter :parameter="stepsParams"></Showparameter>
 
-    <h2 style="margin: 50px 0 0 0">CtStep参数</h2>
+    <h2 style="margin: 50px 0 0 0">CtStep</h2>
     <Showparameter :parameter="stepParams"></Showparameter>
   </div>
 </template>

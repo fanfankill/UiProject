@@ -1,17 +1,19 @@
 <template>
   <div>
-    <h1 v-if="title">{{title}}</h1>
+    <h1 v-if="title">{{ title }}</h1>
     <table>
       <thead>
-      <tr>
-        <td v-for="(item,index) in parameter.title" v-bind:key="index">{{ item }}</td>
-      </tr>
+        <tr>
+          <td v-for="(item, index) in parameter.title" v-bind:key="index">
+            {{ item }}
+          </td>
+        </tr>
       </thead>
 
       <tbody>
-      <tr v-for="(content,index) in parameter.contents" :key="index">
-        <td v-for="(item,index) in content" :key="index">{{ item }}</td>
-      </tr>
+        <tr v-for="(content, index) in parameter.contents" :key="index">
+          <td v-for="(item, index) in content" :key="index">{{ item }}</td>
+        </tr>
       </tbody>
     </table>
   </div>
@@ -23,17 +25,17 @@ export default {
   props: {
     parameter: Object,
     title: {
-      type:String,
-      default:"",
-    }
-  }
-}
+      type: String,
+      default: "",
+    },
+  },
+};
 </script>
 
 <style scoped>
 table {
   border-collapse: collapse;
-  margin: 50px 0 0 0px;
+  margin: 20px 0 50px 0;
   table-layout: fixed;
   width: 90%;
 }
@@ -50,7 +52,8 @@ td {
   color: #606266;
   font-size: 14px;
   font-weight: 400;
-  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, SimSun, sans-serif;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB,
+    Microsoft YaHei, SimSun, sans-serif;
   text-align: left;
   padding-right: 100px;
   word-break: break-all;

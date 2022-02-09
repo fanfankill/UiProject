@@ -7,7 +7,8 @@
     >
       <router-link
         :to="item.to"
-        :class="['base_link', { 'is-active': current == index }]"
+         active-class="is-active"
+        :class="['base_link']"
         >{{ item.name }}
       </router-link>
     </li>
@@ -24,16 +25,16 @@ export default {
       current: 0,
       mylist: [
         {
-          to: "/style",
+          to: "/main",
           name: "指南",
         },
         {
-          to: "/components",
+          to: "/examples",
           name: "组件",
         },
         {
-          to: "/",
-          name: "资源",
+          to: "/style",
+          name: "色彩",
         },
       ],
     };
