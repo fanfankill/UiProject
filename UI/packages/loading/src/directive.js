@@ -10,6 +10,8 @@ const toggleLoading = (el, binding) => {
       el.instance.visible = true;
 
       if (binding.modifiers.fullscreen) {
+        el.style.height = "100vh";
+        el.style.width = "100vw";
         document.body.appendChild(el.mask);
       } else {
         el.appendChild(el.mask);
