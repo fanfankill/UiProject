@@ -24,7 +24,7 @@ const link = () => import("../examples/link");
 const tabs = () => import("../examples/tabs");
 const tree = () => import("../examples/tree");
 const switchCom = () => import("../examples/switch");
-
+const animate = () => import("../examples/animate");
 
 const routes = [
   {
@@ -125,6 +125,10 @@ const routes = [
         path: "tree",
         component: tree,
         index:14,
+      },
+      {
+        path: "animate",
+        component: animate,
       },
     ],
   },
