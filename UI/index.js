@@ -1,4 +1,5 @@
 import Loading from "./packages/loading";
+// import animate from "./directive/animate";
 
 
 
@@ -23,6 +24,7 @@ const install = function(Vue) {
     });
 
     Vue.use(Loading.directive);
+    // Vue.use(animate)
     Vue.prototype.$loading = Loading.service;
     Vue.prototype.$notify = Notification;
 };

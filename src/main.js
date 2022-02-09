@@ -19,42 +19,13 @@ import "vuescroll/dist/vuescroll.css";
 import Highlight from "./plugins/highlight"; // 这里是你项目highlight.js所在路径
 Vue.use(Highlight);
 
+import './directive'
 
 Vue.use(fanui);
 Vue.use(vuescroll);
 
 Vue.config.productionTip = false;
 
-
-Vue.directive('animate', {
-  // 当绑定元素插入到 DOM 中
-  inserted: function (el, binding) {
-    // 聚焦元素
-    binding.addClass = () => {
-      const { top } = el.getBoundingClientRect()
-      const h = document.documentElement.clientHeight || document.body.clientHeight
-      if (top < h) {
-        if(el.className.indexOf(binding.value) == -1 ){
-          // 初次还未绑定过，则新增类名(注意：下面单引号中间是一个空格！！！)
-          el.className = binding.value+' '+el.className
-        }
-        if (binding.addClass) {
-          window.removeEventListener('scroll', binding.addClass)
-        }
-
-      }
-    }
-    window.addEventListener('scroll', binding.addClass)
-    binding.addClass()
-  },
-
-  unbind: function (el, binding) {
-    if (binding.addClass) {
-      window.removeEventListener('scroll', binding.addClass)
-    }
-  }
-
-});
 
 new Vue({
     render: (h) => h(App),

@@ -12,8 +12,7 @@
       </router-link>
     </li>
 
-    <li class="iconfont icon-lights" @click="toggleMode"></li>
-    <li class="iconfont icon-zhongwen"><a></a></li>
+    <li class="iconfont icon-github-fill myicon" @click="togithub"></li>
   </ul>
 </template>
 
@@ -50,6 +49,9 @@ export default {
         this.mode = "light";
       }
     },
+    togithub(){
+       location.href="https://github.com/fanfankill/UiProject"
+    }
   },
 };
 </script>
@@ -106,6 +108,9 @@ export default {
   width: 50px;
   height: 1px;
   background: @info-font-color;
+}
+.myicon{
+  cursor: pointer;
 }
 @media screen and (max-width: 900px) {
   .headul {

@@ -14,11 +14,10 @@
         </div>
 
         <div class="main" ref="main">
-          <keep-alive>
+        
             <transition :name="transitionName">
           <router-view> </router-view>
           </transition>
-          </keep-alive>
           
           <back-top parent="main"></back-top>
 
@@ -55,6 +54,9 @@ export default {
         this.transitionName = 'slide-right';
       }
     }
+  },
+   computed:{
+    
   }
 }
 </script>
@@ -88,7 +90,7 @@ export default {
 }
 
 .main {
-  padding: 20px 0 60px 40px;
+  padding: 40px 20px 60px 40px;
   flex: 1;
   overflow: auto;
   height: calc(100vh - 80px);
@@ -125,11 +127,12 @@ export default {
 }
 
 
-@media screen and(max-width:900px) {
+@media screen and (max-width:900px) {
   .aside {
-    display: none;
+    width: 100%;
+    margin-bottom: 20px;
   }
-  .showsmlicon {
+  /* .showsmlicon {
     display: block;
     position: fixed;
     top: 90px;
@@ -140,6 +143,9 @@ export default {
     transform: rotate(180deg);
     background-color: white;
     box-shadow: 2px 0 8px #00000026;
+  } */
+  .container{
+    flex-direction: column;
   }
 }
 </style>

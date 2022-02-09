@@ -44,6 +44,13 @@ const routes = [
     component: blankView,
     children: [
       {
+        path: "myanimate",
+        component: animate,
+        meta: {
+          index:-1,
+      }
+      },
+      {
         path: "avatar",
         component: avatar,
         meta: {
@@ -81,54 +88,70 @@ const routes = [
       {
         path: "dialog",
         component: dialog,
-        index:5,
+        meta: {
+          index:5,
+      }
       },{
         path: "link",
         component: link,
-        index:6,
+        meta: {
+          index:6,
+      }
       },
       {
         path: "loading",
         component: loading,
-        index:7,
+        meta: {
+          index:7,
+      }
       },
       {
         path: "dropdown",
         component: dropdown,
-        index:8,
+        meta: {
+          index:8,
+      }
       },
       {
         path: "radio",
         component: radio,
-        index:9,
+        meta: {
+          index:9,
+      }
       },
       {
         path: "scrollbar",
         component: scrollbar,
-        index:10,
+        meta: {
+          index:10,
+      }
       },
       {
         path: "steps",
         component: steps,
-        index:11,
+        meta: {
+          index:11,
+      }
       },{
         path: "switch",
         component: switchCom,
-        index:12,
+        meta: {
+          index:12,
+      }
       },
       {
         path: "tabs",
         component: tabs,
-        index:13,
+        meta: {
+          index:13,
+      }
       },
       {
         path: "tree",
         component: tree,
-        index:14,
-      },
-      {
-        path: "animate",
-        component: animate,
+        meta: {
+          index:14,
+      }
       },
     ],
   },

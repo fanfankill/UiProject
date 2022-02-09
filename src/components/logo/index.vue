@@ -8,9 +8,9 @@
     <ct-dropdown class="droptop" trigger="click">
       <span class="iconfont icon-hanbaoanniu"></span>
       <ct-dropdown-menu>
-        <ct-dropdown-item>指南</ct-dropdown-item>
-        <ct-dropdown-item>组件</ct-dropdown-item>
-        <ct-dropdown-item>资源</ct-dropdown-item>
+        <ct-dropdown-item><router-link active-class="is-active" to="/main">指南</router-link></ct-dropdown-item>
+        <ct-dropdown-item><router-link active-class="is-active" to="/examples">组件</router-link></ct-dropdown-item>
+        <ct-dropdown-item><router-link active-class="is-active" to="/style">色彩</router-link></ct-dropdown-item>
       </ct-dropdown-menu>
     </ct-dropdown>
   </div>
@@ -49,6 +49,13 @@ export default {
 }
 .droptop {
   display: none;
+}
+.is-active{
+  color: #21a8f3;
+}
+a{
+  text-decoration: none;
+  color: gray;
 }
 @media screen and (max-width: 900px) {
   .headtital {

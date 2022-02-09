@@ -99,6 +99,9 @@ export default {
   mounted(){
       this.startinterval()
   },
+  beforeDestroy(){
+    this.stopintervar()
+  },
 
   methods: {
     toleftchange() {
@@ -117,9 +120,9 @@ export default {
         console.log(1);
       } else {
         this.currentindex++;
-        this.$refs.scrollblock.style.transform = `translateX(${
-          this.$refs.scrollchild[0].offsetWidth * this.currentindex
-        }px)`;
+       this.$nextTick(()=>{
+          this.$refs.scrollblock.style.transform = `translateX(${this.$refs.scrollchild[0].offsetWidth * this.currentindex}px)`;
+       })
       }
     },
     rightchange() {
@@ -130,13 +133,15 @@ export default {
         maxlength = this.myintrdolist.length - 1;
       }
       if (-this.currentindex >= maxlength) {
-        this.$refs.scrollblock.style.transform = `translateX(0px)`;
+        this.$nextTick(()=>{
+          this.$refs.scrollblock.style.transform = `translateX(0px)`;
+        })
         this.currentindex = 0;
       } else {
         this.currentindex--;
-        this.$refs.scrollblock.style.transform = `translateX(${
-          this.$refs.scrollchild[0].offsetWidth * this.currentindex
-        }px)`;
+       this.$nextTick(()=>{
+          this.$refs.scrollblock.style.transform = `translateX(${this.$refs.scrollchild[0].offsetWidth * this.currentindex}px)`;
+       })
       }
     },
 

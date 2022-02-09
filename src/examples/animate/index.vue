@@ -9,7 +9,6 @@
         ctname="Animate"
         :codes="code1"
         v-animate="'queue-top'"
-        class="iscenter"
     >
       <template v-slot:showarea  >
         <div class="block_show_div">
@@ -22,6 +21,7 @@
         使用<code>v-animate</code>、<code>class</code>属性来定义视口出现的效果，可以自定义视口出现的效果
       </template>
     </showcomponent>
+    <!-- <mybase></mybase> -->
     <showpara
         title="Attribute"
         :parameter="parameter"
@@ -33,10 +33,11 @@
 <script>
 import showcomponent from "../../components/showcomponent";
 import showpara from "../../components/showparameter";
+// import mybase from './children/base'
 export default {
-  name:"animate",
-  chName:"视口出现",
-  components:{showcomponent,showpara},
+  name:"myanimate",
+  chName:"视口动画",
+  components:{showcomponent,showpara,},
   data(){
     return{
       code1:`<h5 v-animate="'queue-top'" class="iscenter">元素出现在可视区域后的渐变动画</h5>
@@ -63,13 +64,11 @@ export default {
 }
 </script>
 
-<style scoped lang="less">
-.iscenter {
-  opacity: 0;
-  &.queue-top {
-    opacity: 1;
-    transition: 2s all;
+<style>
+
+ .queue-top{
+    animation: Titletop 1s cubic-bezier(.5,1,.89,1);
   }
-}
+  
 
 </style>
