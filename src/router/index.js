@@ -29,7 +29,11 @@ const steps = () => import("../examples/steps");
 
 const routes = [
   {
-    path: "/",
+    path:'/',
+    redirect: '/main'
+  },
+  {
+    path: "/main",
     component: mainView,
   },
   {

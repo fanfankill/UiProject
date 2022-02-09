@@ -25,7 +25,7 @@ export default {
       current: 0,
       mylist: [
         {
-          to: "/",
+          to: "/main",
           name: "指南",
         },
         {
