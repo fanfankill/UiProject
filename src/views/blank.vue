@@ -12,9 +12,11 @@
         <div class="aside">
           <asider></asider>
         </div>
+
         <div class="main" ref="main">
           <keep-alive><router-view> </router-view></keep-alive>
           <back-top parent="main"></back-top>
+
         </div>
       </div>
     </div>

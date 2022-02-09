@@ -1,6 +1,5 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-// import examples from "../examples";
 
 Vue.use(VueRouter);
 
@@ -29,7 +28,11 @@ const switchCom = () => import("../examples/switch");
 
 const routes = [
   {
-    path: "/",
+    path:'/',
+    redirect: '/main'
+  },
+  {
+    path: "/main",
     component: mainView,
   },
   {
@@ -100,10 +103,6 @@ const routes = [
         component: switchCom,
       },
       {
-        path: "switch",
-        component: Switch,
-      },
-      {
         path: "link",
         component: link,
       },
@@ -119,14 +118,7 @@ const routes = [
   },
   {
     path: "/style",
-    component: blankView,
-    redirect: "/style/color",
-    children: [
-      {
-        path: "color",
-        component: styleView,
-      },
-    ],
+    component: styleView,
   },
 ];
 
