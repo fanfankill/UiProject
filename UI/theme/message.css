@@ -1,14 +1,14 @@
-@import url(./common/global.less);
-
-.message-fade-enter-active, .message-fade-leave-active {
-  transition: all .3s ease;
+.message-fade-enter-active,
+.message-fade-leave-active {
+  transition: all 0.3s ease;
 }
-.message-fade-enter, .message-fade-leave-to {
+.message-fade-enter,
+.message-fade-leave-to {
   transform: translateY(-20px);
   opacity: 0;
 }
 .message {
-  position:fixed;
+  position: fixed;
   z-index: 9999;
   top: 20px;
   right: 36%;
@@ -26,9 +26,9 @@
   color: rgba(153, 152, 152, 0.774);
   cursor: pointer;
   font-size: 17px;
-  &:hover {
-    color: #0c0c0c;
-  }
+}
+.message-close:hover {
+  color: #0c0c0c;
 }
 .message_img {
   display: inline-block;
@@ -37,18 +37,18 @@
   margin-right: 3px;
 }
 .message-success {
-  color: @success-color;
+  color: #00ce3f;
   background: #dcffefd3;
 }
 .message-info {
-  color: @main-color;
-  background: @main-color3;
+  color: #0ba5f8;
+  background: #a8ddfa;
 }
 .message-warning {
-  color: @warning-color;
+  color: #e79f18;
   background: #ffdec9;
 }
 .message-error {
-  color: @error-color;
+  color: #f06897;
   background: #ffe2e2;
 }

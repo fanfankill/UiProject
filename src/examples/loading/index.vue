@@ -247,7 +247,7 @@ export default {
 
 <style lang="less" scoped>
 .container {
-  width: 800px;
+  width: 100%;
   height: 200px;
   background-color: @main-color3;
 }

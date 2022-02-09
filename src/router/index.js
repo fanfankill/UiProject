@@ -46,7 +46,7 @@ const routes = [
     component: blankView,
     children: [
       {
-        path: "myanimate",
+        path: "animate",
         component: animate,
         meta: {
           index:-1,
@@ -192,14 +192,7 @@ const routes = [
   },
   {
     path: "/style",
-    redirect: "/style/color",
-    component: blankView,
-    children: [
-      {
-        path: "color",
-        component: styleView,
-      },
-    ],
+    component: styleView,
   },
 ];
 

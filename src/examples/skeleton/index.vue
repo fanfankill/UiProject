@@ -2,7 +2,7 @@
   <div>
     <h1>Skeleton 骨架屏</h1>
     <p>用于在加载实际页面数据之前显示内容的占位符预览。</p>
-     <Showcomponent title="基础用法" subtitle="基础的骨架效果。" :codes="code1">
+     <Showcomponent title="基础用法" subtitle="基础的骨架效果" :codes="code1">
       <template v-slot:desc>
         <div>
            默认为类型为text,宽度默认会充满父盒子
@@ -14,7 +14,7 @@
         </div>
       </template>
     </Showcomponent>
-     <Showcomponent title="动画效果" subtitle="显示动画效果。" :codes="code2">
+     <Showcomponent title="动画效果" subtitle="显示动画效果" :codes="code2">
       <template v-slot:desc>
         <div>
            通过<code>animated</code>属性来定义是否显示动画效果
@@ -46,7 +46,7 @@
         </div>
       </template>
     </Showcomponent>
-     <Showcomponent title="大小" subtitle="显示动画效果。" :codes="code4">
+     <Showcomponent title="大小" subtitle="定义元素大小" :codes="code4">
       <template v-slot:desc>
         <div>
            通过<code>size</code>、<code>height</code>、<code>width</code>属性来设置Skeleton 组件的大小

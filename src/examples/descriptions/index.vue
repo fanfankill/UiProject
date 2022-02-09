@@ -4,40 +4,40 @@
     <p>常用的描述列表用法。</p>
     <!--常用转义符号:&gt=>'>',&lt=>'<',&quot=>'"',&amp=>'&'-->
     <showcomponent
-      title="基础用法"
-      subtitle="基础的描述列表。"
-      :attributes="['type, size']"
-      ctname="Descriptions"
-      :codes="code1"
+        title="基础用法"
+        subtitle="基础的描述列表。"
+        :attributes="['type, size']"
+        ctname="Descriptions"
+        :codes="code1"
     >
       <template v-slot:showarea>
         <div class="block_show_div">
           <div class="flex_col">
             <ct-descriptions title="User Info" column="3">
               <ct-descriptions-item label="Username">{{
-                info.name
-              }}</ct-descriptions-item>
+                  info.name
+                }}</ct-descriptions-item>
               <ct-descriptions-item label="Age"
-                ><code>{{ info.age }}</code></ct-descriptions-item
+              ><code>{{ info.age }}</code></ct-descriptions-item
               >
               <ct-descriptions-item label="Gender">{{
-                info.sex
-              }}</ct-descriptions-item>
+                  info.sex
+                }}</ct-descriptions-item>
               <ct-descriptions-item label="School">{{
-                info.school
-              }}</ct-descriptions-item>
+                  info.school
+                }}</ct-descriptions-item>
               <ct-descriptions-item label="Profession">{{
-                info.major
-              }}</ct-descriptions-item>
+                  info.major
+                }}</ct-descriptions-item>
               <ct-descriptions-item label="Hobby">{{
-                info.hobby
-              }}</ct-descriptions-item>
+                  info.hobby
+                }}</ct-descriptions-item>
               <ct-descriptions-item label="Telephone">{{
-                info.phone
-              }}</ct-descriptions-item>
+                  info.phone
+                }}</ct-descriptions-item>
               <ct-descriptions-item label="Address">{{
-                info.address
-              }}</ct-descriptions-item>
+                  info.address
+                }}</ct-descriptions-item>
             </ct-descriptions>
           </div>
         </div>
@@ -48,11 +48,11 @@
       </template>
     </showcomponent>
     <showcomponent
-      title="不同尺寸"
-      subtitle="不同尺寸的描述列表。"
-      :attributes="['type, size']"
-      ctname="Descriptions"
-      :codes="code2"
+        title="不同尺寸"
+        subtitle="不同尺寸的描述列表。"
+        :attributes="['type, size']"
+        ctname="Descriptions"
+        :codes="code2"
     >
       <template v-slot:showarea>
         <div class="block_show_div">
@@ -64,29 +64,29 @@
             </ct-row>
             <ct-descriptions :size="radio1" title="User info" column="3">
               <ct-descriptions-item label="Username">{{
-                info.name
-              }}</ct-descriptions-item>
+                  info.name
+                }}</ct-descriptions-item>
               <ct-descriptions-item label="Age"
-                ><code>{{ info.age }}</code></ct-descriptions-item
+              ><code>{{ info.age }}</code></ct-descriptions-item
               >
               <ct-descriptions-item label="Gender">{{
-                info.sex
-              }}</ct-descriptions-item>
+                  info.sex
+                }}</ct-descriptions-item>
               <ct-descriptions-item label="School">{{
-                info.school
-              }}</ct-descriptions-item>
+                  info.school
+                }}</ct-descriptions-item>
               <ct-descriptions-item label="Profession">{{
-                info.major
-              }}</ct-descriptions-item>
+                  info.major
+                }}</ct-descriptions-item>
               <ct-descriptions-item label="Hobby">{{
-                info.hobby
-              }}</ct-descriptions-item>
+                  info.hobby
+                }}</ct-descriptions-item>
               <ct-descriptions-item label="Telephone">{{
-                info.phone
-              }}</ct-descriptions-item>
+                  info.phone
+                }}</ct-descriptions-item>
               <ct-descriptions-item label="Address">{{
-                info.address
-              }}</ct-descriptions-item>
+                  info.address
+                }}</ct-descriptions-item>
             </ct-descriptions>
           </div>
         </div>
@@ -96,11 +96,11 @@
       </template>
     </showcomponent>
     <showcomponent
-      title="有无边框"
-      subtitle="有无边框的描述列表。"
-      :attributes="['type, size']"
-      ctname="Descriptions"
-      :codes="code3"
+        title="有无边框"
+        subtitle="有无边框的描述列表。"
+        :attributes="['type, size']"
+        ctname="Descriptions"
+        :codes="code3"
     >
       <template v-slot:showarea>
         <div class="block_show_div">
@@ -110,34 +110,34 @@
               <ct-radio v-model="radio2" label="borderless">无边框</ct-radio>
             </ct-row>
             <ct-descriptions
-              :borderless="'borderless' === radio2"
-              title="User info"
-              column="3"
+                :borderless="'borderless' === radio2"
+                title="User info"
+                column="3"
             >
               <ct-descriptions-item label="Username">{{
-                info.name
-              }}</ct-descriptions-item>
+                  info.name
+                }}</ct-descriptions-item>
               <ct-descriptions-item label="Age"
-                ><code>{{ info.age }}</code></ct-descriptions-item
+              ><code>{{ info.age }}</code></ct-descriptions-item
               >
               <ct-descriptions-item label="Gender">{{
-                info.sex
-              }}</ct-descriptions-item>
+                  info.sex
+                }}</ct-descriptions-item>
               <ct-descriptions-item label="School">{{
-                info.school
-              }}</ct-descriptions-item>
+                  info.school
+                }}</ct-descriptions-item>
               <ct-descriptions-item label="Profession">{{
-                info.major
-              }}</ct-descriptions-item>
+                  info.major
+                }}</ct-descriptions-item>
               <ct-descriptions-item label="Hobby">{{
-                info.hobby
-              }}</ct-descriptions-item>
+                  info.hobby
+                }}</ct-descriptions-item>
               <ct-descriptions-item label="Telephone">{{
-                info.phone
-              }}</ct-descriptions-item>
+                  info.phone
+                }}</ct-descriptions-item>
               <ct-descriptions-item label="Address">{{
-                info.address
-              }}</ct-descriptions-item>
+                  info.address
+                }}</ct-descriptions-item>
             </ct-descriptions>
           </div>
         </div>
@@ -147,11 +147,11 @@
       </template>
     </showcomponent>
     <showcomponent
-      title="垂直列表"
-      subtitle="是否垂直排列的描述列表。"
-      :attributes="['type, size']"
-      ctname="Descriptions"
-      :codes="code4"
+        title="垂直列表"
+        subtitle="是否垂直排列的描述列表。"
+        :attributes="['type, size']"
+        ctname="Descriptions"
+        :codes="code4"
     >
       <template v-slot:showarea>
         <div class="block_show_div">
@@ -162,35 +162,35 @@
               <ct-radio v-model="radio3" label="small">Small</ct-radio>
             </ct-row>
             <ct-descriptions
-              direction="vertical"
-              :size="radio3"
-              title="User info"
-              column="3"
+                direction="vertical"
+                :size="radio3"
+                title="User info"
+                column="3"
             >
               <ct-descriptions-item label="Username">{{
-                info.name
-              }}</ct-descriptions-item>
+                  info.name
+                }}</ct-descriptions-item>
               <ct-descriptions-item label="Age"
-                ><code>{{ info.age }}</code></ct-descriptions-item
+              ><code>{{ info.age }}</code></ct-descriptions-item
               >
               <ct-descriptions-item label="Gender">{{
-                info.sex
-              }}</ct-descriptions-item>
+                  info.sex
+                }}</ct-descriptions-item>
               <ct-descriptions-item label="School">{{
-                info.school
-              }}</ct-descriptions-item>
+                  info.school
+                }}</ct-descriptions-item>
               <ct-descriptions-item label="Profession">{{
-                info.major
-              }}</ct-descriptions-item>
+                  info.major
+                }}</ct-descriptions-item>
               <ct-descriptions-item label="Hobby">{{
-                info.hobby
-              }}</ct-descriptions-item>
+                  info.hobby
+                }}</ct-descriptions-item>
               <ct-descriptions-item label="Telephone">{{
-                info.phone
-              }}</ct-descriptions-item>
+                  info.phone
+                }}</ct-descriptions-item>
               <ct-descriptions-item label="Address">{{
-                info.address
-              }}</ct-descriptions-item>
+                  info.address
+                }}</ct-descriptions-item>
             </ct-descriptions>
           </div>
         </div>
@@ -200,9 +200,9 @@
       </template>
     </showcomponent>
     <showpara
-      title="Attribute"
-      :parameter="parameter"
-      style="margin-top: 150px"
+        title="Attribute"
+        :parameter="parameter"
+        style="margin-top: 150px"
     ></showpara>
   </div>
 </template>
@@ -307,7 +307,7 @@ export default{
         school: "Scut",
         major: "computer",
         address:
-          "No.1188, Xiaoguwei Avenue, Xiaoguwei District, Guangzhou, Guangdong Province",
+            "No.1188, Xiaoguwei Avenue, Xiaoguwei District, Guangzhou, Guangdong Province",
         hobby: "Movies",
         phone: 18888888888,
         intro: "Pursue my inner peace!",

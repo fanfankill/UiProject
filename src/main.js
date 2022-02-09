@@ -27,6 +27,42 @@ Vue.use(vuescroll);
 Vue.config.productionTip = false;
 
 
+
+Vue.directive('animate', {
+  // 当绑定元素插入到 DOM 中
+  inserted: function (el, binding) {
+    // 聚焦元素
+    binding.addClass = () => {
+      const { top } = el.getBoundingClientRect()
+      const h = document.documentElement.clientHeight || document.body.clientHeight
+      if (top < h) {
+        if(el.className.indexOf(binding.value) == -1 ){
+          // 初次还未绑定过，则新增类名(注意：下面单引号中间是一个空格！！！)
+          el.className = binding.value+' '+el.className
+        }
+        if (binding.addClass) {
+          window.removeEventListener('wheel', binding.addClass)
+          window.removeEventListener('scroll', binding.addClass)
+        }
+
+      }
+    }
+    window.addEventListener('wheel', binding.addClass,true)
+    window.addEventListener('scroll', binding.addClass,true)
+    binding.addClass()
+
+  },
+  //解绑
+  unbind: function (el, binding) {
+    if (binding.addClass) {
+      window.removeEventListener('wheel', binding.addClass)
+      window.removeEventListener('scroll', binding.addClass)
+    }
+  }
+
+});
+
+
 new Vue({
     render: (h) => h(App),
     router,
