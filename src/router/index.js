@@ -24,12 +24,17 @@ const link = () => import("../examples/link");
 const tabs = () => import("../examples/tabs");
 const tree = () => import("../examples/tree");
 const switchCom = () => import("../examples/switch");
+const message = () => import("../examples/message");
 const animate = () => import("../examples/animate");
+const skeleton = () => import("../examples/skeleton");
+const badge = () => import("../examples/badge");
+const notification = () => import("../examples/notification");
+const rate = () => import("../examples/rate");
 
 const routes = [
   {
-    path:'/',
-    redirect: '/main'
+    path: "/",
+    redirect: "/main",
   },
   {
     path: "/main",
@@ -38,9 +43,6 @@ const routes = [
   {
     path: "/examples",
     redirect: "/examples/avatar",
-  },
-  {
-    path: "/examples",
     component: blankView,
     children: [
       {
@@ -56,6 +58,10 @@ const routes = [
         meta: {
           index:0,
       }
+      },
+      {
+        path: "badge",
+        component: badge,
       },
       {
         path: "button",
@@ -106,6 +112,14 @@ const routes = [
       }
       },
       {
+        path: "message",
+        component: message,
+      },
+      {
+        path: "notification",
+        component: notification,
+      },
+      {
         path: "dropdown",
         component: dropdown,
         meta: {
@@ -120,6 +134,10 @@ const routes = [
       }
       },
       {
+        path: "rate",
+        component: rate,
+      },
+      {
         path: "scrollbar",
         component: scrollbar,
         meta: {
@@ -129,6 +147,7 @@ const routes = [
       {
         path: "steps",
         component: steps,
+
         meta: {
           index:11,
       }
@@ -138,6 +157,16 @@ const routes = [
         meta: {
           index:12,
       }
+
+      },
+      {
+        path: "skeleton",
+        component: skeleton,
+      },
+      {
+        path: "link",
+        component: link,
+
       },
       {
         path: "tabs",
@@ -149,15 +178,28 @@ const routes = [
       {
         path: "tree",
         component: tree,
+
         meta: {
           index:14,
       }
+
+      },
+      {
+        path: "switch",
+        component: switchCom,
       },
     ],
   },
   {
     path: "/style",
-    component: styleView,
+    redirect: "/style/color",
+    component: blankView,
+    children: [
+      {
+        path: "color",
+        component: styleView,
+      },
+    ],
   },
 ];
 

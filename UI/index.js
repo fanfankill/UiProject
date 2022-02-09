@@ -1,7 +1,7 @@
 import Loading from "./packages/loading";
-// import animate from "./directive/animate";
 
-
+import Notify from "./packages/notification";
+import Message from "./packages/message";
 
 
 // 组件列表
@@ -23,14 +23,17 @@ const install = function(Vue) {
         }
     });
 
+    // 指令注册
     Vue.use(Loading.directive);
-    // Vue.use(animate)
+
+
+    // 服务注册
     Vue.prototype.$loading = Loading.service;
-    Vue.prototype.$notify = Notification;
+    Vue.prototype.$notify = Notify;
+    Vue.prototype.$message = Message;
 };
 
 //导出全局install
 export default {
     install,
-    Notification,
 };

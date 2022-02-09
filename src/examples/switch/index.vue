@@ -1,5 +1,7 @@
 <template>
   <div>
+    <h1>Switch 开关</h1>
+    <p>不同样式的开关按钮</p>
     <showcomponent
       title="基础用法"
       :attributes="['active-color,inactive-color']"

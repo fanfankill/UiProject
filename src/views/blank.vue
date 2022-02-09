@@ -20,7 +20,6 @@
           </transition>
           
           <back-top parent="main"></back-top>
-
         </div>
       </div>
     </div>
@@ -31,13 +30,14 @@
 import top from "../components/top";
 import logo from "../components/logo";
 import asider from "../components/asider";
-import backTop from './backTop.vue'
+import backTop from "./backTop.vue";
 
 export default {
   components: {
     top,
     logo,
     asider,
+
     backTop
    },
    data() {
@@ -59,6 +59,9 @@ export default {
     
   }
 }
+
+
+
 </script>
 
 <style scoped>
@@ -76,7 +79,7 @@ export default {
   width: 100%;
   height: 80px;
   position: relative;
-  z-index: 2001;
+  z-index: 998;
   top: 0;
   background-color: #fff;
   border-bottom: solid 1px gainsboro;

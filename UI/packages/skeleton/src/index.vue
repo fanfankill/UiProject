@@ -23,7 +23,7 @@ export default {
       type:String,
       default: 'text',
        validator(val) {
-        return [ 'text', 'rect', 'circle','Btn', 'Badge', 'Chip'].indexOf(val) > -1;
+        return [ 'text', 'rect', 'circle','btn', 'badge', 'chip'].indexOf(val) > -1;
       }
     },
     color: {

@@ -1,8 +1,10 @@
 const path = require("path");
+
 module.exports = {
-  publicPath:'./' ,
   //不打包map
   productionSourceMap: false,
+  publicPath: "./",
+
   pluginOptions: {
     "style-resources-loader": {
       preProcessor: "less",

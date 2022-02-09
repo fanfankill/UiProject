@@ -1,9 +1,5 @@
 <template>
   <div>
-      <div class="head">
-          <logo></logo>
-          <top></top>
-        </div>
     <h1 class="title">色彩</h1>
     <br />
     <ul class="intro">
@@ -120,16 +116,6 @@
     </div>
   </div>
 </template>
-<script>
-import top from "../components/top";
-import logo from "../components/logo";
-export default {
-     components:{
-     top,
-     logo,
-   }
-}
-</script>
 
 <style scoped lang="less">
 .head {
@@ -154,7 +140,7 @@ li {
 }
 .title {
   font-weight: 400;
-  margin-top:80px;
+  margin-top: 80px;
 }
 .color {
   color: white;
