@@ -9,6 +9,7 @@
         :attributes="['type, size']"
         ctname="Descriptions"
         :codes="code1"
+        v-animate="'queue-top'" class="iscenter"
     >
       <template v-slot:showarea>
         <div class="block_show_div">
@@ -36,6 +37,7 @@
         :attributes="['type, size']"
         ctname="Descriptions"
         :codes="code2"
+        v-animate="'queue-top'" class="iscenter"
     >
       <template v-slot:showarea>
         <div class="block_show_div">
@@ -68,6 +70,7 @@
         :attributes="['type, size']"
         ctname="Descriptions"
         :codes="code3"
+        v-animate="'queue-top'" class="iscenter"
     >
       <template v-slot:showarea>
         <div class="block_show_div">
@@ -99,6 +102,7 @@
         :attributes="['type, size']"
         ctname="Descriptions"
         :codes="code4"
+        v-animate="'queue-top'" class="iscenter"
     >
       <template v-slot:showarea>
         <div class="block_show_div">
@@ -125,7 +129,7 @@
         使用<code>direction</code>属性来定义 Descriptions 的样式
       </template>
     </showcomponent>
-    <showpara title="Attribute" :parameter="parameter" style="margin-top:150px;"></showpara>
+    <showpara v-animate="'queue-top'" class="iscenter" title="Attribute" :parameter="parameter" style="margin-top:150px;"></showpara>
 
 
   </div>
@@ -253,7 +257,7 @@ export default{
 };
 </script>
 
-<style lang="less">
+<style scope lang="less">
 @import "./src/hljsplugin/color-brewer.less";
 .flex_col {
   height: auto;

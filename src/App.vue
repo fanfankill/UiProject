@@ -15,7 +15,9 @@
           <asider></asider>
         </div>
         <div class="main">
+          <h3 v-animate="'queue-top'" class="iscenter"><a href="#/mainview/concat">联系我们</a></h3>
           <router-view> </router-view>
+
         </div>
       </div>
     </div>
@@ -101,6 +103,15 @@ export default {
     transform: rotate(180deg);
     background-color: white;
     box-shadow: 2px 0 8px #00000026;
+  }
+}
+
+
+.iscenter {
+  opacity: 0;
+  &.queue-top {
+    opacity: 1;
+    transition: 0.6s all;
   }
 }
 </style>
