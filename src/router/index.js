@@ -21,6 +21,10 @@ const radio = () => import("../examples/radio");
 const loading = () => import("../examples/loading");
 const scrollbar = () => import("../examples/scrollbar");
 const steps = () => import("../examples/steps");
+const link = () => import("../examples/link");
+const Switch = () => import("../examples/switch");
+const tabs = () => import("../examples/tabs");
+const tree = () => import("../examples/tree");
 
 const routes = [
   {
@@ -78,6 +82,22 @@ const routes = [
       {
         path: "steps",
         component: steps,
+      },
+      {
+        path: "switch",
+        component: Switch,
+      },
+      {
+        path: "link",
+        component: link,
+      },
+      {
+        path: "tabs",
+        component: tabs,
+      },
+      {
+        path: "tree",
+        component: tree,
       },
     ],
   },
