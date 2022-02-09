@@ -1,0 +1,91 @@
+@import url(./common/global.less);
+
+.ct-link{
+   text-decoration: none;
+   cursor:pointer;
+   font-size:14px;
+   font-weight: 500;
+   position: relative;
+   margin-left:8px;
+}
+.ct-link.is-underline:hover:after{  
+    content: "";
+    position:absolute;
+    left:0;
+    top:0;
+    bottom: 0;
+    right:0;
+    border-bottom: 1px solid @main-active-color
+}
+.ct-link.is-disabled{
+    cursor: not-allowed;
+}
+
+.ct-link.ct-link--default{
+    color:@grey-bg-color1;
+}
+.ct-link.ct-link--default:hover{
+    color: @main-color
+}
+.ct-link.ct-link--default.is-disabled{
+    color: @grey-bg-color2
+}
+
+.ct-link.ct-link--primary,
+.ct-link.ct-link--primary:hover{
+    color: @main-color
+}
+.ct-link.ct-link--primary.is-disabled{
+    color: @main-color3
+}
+.ct-link.ct-link--primary.is-underline:hover:after{
+    border-color: @main-color
+}
+
+.ct-link.ct-link--success,
+.ct-link.ct-link--success:hover{
+    color: @success-color
+}
+.ct-link.ct-link--success.is-disabled{
+    color: @success-color
+}
+.ct-link.ct-link--success.is-underline:hover:after{
+    border-color: @success-color
+}
+
+
+.ct-link.ct-link--danger,
+.ct-link.ct-link--danger:hover{
+    color: @error-color
+}
+.ct-link.ct-link--danger.is-disabled{
+    color: @error-color
+}
+.ct-link.ct-link--danger.is-underline:hover:after{
+    border-color: @error-color
+}
+
+
+.ct-link.ct-link--warning,
+.ct-link.ct-link--warning:hover{
+    color: @warning-color
+}
+.ct-link.ct-link--warning.is-disabled{
+    color: @warning-hover-color
+}
+.ct-link.ct-link--warning.is-underline:hover:after{
+    border-color: @warning-active-color
+}
+
+.ct-link.ct-link--info,
+.ct-link.ct-link--info:hover{
+    color: @info-active-color
+}
+.ct-link.ct-link--info.is-disabled{
+    color: @info-color
+}
+.ct-link.ct-link--info.is-underline:hover:after{
+    border-color: @info-hover-color
+}
+
+

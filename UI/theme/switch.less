@@ -1,0 +1,98 @@
+@import url(./common/global.less);
+
+
+.ct-switch {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    font-size: 14px;
+    line-height: 20px;
+    height: 20px;
+    vertical-align: middle
+}
+.ct-switch.is-disabled .ct-switch__core{
+    /* 要显示的光标类型：禁用 */
+    cursor: not-allowed
+}
+.ct-switch__core,
+.ct-switch__label {
+    display: inline-block;
+    /* 鼠标呈现一只手 */
+    cursor: pointer;
+    /* 垂直居中 */
+    vertical-align: middle
+}
+.ct-switch__label {
+    /* 0.2s后样式过渡 */
+    transition: .2s;
+    height: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #303133
+}
+.ct-switch__label.is-active {
+    color: @info-font-color
+}
+.ct-switch__label--left {
+    margin-right: 10px
+}
+.ct-switch__label--right {
+    margin-left: 10px
+}
+.ct-switch__label * {
+    line-height: 1;
+    font-size: 14px;
+    display: inline-block
+}
+.ct-switch__input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    // 透明度
+    opacity: 0;
+    margin: 0
+}
+.ct-switch__core {
+    margin: 0;
+    position: relative;
+    width: 40px;
+    height: 20px;
+    border: 1px solid @grey-bg-color3;
+    outline: 0;
+    border-radius: 10px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background: @grey-bg-color3;
+    // 样式过渡：边框颜色 0.3s,背景色0.3s
+    transition: border-color .3s, background-color .3s
+}
+/* 核心按钮 */
+// 伪元素
+.ct-switch__core:after {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    border-radius: 100%;
+    transition: all .3s;
+    width: 16px;
+    height: 16px;
+    background-color: @blue-bg-color2
+}
+.ct-switch.is-checked .ct-switch__core {
+    border-color: @info-font-color;
+    background-color: @info-font-color;
+}
+.ct-switch.is-checked .ct-switch__core::after {
+    left: 100%;
+    margin-left: -17px
+}
+.ct-switch.is-disabled {
+    opacity: .6
+}
+.ct-switch--wide .ct-switch__label.ct-switch__label--left span {
+    left: 10px
+}
+.ct-switch--wide .ct-switch__label.ct-switch__label--right span {
+    right: 10px
+}

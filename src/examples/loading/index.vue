@@ -67,7 +67,7 @@ import Showcomponent from "../../components/showcomponent/index.vue";
 import Showparameter from "../../components/showparameter/index.vue";
 export default {
   name: "loading",
-  chName: "进度条",
+  chName: "加载",
   data() {
     return {
       params: {
