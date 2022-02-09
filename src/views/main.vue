@@ -1,23 +1,30 @@
 <template>
   <div class="main">
-    <h1>What's CreateUI</h1>
+    <div class="head">
+      <logo></logo>
+      <top></top>
+    </div>
+    <div class="main_block">
+      <whyuse></whyuse>
+      <showperson></showperson>
+    </div>
   </div>
 </template>
 
 <script>
-// import top from "../components/top";
-// import logo from "../components/logo";
-// import whyuse from "../components/mainchild/whyuse";
-// import showperson from "../components/mainchild/showperson";
+import top from "../components/top";
+import logo from "../components/logo";
+import whyuse from "../components/mainchild/whyuse";
+import showperson from "../components/mainchild/showperson";
 export default {
   name: "main",
   components: {
-    // top,
-    // logo,
-    // whyuse,
-    // showperson,
+    top,
+    logo,
+    whyuse,
+    showperson,
   },
-}
+};
 </script>
 <style scoped lang="less">
 .head {
