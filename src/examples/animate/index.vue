@@ -8,7 +8,7 @@
         :attributes="['type, size']"
         ctname="Animate"
         :codes="code1"
-        v-Animate="'queue-top'"
+        v-animate="'queue-top'"
         class="iscenter"
     >
       <template v-slot:showarea  >
