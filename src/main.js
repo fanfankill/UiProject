@@ -26,7 +26,7 @@ Vue.use(vuescroll);
 Vue.config.productionTip = false;
 
 
-Vue.directive('Animate', {
+Vue.directive('animate', {
   // 当绑定元素插入到 DOM 中
   inserted: function (el, binding) {
     // 聚焦元素
