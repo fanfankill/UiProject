@@ -1,5 +1,6 @@
 <template>
   <div class="main">
+
   <div class="head">
           <logo></logo>
           <top></top>
@@ -8,10 +9,12 @@
       <whyuse></whyuse>
       <showperson></showperson>
     </div>
+
   </div>
 </template>
 
 <script>
+
 import top from "../components/top";
 import logo from "../components/logo";
 import whyuse from "../components/mainchild/whyuse";
@@ -48,4 +51,5 @@ export default {
     }
 }
 </style>
+
 
