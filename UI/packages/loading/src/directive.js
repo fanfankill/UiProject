@@ -10,6 +10,7 @@ const toggleLoading = (el, binding) => {
       el.instance.visible = true;
 
       if (binding.modifiers.fullscreen) {
+        el.mask.style.zIndex = "9999";
         document.body.appendChild(el.mask);
       } else {
         el.appendChild(el.mask);
