@@ -49,15 +49,15 @@ const routes = [
         path: "animate",
         component: animate,
         meta: {
-          index:-1,
-      }
+          index: -1,
+        },
       },
       {
         path: "avatar",
         component: avatar,
         meta: {
-          index:0,
-      }
+          index: 0,
+        },
       },
       {
         path: "badge",
@@ -67,49 +67,50 @@ const routes = [
         path: "button",
         component: button,
         meta: {
-          index:1,
-      }
+          index: 1,
+        },
       },
       {
         path: "chatbox",
         component: chatbox,
         meta: {
-          index:2,
-      }
+          index: 2,
+        },
       },
       {
         path: "container",
         component: container,
         meta: {
-          index:3,
-      }
+          index: 3,
+        },
       },
       {
         path: "descriptions",
         component: descriptions,
         meta: {
-          index:4,
-      }
+          index: 4,
+        },
       },
       {
         path: "dialog",
         component: dialog,
         meta: {
-          index:5,
-      }
-      },{
+          index: 5,
+        },
+      },
+      {
         path: "link",
         component: link,
         meta: {
-          index:6,
-      }
+          index: 6,
+        },
       },
       {
         path: "loading",
         component: loading,
         meta: {
-          index:7,
-      }
+          index: 7,
+        },
       },
       {
         path: "message",
@@ -123,15 +124,15 @@ const routes = [
         path: "dropdown",
         component: dropdown,
         meta: {
-          index:8,
-      }
+          index: 8,
+        },
       },
       {
         path: "radio",
         component: radio,
         meta: {
-          index:9,
-      }
+          index: 9,
+        },
       },
       {
         path: "rate",
@@ -141,23 +142,23 @@ const routes = [
         path: "scrollbar",
         component: scrollbar,
         meta: {
-          index:10,
-      }
+          index: 10,
+        },
       },
       {
         path: "steps",
         component: steps,
 
         meta: {
-          index:11,
-      }
-      },{
+          index: 11,
+        },
+      },
+      {
         path: "switch",
         component: switchCom,
         meta: {
-          index:12,
-      }
-
+          index: 12,
+        },
       },
       {
         path: "skeleton",
@@ -166,23 +167,21 @@ const routes = [
       {
         path: "link",
         component: link,
-
       },
       {
         path: "tabs",
         component: tabs,
         meta: {
-          index:13,
-      }
+          index: 13,
+        },
       },
       {
         path: "tree",
         component: tree,
 
         meta: {
-          index:14,
-      }
-
+          index: 14,
+        },
       },
       {
         path: "switch",
@@ -192,7 +191,14 @@ const routes = [
   },
   {
     path: "/style",
-    component: styleView,
+    component: blankView,
+    redirect: "/style/color",
+    children: [
+      {
+        path: "color",
+        component: styleView,
+      },
+    ],
   },
 ];
 

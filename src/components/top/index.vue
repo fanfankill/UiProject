@@ -1,18 +1,12 @@
 <template>
   <ul class="headul">
-    <li
-      v-for="(item, index) in mylist"
-      :key="index"
-    >
-      <router-link
-        :to="item.to"
-         active-class="is-active"
-        :class="['base_link']"
+    <li v-for="(item, index) in mylist" :key="index">
+      <router-link :to="item.to" active-class="is-active" :class="['base_link']"
         >{{ item.name }}
       </router-link>
     </li>
 
-    <li class="iconfont icon-github-fill myicon" @click="togithub"></li>
+    <li class="iconfont icon-github myicon" @click="togithub"></li>
   </ul>
 </template>
 
@@ -49,9 +43,9 @@ export default {
         this.mode = "light";
       }
     },
-    togithub(){
-       location.href="https://github.com/fanfankill/UiProject"
-    }
+    togithub() {
+      window.open("https://github.com/fanfankill/UiProject", "_blank");
+    },
   },
 };
 </script>
@@ -109,7 +103,7 @@ export default {
   height: 1px;
   background: @info-font-color;
 }
-.myicon{
+.myicon {
   cursor: pointer;
 }
 @media screen and (max-width: 900px) {
