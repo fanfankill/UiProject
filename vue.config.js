@@ -1,10 +1,12 @@
 const path = require("path");
+const buildConfig = require("./build/config.prod");
 
-module.exports = {
-  //不打包map
-  productionSourceMap: false,
-  publicPath: "./",
+// common config
+const config = {
+  productionSourceMap: process.env.NODE_ENV === "development" ? true : false,
+  publicPath: process.env.NODE_ENV === "development" ? "/" : "./",
 
+  // less loader
   pluginOptions: {
     "style-resources-loader": {
       preProcessor: "less",
@@ -12,3 +14,8 @@ module.exports = {
     },
   },
 };
+
+module.exports =
+  process.env.NODE_ENV === "development"
+    ? config
+    : { ...config, ...buildConfig };
