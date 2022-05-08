@@ -82,5 +82,9 @@
   {
     "name": "树",
     "eName": "Tree"
+  },
+  {
+    "name": "放大镜",
+    "eName": "Big"
   }
 ]

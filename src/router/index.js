@@ -30,6 +30,7 @@ const skeleton = () => import("../examples/skeleton");
 const badge = () => import("../examples/badge");
 const notification = () => import("../examples/notification");
 const rate = () => import("../examples/rate");
+const big = () => import("../examples/big");
 
 const routes = [
   {
@@ -178,7 +179,6 @@ const routes = [
       {
         path: "tree",
         component: tree,
-
         meta: {
           index: 14,
         },
@@ -186,6 +186,16 @@ const routes = [
       {
         path: "switch",
         component: switchCom,
+        meta : {
+          index: 16
+        }
+      },
+      {
+        path: "big",
+        component: big,
+        meta: {
+          index: 15
+        }
       },
     ],
   },

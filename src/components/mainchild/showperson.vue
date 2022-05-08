@@ -25,7 +25,6 @@
         </div>
       </div>
     </div>
-
   </div>
 </template>
 
@@ -82,7 +81,7 @@ export default {
             "https://avatars.githubusercontent.com/u/52449327?s=400&u=d9e5bc7f35bc6e08b68670debc8e7849c547598e&v=4",
           htitle: "WQ15652799191",
           name: "吴庆",
-          ptitle: "负责代码展示组件开发，Avatar、Dialog组件开发",
+          ptitle: "负责代码展示组件开发，Avatar、Dialog、Big放大镜组件开发",
         },
         {
           img:
