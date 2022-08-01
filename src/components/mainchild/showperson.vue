@@ -1,5 +1,5 @@
 <template>
-  <div class="shower">
+  <div class="shower" v-animate="'queue-left'">
     <h2>开发人员</h2>
     <div class="showmybtn">
       <span class="iconfont icon-left" @click="toleftchange"></span>
@@ -191,7 +191,6 @@ h2 {
 
 .middle_intrdo_showblock {
   text-align: center;
-  padding-bottom: 10rem;
   border-bottom: 1px solid #cfcfcf;
   overflow: hidden;
 }
@@ -251,6 +250,23 @@ h2 {
   display: inline-block;
   border: 1px solid gainsboro;
 }
+.queue-left{
+
+    animation: myleft 1s;
+ 
+}
+
+@keyframes myleft{
+    from{
+        opacity: 0;
+        transform: translate(-20%,0);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0,0);
+    }
+}
+
 @media screen and (max-width: 900px) {
   .middle_intrdo {
     width: 100%;

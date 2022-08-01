@@ -24,7 +24,7 @@
           v-if="showClose"
           @click="handleClose"
         >
-          <i class="iconfont icon-closedialog"></i>
+          <i class="iconfont icon-close"></i>
         </button>
       </div>
       <div class="ct-dialog__body" v-if="rendered"><slot></slot></div>

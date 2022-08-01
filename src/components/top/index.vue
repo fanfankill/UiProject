@@ -29,10 +29,9 @@ export default {
         {
           to: "/examples",
           name: "组件",
-        },
-        {
-          to: "/style",
-          name: "色彩",
+        },  {
+          to: "/style/Color",
+          name: "颜色",
         },
       ],
     };

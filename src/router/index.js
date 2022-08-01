@@ -42,158 +42,178 @@ const routes = [
   },
   {
     path: "/examples",
-    redirect: "/examples/avatar",
+    redirect: "/examples/Animate",
     component: blankView,
     children: [
       {
-        path: "animate",
+        path: "Animate",
         component: animate,
         meta: {
           index:-1,
       }
       },
       {
-        path: "avatar",
+        path: "Avatar",
         component: avatar,
         meta: {
           index:0,
       }
       },
       {
-        path: "badge",
+        path: "Badge",
         component: badge,
-      },
-      {
-        path: "button",
-        component: button,
         meta: {
           index:1,
       }
       },
       {
-        path: "chatbox",
-        component: chatbox,
+        path: "Button",
+        component: button,
         meta: {
           index:2,
       }
       },
       {
-        path: "container",
-        component: container,
+        path: "Chatbox",
+        component: chatbox,
         meta: {
           index:3,
       }
       },
       {
-        path: "descriptions",
-        component: descriptions,
+        path: "Container",
+        component: container,
         meta: {
           index:4,
       }
       },
       {
-        path: "dialog",
-        component: dialog,
+        path: "Descriptions",
+        component: descriptions,
         meta: {
           index:5,
       }
-      },{
-        path: "link",
-        component: link,
+      },
+      {
+        path: "Dialog",
+        component: dialog,
         meta: {
           index:6,
       }
-      },
-      {
-        path: "loading",
-        component: loading,
+      }, {
+        path: "Dropdown",
+        component: dropdown,
         meta: {
           index:7,
       }
-      },
-      {
-        path: "message",
-        component: message,
-      },
-      {
-        path: "notification",
-        component: notification,
-      },
-      {
-        path: "dropdown",
-        component: dropdown,
+      },{
+        path: "Link",
+        component: link,
         meta: {
           index:8,
       }
       },
       {
-        path: "radio",
-        component: radio,
+        path: "Loading",
+        component: loading,
         meta: {
           index:9,
       }
       },
       {
-        path: "rate",
-        component: rate,
-      },
-      {
-        path: "scrollbar",
-        component: scrollbar,
+        path: "Message",
+        component: message,
         meta: {
           index:10,
       }
       },
       {
-        path: "steps",
-        component: steps,
-
+        path: "Notification",
+        component: notification,
         meta: {
           index:11,
       }
-      },{
-        path: "switch",
-        component: switchCom,
+      },
+      {
+        path: "Radio",
+        component: radio,
         meta: {
           index:12,
       }
-
       },
       {
-        path: "skeleton",
-        component: skeleton,
-      },
-      {
-        path: "link",
-        component: link,
-
-      },
-      {
-        path: "tabs",
-        component: tabs,
+        path: "Rate",
+        component: rate,
         meta: {
           index:13,
       }
       },
       {
-        path: "tree",
-        component: tree,
-
+        path: "Scrollbar",
+        component: scrollbar,
         meta: {
           index:14,
       }
-
       },
       {
-        path: "switch",
-        component: switchCom,
+        path: "Skeleton",
+        component: skeleton,
+        meta: {
+          index:15,
+      }
       },
+      
+      {
+        path: "Steps",
+        component: steps,
+
+        meta: {
+          index:16,
+      }
+      },
+      {
+        path: "Switch",
+        component: switchCom,
+        meta: {
+          index:17,
+      }
+
+      },
+
+      {
+        path: "Tabs",
+        component: tabs,
+        meta: {
+          index:18,
+      }
+      },
+      {
+        path: "Tree",
+        component: tree,
+
+        meta: {
+          index:19,
+      }
+
+      },
+     
     ],
   },
   {
-    path: "/style",
-    component: styleView,
-  },
+    path:'/style',
+    component:blankView,
+    redirect:'/style/Color',
+    children:[
+      {
+        path: "Color",
+        component: styleView,
+        meta: {
+          index:20,
+      }
+      },
+    ]
+  }
+
 ];
 
 const router = new VueRouter({

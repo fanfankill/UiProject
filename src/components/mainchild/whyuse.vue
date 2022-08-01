@@ -1,5 +1,5 @@
 <template>
-  <div class="mystart">
+  <div class="mystart" v-animate="'queue-left'">
       <h2>关于CreateUI</h2>
       <p><code>CreateUI</code>，是一套基于 Vue.js 的开源 UI 组件库，由多人协作开发完成，开发的目的在于提升自己对组件化开发的理解和动手能力，基于自己感兴趣的组件上进行开发和实践，从中学习到其组件化的思想。</p>
 
@@ -76,8 +76,7 @@ p{
     content: '';
     position: absolute;
     left: -10px;
-    top: 50%;
-    transform: translate(0,-50%);
+    top: 12px;
     width: 5px;
     height: 5px;
     border-radius:100% ;
@@ -109,6 +108,22 @@ code{
 .myico  span:hover{
     color: #65e0ff;
     transform: translate(0,-10%);
+}
+.queue-left{
+
+    animation: myleft 1s ;
+ 
+}
+
+@keyframes myleft{
+    from{
+        opacity: 0;
+        transform: translate(-20%,0);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0,0);
+    }
 }
 
 </style>

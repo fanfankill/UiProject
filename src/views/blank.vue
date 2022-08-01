@@ -15,7 +15,7 @@
 
         <div class="main" ref="main">
         
-            <transition :name="transitionName">
+            <transition mode="out-in" :name="transitionName">
           <router-view> </router-view>
           </transition>
           
@@ -113,20 +113,20 @@ export default {
 .slide-left-enter-active,
 .slide-left-leave-active {
   will-change: transform;
-  transition: all 500ms;
+  transition: all 250ms;
   
 }
 .slide-right-enter {
-  opacity: 0;
+  transform: translate(-110%);
 }
 .slide-right-leave-active {
-  opacity: 0;
+   transform: translate(-110%);
 }
 .slide-left-enter {
-  opacity: 0;
+    transform: translate(110%);
 }
 .slide-left-leave-active {
-  opacity: 0;;
+   transform: translate(110%);
 }
 
 

@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 3143270 */
-  src: url('//at.alicdn.com/t/font_3143270_3rh8c5t5nfc.woff2?t=1644387743071') format('woff2'),
-       url('//at.alicdn.com/t/font_3143270_3rh8c5t5nfc.woff?t=1644387743071') format('woff'),
-       url('//at.alicdn.com/t/font_3143270_3rh8c5t5nfc.ttf?t=1644387743071') format('truetype');
+  src: url('//at.alicdn.com/t/font_3143270_pi79a3ga83s.woff2?t=1644470002184') format('woff2'),
+       url('//at.alicdn.com/t/font_3143270_pi79a3ga83s.woff?t=1644470002184') format('woff'),
+       url('//at.alicdn.com/t/font_3143270_pi79a3ga83s.ttf?t=1644470002184') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,10 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-github:before {
+  content: "\e645";
 }
 
 .icon-idea__easyico:before {
@@ -184,4 +188,3 @@
 .icon-heianmoshi:before {
   content: "\e7cb";
 }
-

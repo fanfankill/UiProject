@@ -1,9 +1,5 @@
 <template>
   <div>
-      <div class="head">
-      <logo></logo>
-      <top></top>
-    </div>
     <h1 class="title">色彩</h1>
     <br />
     <ul class="intro">
@@ -121,26 +117,14 @@
   </div>
 </template>
 <script>
-import top from "../components/top";
-import logo from "../components/logo";
+
 export default {
-  components:{
-      top,
-      logo
-  }
+ 
 }
 </script>
 
 <style scoped lang="less">
-.head {
-  width: 100%;
-  height: 80px;
-  position: fixed;
-  z-index: 2001;
-  background-color: #fff;
-  top: 0;
-  border-bottom: solid 1px gainsboro;
-}
+
 li {
   margin-left: 10px;
   margin-bottom: 10px;
@@ -154,7 +138,6 @@ li {
 }
 .title {
   font-weight: 400;
-  margin-top: 80px;
 }
 .color {
   color: white;

@@ -24,6 +24,9 @@ export default {
     whyuse,
     showperson,
   },
+  beforeCreate(){
+    
+  }
 };
 </script>
 <style scoped lang="less">
