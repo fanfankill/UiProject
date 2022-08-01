@@ -49,15 +49,15 @@ const routes = [
         path: "Animate",
         component: animate,
         meta: {
-          index:-1,
-      }
+          index: -1,
+        },
       },
       {
         path: "Avatar",
         component: avatar,
         meta: {
-          index:0,
-      }
+          index: 0,
+        },
       },
       {
         path: "Badge",
@@ -70,27 +70,34 @@ const routes = [
         path: "Button",
         component: button,
         meta: {
+
           index:2,
       }
+
       },
       {
         path: "Chatbox",
         component: chatbox,
         meta: {
+
           index:3,
       }
+
       },
       {
         path: "Container",
         component: container,
         meta: {
+
           index:4,
       }
+
       },
       {
         path: "Descriptions",
         component: descriptions,
         meta: {
+
           index:5,
       }
       },
@@ -119,6 +126,7 @@ const routes = [
         meta: {
           index:9,
       }
+
       },
       {
         path: "Message",
@@ -131,6 +139,7 @@ const routes = [
         path: "Notification",
         component: notification,
         meta: {
+
           index:11,
       }
       },
@@ -138,8 +147,10 @@ const routes = [
         path: "Radio",
         component: radio,
         meta: {
+
           index:12,
       }
+
       },
       {
         path: "Rate",
@@ -152,6 +163,7 @@ const routes = [
         path: "Scrollbar",
         component: scrollbar,
         meta: {
+
           index:14,
       }
       },
@@ -161,6 +173,7 @@ const routes = [
         meta: {
           index:15,
       }
+
       },
       
       {
@@ -184,16 +197,20 @@ const routes = [
         path: "Tabs",
         component: tabs,
         meta: {
+
           index:18,
       }
+
       },
       {
         path: "Tree",
         component: tree,
 
         meta: {
+
           index:19,
       }
+
 
       },
      
@@ -213,6 +230,7 @@ const routes = [
       },
     ]
   }
+
 
 ];
 
